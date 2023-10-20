@@ -8,4 +8,4 @@ A drop-in patch for XIV ReShade installations with presets, shaders, and fixes f
 
 | Creator | Collection | Notes |
 | --- | --- | --- |
-| [Yomy](https://twitter.com/Yomigammy) | Okami | ReShade port by [Meynan Aneytha](https://twitter.com/meynan_ffxiv) |
+| [Yomy](https://twitter.com/Yomigammy) | Yomigami Okami | [ReShade port](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders#yomigamiokami-reshade-560-port) by [Meynan Aneytha](https://twitter.com/meynan_ffxiv) |

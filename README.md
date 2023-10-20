@@ -1,7 +1,7 @@
-# reshade-xiv-community-patch
+# reshade-xiv-community-patch for
 A drop-in patch for XIV ReShade installations with presets, shaders, and fixes from all around the community.
 
-### For ReShade version 5.9.2 ([download](https://www.mediafire.com/file/d9qwmrnsbh71wwd/ReShade_Setup_5.9.2_Addon.exe/file))
+### For ReShade version 5.9.2
 
 ### Getting Started (clean install)
 

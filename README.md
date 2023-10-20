@@ -1,7 +1,7 @@
 # reshade-xiv-community-patch for
 A drop-in patch for XIV ReShade installations with presets, shaders, and fixes from all around the community.
 
-### For ReShade version 5.9.2
+**Supported version**: ReShade 5.9.2 with add-on support
 
 ### Getting Started (clean install)
 

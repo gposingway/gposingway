@@ -1,13 +1,13 @@
-# reshade-xiv-community-patch
+# gposingway
 
-A drop-in patch for XIV ReShade installations with presets, shaders, and fixes from all around the community.
+A drop-in patch for ReShade installations with presets, shaders, and fixes from around the XIV community.
 
-**Supported version**: ReShade 5.9.2 with add-on support
+**Current supported version**: ReShade 5.9.2 with add-on support
 
 ### Getting Started (clean install)
 
 - [Download](https://www.mediafire.com/file/d9qwmrnsbh71wwd/ReShade_Setup_5.9.2_Addon.exe/file) ReShade version 5.9.2 with Add-on support, and start the installer.
-- Under the `Select a game or application` menu, select 'Final Fantasy XIV' (or, alternatively, browse for the `SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` folder.)
+- Under the `Select a game or application` menu, select 'Final Fantasy XIV' (or browse for the `SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` folder.)
 - Select the desired rendering API (`DirectX 10/11/12` by default.)
 - Under `Select preset to install`, click `Next`.
 - Under `Select effect packages to install`, select all available and click `Next`.

@@ -13,7 +13,7 @@ A drop-in patch for ReShade installations with presets, shaders, and fixes from 
 - Select the desired rendering API (`DirectX 10/11/12` by default.)
 - Under `Select preset to install`, just click `Next`.
 - Under `Select effect packages to install`, select all available and click `Next`.
-- [Download](https://github.com/gposingway/gposingway/refs/heads/main.zip) and unzip this Community Patch.
+- [Download](https://github.com/gposingway/gposingway/archive/refs/heads/main.zip) and unzip this Community Patch.
 - Copy and paste the `reshade-presets` and `reshare-shaders` from the unzipped file over the folders with the same name under the XIV game folder (`SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` by default.)
 - Launch the game. You're good to go!
 

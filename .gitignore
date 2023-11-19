@@ -605,3 +605,15 @@ reshade-shaders/Textures/TestPattern.png
 reshade-shaders/Textures/UIDetectMaskRGB.png
 reshade-shaders/Textures/vort_GaussianNoise.png
 reshade-shaders/Textures/waow.png
+reshade-shaders/Textures/uniform_noise.png
+reshade-shaders/Shaders/Warp-FX/Include/RadegastShaders.Radial.fxh
+reshade-shaders/Shaders/Warp-FX/Include/RadegastShaders.Positional.fxh
+reshade-shaders/Shaders/Warp-FX/Include/RadegastShaders.Offsets.fxh
+reshade-shaders/Shaders/Warp-FX/Include/RadegastShaders.AspectRatio.fxh
+reshade-shaders/Shaders/Warp-FX/Include/RadegastShaders.Animate.fxh
+reshade-shaders/Shaders/vort_Shaders/vort_MotionEstimation.fx
+reshade-shaders/Shaders/CShade/cGrain.fx
+reshade-shaders/Shaders/CobraFX/Gravity_CS.fx
+reshade-shaders/Shaders/CobraFX/ColorSort_CS.fx
+reshade-shaders/Shaders/CobraFX/CobraUtility.fxh
+reshade-shaders/Shaders/CobraFX/CobraMask.fx

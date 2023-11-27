@@ -1,0 +1,654 @@
+21:05:16:812 [05420] | INFO  | Initializing crosire's ReShade version '5.8.0.1728' (64-bit) loaded from "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\dxgi.dll" into "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\ffxiv_dx11.exe" ...
+21:05:16:812 [05420] | INFO  | Registering hooks for "user32.dll" ...
+21:05:16:812 [05420] | INFO  | > Libraries loaded.
+21:05:16:813 [05420] | INFO  | > Found 14 match(es). Installing ...
+21:05:16:834 [05420] | INFO  | Registering hooks for "C:\Windows\system32\d2d1.dll" ...
+21:05:16:834 [05420] | INFO  | > Delayed.
+21:05:16:834 [05420] | INFO  | Registering hooks for "C:\Windows\system32\d3d9.dll" ...
+21:05:16:834 [05420] | INFO  | > Delayed.
+21:05:16:835 [05420] | INFO  | Registering hooks for "C:\Windows\system32\d3d10.dll" ...
+21:05:16:835 [05420] | INFO  | > Delayed.
+21:05:16:835 [05420] | INFO  | Registering hooks for "C:\Windows\system32\d3d10_1.dll" ...
+21:05:16:835 [05420] | INFO  | > Delayed.
+21:05:16:835 [05420] | INFO  | Registering hooks for "C:\Windows\system32\d3d11.dll" ...
+21:05:16:835 [05420] | INFO  | > Libraries loaded.
+21:05:16:835 [05420] | INFO  | > Found 3 match(es). Installing ...
+21:05:16:856 [05420] | INFO  | Registering hooks for "C:\Windows\system32\d3d12.dll" ...
+21:05:16:857 [05420] | INFO  | > Delayed.
+21:05:16:857 [05420] | INFO  | Registering hooks for "C:\Windows\system32\dxgi.dll" ...
+21:05:16:857 [05420] | INFO  | > Delayed until first call to an exported function.
+21:05:16:857 [05420] | INFO  | Registering hooks for "vrclient_x64.dll" ...
+21:05:16:857 [05420] | INFO  | > Delayed.
+21:05:16:857 [05420] | INFO  | Registering hooks for "C:\Windows\system32\dinput.dll" ...
+21:05:16:857 [05420] | INFO  | > Delayed.
+21:05:16:858 [05420] | INFO  | Initialized.
+21:05:17:457 [05420] | INFO  | Redirecting RegisterClassExA(lpWndClassEx = 0000005A68DAF530 { "FFXIVGAME", style = 0x3 }) ...
+21:05:17:457 [05420] | INFO  | > Adding 'CS_OWNDC' window class style flag to "FFXIVGAME".
+21:05:17:910 [05420] | INFO  | Redirecting CreateDXGIFactory1(riid = {7B7166EC-21C7-44AE-B21A-C9AE321AE369}, ppFactory = 0000005A68DAEDA8) ...
+21:05:17:911 [05420] | INFO  | Installing export hooks for "C:\Windows\system32\dxgi.dll" ...
+21:05:17:911 [05420] | INFO  | > Found 5 match(es). Installing ...
+21:05:17:917 [05420] | INFO  | Redirecting CreateDXGIFactory1(riid = {7B7166EC-21C7-44AE-B21A-C9AE321AE369}, ppFactory = 0000005A68DAEE28) ...
+21:05:17:917 [05420] | INFO  | Redirecting CreateDXGIFactory1(riid = {7B7166EC-21C7-44AE-B21A-C9AE321AE369}, ppFactory = 0000005A68DAEEB0) ...
+21:05:17:918 [05420] | INFO  | Redirecting CreateDXGIFactory1(riid = {7B7166EC-21C7-44AE-B21A-C9AE321AE369}, ppFactory = 0000005A68DAEF38) ...
+21:05:17:918 [05420] | INFO  | Redirecting CreateDXGIFactory1(riid = {7B7166EC-21C7-44AE-B21A-C9AE321AE369}, ppFactory = 00000244C9C0B478) ...
+21:05:17:919 [05420] | INFO  | Redirecting D3D11CreateDevice(pAdapter = 00000244C0814C70, DriverType = 0, Software = 0000000000000000, Flags = 0x80, pFeatureLevels = 0000005A68DAEFD4, FeatureLevels = 1, SDKVersion = 7, ppDevice = 00000244C9C0B488, pFeatureLevel = 00000244C9C0B470, ppImmediateContext = 00000244C9C0B490) ...
+21:05:17:919 [05420] | INFO  | > Passing on to D3D11CreateDeviceAndSwapChain:
+21:05:17:919 [05420] | INFO  | Redirecting D3D11CreateDeviceAndSwapChain(pAdapter = 00000244C0814C70, DriverType = 0, Software = 0000000000000000, Flags = 0x80, pFeatureLevels = 0000005A68DAEFD4, FeatureLevels = 1, SDKVersion = 7, pSwapChainDesc = 0000000000000000, ppSwapChain = 0000000000000000, ppDevice = 00000244C9C0B488, pFeatureLevel = 00000244C9C0B470, ppImmediateContext = 00000244C9C0B490) ...
+21:05:18:054 [05420] | INFO  | Redirecting CreateDXGIFactory1(riid = {770AAE78-F26F-4DBA-A829-253C83D1B387}, ppFactory = 0000005A68DAB298) ...
+21:05:18:104 [05420] | INFO  | Using feature level 0xb000.
+21:05:18:105 [05420] | INFO  | Searching for add-ons (*.addon, *.addon64) in "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game" ...
+21:05:18:105 [05420] | INFO  | Redirecting IDXGIFactory::CreateSwapChain(this = 00000244C8A691D0, pDevice = 00000244D21D2438, pDesc = 0000005A68DAF050, ppSwapChain = 0000005A68DAEFD8) ...
+21:05:18:105 [05420] | INFO  | > Dumping swap chain description:
+21:05:18:105 [05420] | INFO  |   +-----------------------------------------+-----------------------------------------+
+21:05:18:105 [05420] | INFO  |   | Parameter                               | Value                                   |
+21:05:18:106 [05420] | INFO  |   +-----------------------------------------+-----------------------------------------+
+21:05:18:106 [05420] | INFO  |   | Width                                   | 1920                                    |
+21:05:18:106 [05420] | INFO  |   | Height                                  | 1080                                    |
+21:05:18:106 [05420] | INFO  |   | RefreshRate                             | 60                  1                   |
+21:05:18:106 [05420] | INFO  |   | Format                                  | DXGI_FORMAT_R8G8B8A8_UNORM              |
+21:05:18:106 [05420] | INFO  |   | ScanlineOrdering                        | 1                                       |
+21:05:18:106 [05420] | INFO  |   | Scaling                                 | 0                                       |
+21:05:18:106 [05420] | INFO  |   | SampleCount                             | 1                                       |
+21:05:18:106 [05420] | INFO  |   | SampleQuality                           | 0                                       |
+21:05:18:106 [05420] | INFO  |   | BufferUsage                             | 0x20                                    |
+21:05:18:106 [05420] | INFO  |   | BufferCount                             | 2                                       |
+21:05:18:106 [05420] | INFO  |   | OutputWindow                            | 0000000000290870                        |
+21:05:18:106 [05420] | INFO  |   | Windowed                                | TRUE                                    |
+21:05:18:107 [05420] | INFO  |   | SwapEffect                              | 0                                       |
+21:05:18:107 [05420] | INFO  |   | Flags                                   | 0x2                                     |
+21:05:18:107 [05420] | INFO  |   +-----------------------------------------+-----------------------------------------+
+21:05:18:304 [05420] | INFO  | Running on NVIDIA GeForce RTX 3060 Ti.
+21:05:18:305 [05420] | INFO  | Recreated runtime environment on runtime 00000244DB0D0470 ("C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\ReShade.ini").
+21:05:18:305 [05420] | INFO  | Redirecting IDXGISwapChain::SetFullscreenState(this = 00000244D21D78D0, Fullscreen = FALSE, pTarget = 0000000000000000) ...
+21:05:18:958 [05420] | INFO  | Redirecting IDXGISwapChain::SetFullscreenState(this = 00000244D21D78D0, Fullscreen = FALSE, pTarget = 0000000000000000) ...
+21:05:18:963 [05420] | INFO  | Redirecting IDXGISwapChain::ResizeBuffers(this = 00000244D21D78D0, BufferCount = 2, Width = 3840, Height = 2160, NewFormat = 28, SwapChainFlags = 0x2) ...
+21:05:18:964 [05420] | INFO  | Destroyed runtime environment on runtime 00000244DB0D0470 ("C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\ReShade.ini").
+21:05:18:965 [05420] | INFO  | Recreated runtime environment on runtime 00000244DB0D0470 ("C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\ReShade.ini").
+21:05:19:010 [05420] | INFO  | Redirecting RegisterClassExW(lpWndClassEx = 0000005A68DAE5D0 { "ImGui Platform", style = 0x3 }) ...
+21:05:19:010 [05420] | INFO  | > Adding 'CS_OWNDC' window class style flag to "ImGui Platform".
+21:05:19:372 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\3DFX.fx" in 0.002 s.
+21:05:19:378 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\4xBRZ.fx" in 0.005 s.
+21:05:19:378 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ChromaticAberration.fx" in 0.001 s.
+21:05:19:380 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Bloom.fx" in 0.006 s.
+21:05:19:380 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Colourfulness.fx" in 0.002 s.
+21:05:19:381 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FFXIV MultiLUT.fx" in 0.002 s.
+21:05:19:382 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColShift.fx" in 0.001 s.
+21:05:19:382 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AdaptiveColorGrading.fx" in 0.003 s.
+21:05:19:382 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DLAA.fx" in 0.004 s.
+21:05:19:382 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Levels.fx" in 0.001 s.
+21:05:19:383 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_02_LUT_Creator.fx" in 0.001 s.
+21:05:19:383 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DeepFry.fx" in 0.005 s.
+21:05:19:383 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HexLensFlare.fx" in 0.003 s.
+21:05:19:383 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BloomingHDR.fx" in 0.003 s.
+21:05:19:385 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FXAA.fx" in 0.006 s.
+21:05:19:385 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AdaptiveFog.fx" in 0.002 s.
+21:05:19:385 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LevelsPlus.fx" in 0.003 s.
+21:05:19:385 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\pkd_Kuwahara.fx" in 0.003 s.
+21:05:19:386 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BlueNoiseMotionBlur.fx" in 0.002 s.
+21:05:19:386 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Silhouette.fx" in 0.003 s.
+21:05:19:387 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Comic.fx" in 0.005 s.
+21:05:19:387 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HighPassSharpen.fx" in 0.003 s.
+21:05:19:387 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RadialSlitScan.fx" in 0.005 s.
+21:05:19:387 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LiftGammaGain.fx" in 0.001 s.
+21:05:19:387 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MC_SSAO.fx" in 0.007 s.
+21:05:19:387 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_03_Color_Space_Curves.fx" in 0.004 s.
+21:05:19:388 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\UIShadow.fx" in 0.003 s.
+21:05:19:388 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SimpleBloom.fx" in 0.002 s.
+21:05:19:388 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Border.fx" in 0.001 s.
+21:05:19:389 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HoleFiller.fx" in 0.001 s.
+21:05:19:390 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GAUSSIAN.fx" in 0.004 s.
+21:05:19:390 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_03_Curved_Levels.fx" in 0.002 s.
+21:05:19:390 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NiceGuy_Lamps.fx" in 0.009 s.
+21:05:19:390 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RealLongExposure.fx" in 0.002 s.
+21:05:19:391 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Composition.fx" in 0.003 s.
+21:05:19:391 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SimpleGrain.fx" in 0.002 s.
+21:05:19:391 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Selective_Color_v2.fx" in 0.009 s.
+21:05:19:392 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\StageDepth.fx" in 0.008 s.
+21:05:19:392 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HotsamplingHelper.fx" in 0.002 s.
+21:05:19:392 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NightVision.fx" in 0.001 s.
+21:05:19:393 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_03_Filmic_Adaptation.fx" in 0.002 s.
+21:05:19:393 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LightDoF.fx" in 0.002 s.
+21:05:19:393 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BulgePinch.fx" in 0.004 s.
+21:05:19:393 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Technicolor.fx" in 0.001 s.
+21:05:19:393 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MC_Tonemap.fx" in 0.002 s.
+21:05:19:394 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ReflectiveBumpMapping.fx" in 0.002 s.
+21:05:19:394 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HQ4X.fx" in 0.002 s.
+21:05:19:395 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AdaptiveSharpen.fx" in 0.009 s.
+21:05:19:395 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NLM_Sharp.fx" in 0.002 s.
+21:05:19:395 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LightPersistance.fx" in 0.002 s.
+21:05:19:395 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GaussianBloom.fx" in 0.005 s.
+21:05:19:396 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Reinhard.fx" in 0.001 s.
+21:05:19:396 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Sketch.fx" in 0.005 s.
+21:05:19:396 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_03_Levels.fx" in 0.003 s.
+21:05:19:396 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SunsetFilter.fx" in 0.002 s.
+21:05:19:396 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Bumpmapping.fx" in 0.003 s.
+21:05:19:396 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\pkd_LayerCake.fx" in 0.01 s.
+21:05:19:396 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Dehaze.fx" in 0.013 s.
+21:05:19:396 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MeshEdges.fx" in 0.002 s.
+21:05:19:396 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CinematicDOF.fx" in 0.018 s.
+21:05:19:397 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ContrastStretch.fx" in 0.005 s.
+21:05:19:397 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_05_Sharpening.fx" in 0.003 s.
+21:05:19:396 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\UnrealLens.fx" in 0.007 s.
+21:05:19:397 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LinearMotionBlur.fx" in 0.002 s.
+21:05:19:399 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CA.fx" in 0.001 s.
+21:05:19:400 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RemoveTint.fx" in 0.003 s.
+21:05:19:400 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Delirium.fx" in 0.002 s.
+21:05:19:400 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FGFXLargeScalePerceptualObscuranceIrradiance.fx" in 0.018 s.
+21:05:19:400 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Monochrome.fx" in 0.002 s.
+21:05:19:400 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SkySave.fx" in 0.003 s.
+21:05:19:401 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DOF.fx" in 0.018 s.
+21:05:19:401 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Cartoon.fx" in 0.001 s.
+21:05:19:401 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\pkd_Sketchbook.fx" in 0.003 s.
+21:05:19:401 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_06_Chromatic_Aberration.fx" in 0.003 s.
+21:05:19:401 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SurfaceBlur.fx" in 0.004 s.
+21:05:19:401 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RetroCRT.fx" in 0.001 s.
+21:05:19:401 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_03_Shadows_Midtones_Highlights.fx" in 0.004 s.
+21:05:19:402 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GaussianBlur.fx" in 0.006 s.
+21:05:19:402 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NormalMap.fx" in 0.007 s.
+21:05:19:403 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmGrain.fx" in 0.002 s.
+21:05:19:403 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CAS.fx" in 0.002 s.
+21:05:19:404 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DPX.fx" in 0.002 s.
+21:05:19:404 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RetroFog.fx" in 0.002 s.
+21:05:19:404 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Denoise.fx" in 0.004 s.
+21:05:19:404 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MotionFocus.fx" in 0.003 s.
+21:05:19:405 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Posterize.fx" in 0.003 s.
+21:05:19:405 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AdaptiveTint.fx" in 0.01 s.
+21:05:19:406 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Clarity.fx" in 0.008 s.
+21:05:19:407 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_06_Depth_Slicer.fx" in 0.005 s.
+21:05:19:407 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Unsharp.fx" in 0.009 s.
+21:05:19:408 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RetroFog2.fx" in 0.003 s.
+21:05:19:408 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DepthHaze.fx" in 0.003 s.
+21:05:19:408 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmGrain2.fx" in 0.004 s.
+21:05:19:408 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_BlacknWhite.fx" in 0.006 s.
+21:05:19:408 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Droste.fx" in 0.004 s.
+21:05:19:409 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CathodeRayTube.fx" in 0.005 s.
+21:05:19:409 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SlitScan.fx" in 0.008 s.
+21:05:19:409 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Nostalgia.fx" in 0.006 s.
+21:05:19:411 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MultiLayer.fx" in 0.005 s.
+21:05:19:411 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PPFX_Bloom.fx" in 0.005 s.
+21:05:19:411 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Swirl.fx" in 0.009 s.
+21:05:19:411 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RetroTint.fx" in 0.003 s.
+21:05:19:412 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Color_Balance.fx" in 0.002 s.
+21:05:19:412 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Censor.fx" in 0.002 s.
+21:05:19:412 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DepthSharpen.fx" in 0.003 s.
+21:05:19:413 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Copyright.fx" in 0.015 s.
+21:05:19:413 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SlowSharp.fx" in 0.003 s.
+21:05:19:413 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_06_Film_Grain.fx" in 0.006 s.
+21:05:19:413 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Clarity2.fx" in 0.006 s.
+21:05:19:414 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmicAnamorphSharpen.fx" in 0.005 s.
+21:05:19:414 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MultiLUT.fx" in 0.003 s.
+21:05:19:414 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CEOG.fx" in 0.001 s.
+21:05:19:415 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\TAA.fx" in 0.003 s.
+21:05:19:415 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AmbientLight.fx" in 0.009 s.
+21:05:19:415 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CrossProcess.fx" in 0.001 s.
+21:05:19:415 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PPFX_Godrays.fx" in 0.004 s.
+21:05:19:415 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Clipboard.fx" in 0.002 s.
+21:05:19:416 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Drunk.fx" in 0.006 s.
+21:05:19:416 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DepthSharpenStaticDof.fx" in 0.003 s.
+21:05:19:417 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Oilify.fx" in 0.007 s.
+21:05:19:417 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Chromakey.fx" in 0.002 s.
+21:05:19:417 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmicBloom.fx" in 0.002 s.
+21:05:19:418 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Color_Gradients.fx" in 0.006 s.
+21:05:19:417 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HQAA.fx" in 0.021 s.
+21:05:19:418 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_06_Luma_Fade.fx" in 0.004 s.
+21:05:19:418 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LiquidLens.fx" in 0.02 s.
+21:05:19:418 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\EGAFilter.fx" in 0.002 s.
+21:05:19:419 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CRT.fx" in 0.003 s.
+21:05:19:419 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Chromakey2.fx" in 0.002 s.
+21:05:19:419 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RetroTV.fx" in 0.007 s.
+21:05:19:419 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Technicolor.fx" in 0.001 s.
+21:05:19:419 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MultiLUTFaustus86.fx" in 0.002 s.
+21:05:19:419 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmicGrade.fx" in 0.001 s.
+21:05:19:420 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Depth_Cues.fx" in 0.002 s.
+21:05:19:420 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\OrtonBloom.fx" in 0.002 s.
+21:05:19:420 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Glamayre_Fast_Effects.fx" in 0.018 s.
+21:05:19:420 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\VerticalPreviewer.fx" in 0.008 s.
+21:05:19:420 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_06_Posterize_Pixelate.fx" in 0.002 s.
+21:05:19:420 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\EGGameplayLUT.fx" in 0.001 s.
+21:05:19:421 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PPFX_SSDO.fx" in 0.005 s.
+21:05:19:421 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Color_Isolation.fx" in 0.002 s.
+21:05:19:421 [12548] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ChromaSubSampling.fx" in 0.001 s.
+21:05:19:422 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmicPass.fx" in 0.002 s.
+21:05:19:423 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Technicolor2.fx" in 0.002 s.
+21:05:19:423 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Emboss.fx" in 0.002 s.
+21:05:19:423 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\dh_anime.fx" in 0.002 s.
+21:05:19:423 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HSLShift.fx" in 0.004 s.
+21:05:19:423 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Glitch.fx" in 0.003 s.
+21:05:19:424 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Color_Temperature.fx" in 0.002 s.
+21:05:19:424 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Prism.fx" in 0.002 s.
+21:05:19:425 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CMAA_2.fx" in 0.009 s.
+21:05:19:425 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Emphasize.fx" in 0.001 s.
+21:05:19:425 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GlobalAlpha.fx" in 0.001 s.
+21:05:19:425 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Retro_Neon.fx" in 0.005 s.
+21:05:19:425 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmicSharpen.fx" in 0.002 s.
+21:05:19:425 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\dh_crt.fx" in 0.002 s.
+21:05:19:425 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PerfectPerspective.fx" in 0.004 s.
+21:05:19:425 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SMAA.fx" in 0.01 s.
+21:05:19:425 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HueFX.fx" in 0.002 s.
+21:05:19:426 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LocalContrast.fx" in 0.005 s.
+21:05:19:426 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MultiStageDepth.fx" in 0.005 s.
+21:05:19:427 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\TFAA.fx" in 0.003 s.
+21:05:19:427 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GoldenRatio.fx" in 0.001 s.
+21:05:19:427 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Cobra_Mask.fx" in 0.002 s.
+21:05:19:427 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ExtendedLevels.fx" in 0.002 s.
+21:05:19:428 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\VHSM.fx" in 0.007 s.
+21:05:19:428 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Rim.fx" in 0.002 s.
+21:05:19:428 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SmartDeNoise.fx" in 0.002 s.
+21:05:19:428 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Pirate_Bloom.fx" in 0.002 s.
+21:05:19:428 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MultiTonePoster.fx" in 0.001 s.
+21:05:19:428 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CRTGeomMOD.fx" in 0.009 s.
+21:05:19:428 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Gr8mmFilm.fx" in 0.001 s.
+21:05:19:429 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Contrast_Brightness_Saturation.fx" in 0.005 s.
+21:05:19:429 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorChart.fx" in 0.001 s.
+21:05:19:429 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RimLight.fx" in 0.001 s.
+21:05:19:430 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ImageSharpening.fx" in 0.003 s.
+21:05:19:430 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_bloom.fx" in 0.006 s.
+21:05:19:431 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ArcaneBloom.fx" in 0.01 s.
+21:05:19:431 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SCurve.fx" in 0.001 s.
+21:05:19:431 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FineSharp.fx" in 0.005 s.
+21:05:19:431 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PandaFX.fx" in 0.011 s.
+21:05:19:431 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorfulPoster.fx" in 0.001 s.
+21:05:19:432 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CRT_Lottes.fx" in 0.002 s.
+21:05:19:432 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Interlacing.fx" in 0.001 s.
+21:05:19:432 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\EyeAdaption.fx" in 0.003 s.
+21:05:19:432 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_deband.fx" in 0.001 s.
+21:05:19:433 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SmartNoise.fx" in 0.004 s.
+21:05:19:433 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Pirate_Depth_DOF.fx" in 0.004 s.
+21:05:19:434 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\dh_rtgi.fx" in 0.008 s.
+21:05:19:434 [24488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Sepia.fx" in 0.002 s.
+21:05:19:435 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Fisheye Horizontal.fx" in 0.003 s.
+21:05:19:435 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MXAO 3.4.fx" in 0.006 s.
+21:05:19:435 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorInversion.fx" in 0.003 s.
+21:05:19:435 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Magical_Rectangle.fx" in 0.005 s.
+21:05:19:435 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LumaLines.fx" in 0.008 s.
+21:05:19:435 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ArtisticVignette.fx" in 0.004 s.
+21:05:19:435 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FakeHDR.fx" in 0.003 s.
+21:05:19:435 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Curves.fx" in 0.003 s.
+21:05:19:435 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\KeepUI.fx" in 0.003 s.
+21:05:19:436 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Smart_Sharp.fx" in 0.003 s.
+21:05:19:436 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Pirate_Depth_GI.fx" in 0.003 s.
+21:05:19:437 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Fisheye Vertical.fx" in 0.001 s.
+21:05:19:437 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\dh_undither.fx" in 0.002 s.
+21:05:19:437 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CuttingTool_Depth.fx" in 0.001 s.
+21:05:19:437 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorIsolation.fx" in 0.002 s.
+21:05:19:438 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ThinFilm.fx" in 0.009 s.
+21:05:19:438 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Saturation_Limit.fx" in 0.002 s.
+21:05:19:438 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FakeMotionBlur.fx" in 0.002 s.
+21:05:19:438 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Pirate_FXAA.fx" in 0.001 s.
+21:05:19:438 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GTU.fx" in 0.006 s.
+21:05:19:438 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ASCII.fx" in 0.002 s.
+21:05:19:439 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FlexibleCA.fx" in 0.001 s.
+21:05:19:439 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LumaSharpen.fx" in 0.003 s.
+21:05:19:439 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Daltonize.fx" in 0.001 s.
+21:05:19:439 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ThreeColorGradient.fx" in 0.001 s.
+21:05:19:439 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_dof.fx" in 0.007 s.
+21:05:19:440 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FastSharp.fx" in 0.001 s.
+21:05:19:440 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorIsolation2.fx" in 0.002 s.
+21:05:19:440 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AspectRatio.fx" in 0.001 s.
+21:05:19:440 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Pixelate.fx" in 0.002 s.
+21:05:19:441 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Layer.fx" in 0.004 s.
+21:05:19:441 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Deband.fx" in 0.001 s.
+21:05:19:441 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SplicedRadials.fx" in 0.004 s.
+21:05:19:441 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorMatrix.fx" in 0.001 s.
+21:05:19:442 [15536] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FastSharpen.fx" in 0.001 s.
+21:05:19:442 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FocalDOF.fx" in 0.002 s.
+21:05:19:442 [19896] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Selective_Color.fx" in 0.004 s.
+21:05:19:442 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DirectionalDepthBlur.fx" in 0.004 s.
+21:05:19:442 [31172] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\pkd_Backdrop.fx" in 0.001 s.
+21:05:19:443 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\TiltShift.fx" in 0.003 s.
+21:05:19:443 [17652] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Deblur.fx" in 0.001 s.
+21:05:19:443 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorMod.fx" in 0.001 s.
+21:05:19:443 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GuestCRT.fx" in 0.005 s.
+21:05:19:444 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Splitscreen.fx" in 0.002 s.
+21:05:19:444 [14348] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorToAlpha.fx" in 0.001 s.
+21:05:19:445 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DisplayDepth.fx" in 0.002 s.
+21:05:19:445 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_lightroom.fx" in 0.004 s.
+21:05:19:445 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\TinyPlanet.fx" in 0.001 s.
+21:05:19:445 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PatternShading.fx" in 0.013 s.
+21:05:19:446 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Spotlight.fx" in 0.001 s.
+21:05:19:446 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\VHSPro.fx" in 0.017 s.
+21:05:19:442 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AspectRatioComposition.fx" in 0.001 s.
+21:05:19:447 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DisplayMod.fx" in 0.001 s.
+21:05:19:447 [23336] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FogRemoval.fx" in 0.005 s.
+21:05:19:448 [08176] | WARN  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LUT.fx" in 0.001 s with warnings:
+warning: V__texLUT: another effect (EGGameplayLUT.fx) already created a texture with a different image file
+
+21:05:19:448 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Tonemap.fx" in 0.001 s.
+21:05:19:447 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Halation.fx" in 0.004 s.
+21:05:19:449 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_01A_RT_Correct_Contrast.fx" in 0.003 s.
+21:05:19:449 [08488] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Dither.fx" in 0.002 s.
+21:05:19:451 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LensDiffusion.fx" in 0.01 s.
+21:05:19:452 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_motionvectors.fx" in 0.006 s.
+21:05:19:452 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Halftone.fx" in 0.002 s.
+21:05:19:453 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MXAO 4.0.2 EX.fx" in 0.006 s.
+21:05:19:453 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Vibrance.fx" in 0.007 s.
+21:05:19:454 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_01B_RT_Correct_Color.fx" in 0.004 s.
+21:05:19:454 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HDR.fx" in 0.001 s.
+21:05:19:455 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Vignette.fx" in 0.001 s.
+21:05:19:455 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\M_Sharp.fx" in 0.002 s.
+21:05:19:456 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LensDistort.fx" in 0.004 s.
+21:05:19:458 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\VolumetricFog.fx" in 0.002 s.
+21:05:19:458 [18720] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LevelIO.fx" in 0.002 s.
+21:05:19:459 [15892] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Heightfog.fx" in 0.004 s.
+21:05:19:459 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\TrackingRays.fx" in 0.005 s.
+21:05:19:459 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_mxao.fx" in 0.007 s.
+21:05:19:459 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_01_Color_Gamut.fx" in 0.004 s.
+21:05:19:458 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MagicBloom.fx" in 0.009 s.
+21:05:19:461 [28180] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\UIMask.fx" in 0.001 s.
+21:05:19:462 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MagicBorder.fx" in 0.001 s.
+21:05:19:462 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_sharp.fx" in 0.002 s.
+21:05:19:462 [04460] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SSAO.fx" in 0.015 s.
+21:05:19:466 [08648] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_ssr.fx" in 0.004 s.
+21:05:19:467 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_02_Bloom.fx" in 0.007 s.
+21:05:19:468 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AtmosphericDensity.fx" in 0.014 s.
+21:05:19:470 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NeoBloom.fx" in 0.014 s.
+21:05:19:471 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BadBloomPS2.fx" in 0.002 s.
+21:05:19:471 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_02_Bonus_LUT_pack.fx" in 0.003 s.
+21:05:19:472 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\WatchDogs.fx" in 0.012 s.
+21:05:19:472 [30864] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NFAA.fx" in 0.001 s.
+21:05:19:473 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BIAA.fx" in 0.001 s.
+21:05:19:475 [12296] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_02_Cinetools_LUT.fx" in 0.003 s.
+21:05:19:476 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Wave.fx" in 0.004 s.
+21:05:19:476 [09700] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BilateralComic.fx" in 0.003 s.
+21:05:19:478 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MagicHDR.fx" in 0.009 s.
+21:05:19:479 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\WhitepointFixer.fx" in 0.002 s.
+21:05:19:490 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MartyMcFlyDOF.fx" in 0.012 s.
+21:05:19:490 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\WinUaeMaskGlow.fx" in 0.01 s.
+21:05:19:493 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\XIVCopyright.fx" in 0.002 s.
+21:05:19:493 [08176] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MatCap.fx" in 0.002 s.
+21:05:19:500 [30060] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ZigZag.fx" in 0.006 s.
+21:05:27:477 [05420] | INFO  | Resizing image data for texture 'V__StageDepth_Texture' from 1920x1080 to 3840x2160.
+21:21:45:075 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\3DFX.fx" in 0.002 s.
+21:21:45:076 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ChromaticAberration.fx" in 0.002 s.
+21:21:45:077 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Colourfulness.fx" in 0.003 s.
+21:21:45:078 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Levels.fx" in 0.001 s.
+21:21:45:079 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FFXIV MultiLUT.fx" in 0.004 s.
+21:21:45:079 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DLAA.fx" in 0.004 s.
+21:21:45:081 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HexLensFlare.fx" in 0.004 s.
+21:21:45:082 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Bloom.fx" in 0.008 s.
+21:21:45:082 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LevelsPlus.fx" in 0.003 s.
+21:21:45:084 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HighPassSharpen.fx" in 0.002 s.
+21:21:45:083 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColShift.fx" in 0.004 s.
+21:21:45:085 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BloomingHDR.fx" in 0.003 s.
+21:21:45:086 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HoleFiller.fx" in 0.001 s.
+21:21:45:085 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DeepFry.fx" in 0.011 s.
+21:21:45:087 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FXAA.fx" in 0.011 s.
+21:21:45:090 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\pkd_Kuwahara.fx" in 0.003 s.
+21:21:45:090 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MC_SSAO.fx" in 0.012 s.
+21:21:45:092 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Silhouette.fx" in 0.004 s.
+21:21:45:093 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_02_LUT_Creator.fx" in 0.007 s.
+21:21:45:096 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GAUSSIAN.fx" in 0.007 s.
+21:21:45:098 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\StageDepth.fx" in 0.009 s.
+21:21:45:100 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FGFXLargeScalePerceptualObscuranceIrradiance.fx" in 0.02 s.
+21:21:45:102 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Comic.fx" in 0.016 s.
+21:21:45:107 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SimpleBloom.fx" in 0.013 s.
+21:21:45:107 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MC_Tonemap.fx" in 0.015 s.
+21:21:45:107 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BlueNoiseMotionBlur.fx" in 0.016 s.
+21:21:45:108 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LiftGammaGain.fx" in 0.017 s.
+21:21:45:108 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HotsamplingHelper.fx" in 0.017 s.
+21:21:45:109 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\UIShadow.fx" in 0.02 s.
+21:21:45:110 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SunsetFilter.fx" in 0.011 s.
+21:21:45:112 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Selective_Color_v2.fx" in 0.025 s.
+21:21:45:113 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RadialSlitScan.fx" in 0.025 s.
+21:21:45:114 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\4xBRZ.fx" in 0.023 s.
+21:21:45:115 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HQ4X.fx" in 0.006 s.
+21:21:45:115 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NiceGuy_Lamps.fx" in 0.032 s.
+21:21:45:116 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Border.fx" in 0.008 s.
+21:21:45:116 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_03_Color_Space_Curves.fx" in 0.021 s.
+21:21:45:116 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SimpleGrain.fx" in 0.002 s.
+21:21:45:116 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MeshEdges.fx" in 0.008 s.
+21:21:45:116 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmGrain.fx" in 0.014 s.
+21:21:45:117 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LightDoF.fx" in 0.003 s.
+21:21:45:117 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SurfaceBlur.fx" in 0.007 s.
+21:21:45:118 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GaussianBloom.fx" in 0.022 s.
+21:21:45:119 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\UnrealLens.fx" in 0.009 s.
+21:21:45:120 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LightPersistance.fx" in 0.002 s.
+21:21:45:120 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\pkd_LayerCake.fx" in 0.03 s.
+21:21:45:121 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AdaptiveColorGrading.fx" in 0.005 s.
+21:21:45:121 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Monochrome.fx" in 0.003 s.
+21:21:45:121 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_03_Curved_Levels.fx" in 0.004 s.
+21:21:45:122 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Sketch.fx" in 0.004 s.
+21:21:45:122 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Technicolor.fx" in 0.009 s.
+21:21:45:122 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DOF.fx" in 0.042 s.
+21:21:45:122 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CinematicDOF.fx" in 0.045 s.
+21:21:45:123 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmGrain2.fx" in 0.005 s.
+21:21:45:123 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BulgePinch.fx" in 0.006 s.
+21:21:45:123 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LinearMotionBlur.fx" in 0.002 s.
+21:21:45:124 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RealLongExposure.fx" in 0.01 s.
+21:21:45:124 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Swirl.fx" in 0.006 s.
+21:21:45:124 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_03_Filmic_Adaptation.fx" in 0.003 s.
+21:21:45:124 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NightVision.fx" in 0.005 s.
+21:21:45:124 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AdaptiveFog.fx" in 0.003 s.
+21:21:45:126 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MotionFocus.fx" in 0.004 s.
+21:21:45:126 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Unsharp.fx" in 0.006 s.
+21:21:45:126 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SkySave.fx" in 0.003 s.
+21:21:45:128 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_05_Sharpening.fx" in 0.005 s.
+21:21:45:128 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Composition.fx" in 0.025 s.
+21:21:45:129 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\TAA.fx" in 0.004 s.
+21:21:45:130 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\pkd_Sketchbook.fx" in 0.009 s.
+21:21:45:131 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_03_Levels.fx" in 0.005 s.
+21:21:45:131 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Bumpmapping.fx" in 0.006 s.
+21:21:45:131 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Clarity.fx" in 0.008 s.
+21:21:45:133 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NLM_Sharp.fx" in 0.005 s.
+21:21:45:133 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_06_Chromatic_Aberration.fx" in 0.004 s.
+21:21:45:134 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MultiLayer.fx" in 0.007 s.
+21:21:45:134 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LiquidLens.fx" in 0.009 s.
+21:21:45:134 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SlitScan.fx" in 0.007 s.
+21:21:45:134 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Technicolor.fx" in 0.004 s.
+21:21:45:135 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DPX.fx" in 0.003 s.
+21:21:45:135 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GaussianBlur.fx" in 0.016 s.
+21:21:45:136 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\VerticalPreviewer.fx" in 0.009 s.
+21:21:45:136 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Posterize.fx" in 0.005 s.
+21:21:45:135 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CA.fx" in 0.003 s.
+21:21:45:136 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmicAnamorphSharpen.fx" in 0.005 s.
+21:21:45:137 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NormalMap.fx" in 0.003 s.
+21:21:45:137 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ReflectiveBumpMapping.fx" in 0.005 s.
+21:21:45:137 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Technicolor2.fx" in 0.002 s.
+21:21:45:137 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SlowSharp.fx" in 0.002 s.
+21:21:45:138 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AdaptiveSharpen.fx" in 0.01 s.
+21:21:45:138 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MultiLUT.fx" in 0.003 s.
+21:21:45:139 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_03_Shadows_Midtones_Highlights.fx" in 0.007 s.
+21:21:45:139 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LocalContrast.fx" in 0.004 s.
+21:21:45:141 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Droste.fx" in 0.005 s.
+21:21:45:141 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Reinhard.fx" in 0.003 s.
+21:21:45:141 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HQAA.fx" in 0.023 s.
+21:21:45:143 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MultiLUTFaustus86.fx" in 0.004 s.
+21:21:45:143 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Cartoon.fx" in 0.004 s.
+21:21:45:143 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmicBloom.fx" in 0.003 s.
+21:21:45:143 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LumaLines.fx" in 0.004 s.
+21:21:45:141 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Clarity2.fx" in 0.009 s.
+21:21:45:144 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\TFAA.fx" in 0.006 s.
+21:21:45:146 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PPFX_Bloom.fx" in 0.007 s.
+21:21:45:147 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Nostalgia.fx" in 0.008 s.
+21:21:45:148 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HSLShift.fx" in 0.006 s.
+21:21:45:148 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_BlacknWhite.fx" in 0.009 s.
+21:21:45:151 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LumaSharpen.fx" in 0.008 s.
+21:21:45:152 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CAS.fx" in 0.009 s.
+21:21:45:152 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmicGrade.fx" in 0.009 s.
+21:21:45:152 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PPFX_Godrays.fx" in 0.006 s.
+21:21:45:154 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Clipboard.fx" in 0.009 s.
+21:21:45:153 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Drunk.fx" in 0.011 s.
+21:21:45:154 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ContrastStretch.fx" in 0.026 s.
+21:21:45:155 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_06_Depth_Slicer.fx" in 0.021 s.
+21:21:45:155 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HueFX.fx" in 0.006 s.
+21:21:45:155 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Oilify.fx" in 0.008 s.
+21:21:45:155 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ThinFilm.fx" in 0.01 s.
+21:21:45:155 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MultiStageDepth.fx" in 0.013 s.
+21:21:45:155 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Color_Balance.fx" in 0.007 s.
+21:21:45:156 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\VHSM.fx" in 0.02 s.
+21:21:45:156 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LUT.fx" in 0.004 s.
+21:21:45:156 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SMAA.fx" in 0.018 s.
+21:21:45:157 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AdaptiveTint.fx" in 0.019 s.
+21:21:45:157 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RemoveTint.fx" in 0.013 s.
+21:21:45:157 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Glamayre_Fast_Effects.fx" in 0.018 s.
+21:21:45:160 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ThreeColorGradient.fx" in 0.003 s.
+21:21:45:160 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ImageSharpening.fx" in 0.004 s.
+21:21:45:161 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SmartDeNoise.fx" in 0.004 s.
+21:21:45:162 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CathodeRayTube.fx" in 0.009 s.
+21:21:45:162 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PPFX_SSDO.fx" in 0.008 s.
+21:21:45:163 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\OrtonBloom.fx" in 0.007 s.
+21:21:45:164 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MultiTonePoster.fx" in 0.006 s.
+21:21:45:164 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RetroCRT.fx" in 0.006 s.
+21:21:45:165 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_06_Film_Grain.fx" in 0.009 s.
+21:21:45:165 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\EGAFilter.fx" in 0.01 s.
+21:21:45:165 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmicPass.fx" in 0.007 s.
+21:21:45:166 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SmartNoise.fx" in 0.004 s.
+21:21:45:166 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Glitch.fx" in 0.007 s.
+21:21:45:166 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MagicBloom.fx" in 0.009 s.
+21:21:45:167 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\TiltShift.fx" in 0.007 s.
+21:21:45:168 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Interlacing.fx" in 0.007 s.
+21:21:45:168 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Prism.fx" in 0.005 s.
+21:21:45:169 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Color_Gradients.fx" in 0.011 s.
+21:21:45:169 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Dehaze.fx" in 0.081 s.
+21:21:45:169 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Censor.fx" in 0.007 s.
+21:21:45:169 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_06_Luma_Fade.fx" in 0.004 s.
+21:21:45:170 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CMAA_2.fx" in 0.015 s.
+21:21:45:170 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AmbientLight.fx" in 0.012 s.
+21:21:45:170 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Smart_Sharp.fx" in 0.003 s.
+21:21:45:171 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MXAO 3.4.fx" in 0.005 s.
+21:21:45:172 [28500] | WARN  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\EGGameplayLUT.fx" in 0.007 s with warnings:
+warning: V__texLUT: another effect (LUT.fx) already created a texture with a different image file
+
+21:21:45:172 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RetroFog.fx" in 0.007 s.
+21:21:45:172 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\VHSPro.fx" in 0.015 s.
+21:21:45:174 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MagicBorder.fx" in 0.007 s.
+21:21:45:175 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\TinyPlanet.fx" in 0.007 s.
+21:21:45:175 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\KeepUI.fx" in 0.007 s.
+21:21:45:176 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CEOG.fx" in 0.006 s.
+21:21:45:178 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_06_Posterize_Pixelate.fx" in 0.008 s.
+21:21:45:178 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Delirium.fx" in 0.009 s.
+21:21:45:178 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Vibrance.fx" in 0.005 s.
+21:21:45:179 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PandaFX.fx" in 0.015 s.
+21:21:45:180 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FilmicSharpen.fx" in 0.014 s.
+21:21:45:180 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Cobra_Mask.fx" in 0.01 s.
+21:21:45:181 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SplicedRadials.fx" in 0.01 s.
+21:21:45:181 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GlobalAlpha.fx" in 0.014 s.
+21:21:45:182 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Tonemap.fx" in 0.004 s.
+21:21:45:182 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Chromakey.fx" in 0.005 s.
+21:21:45:182 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RetroFog2.fx" in 0.009 s.
+21:21:45:180 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Emboss.fx" in 0.007 s.
+21:21:45:183 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Vignette.fx" in 0.004 s.
+21:21:45:183 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PatternShading.fx" in 0.004 s.
+21:21:45:183 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Color_Isolation.fx" in 0.014 s.
+21:21:45:183 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Copyright.fx" in 0.028 s.
+21:21:45:184 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MXAO 4.0.2 EX.fx" in 0.012 s.
+21:21:45:184 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_bloom.fx" in 0.015 s.
+21:21:45:184 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Splitscreen.fx" in 0.003 s.
+21:21:45:185 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GoldenRatio.fx" in 0.003 s.
+21:21:45:186 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PerfectPerspective.fx" in 0.007 s.
+21:21:45:186 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorChart.fx" in 0.005 s.
+21:21:45:186 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Chromakey2.fx" in 0.003 s.
+21:21:45:187 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ArcaneBloom.fx" in 0.016 s.
+21:21:45:188 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RetroTint.fx" in 0.005 s.
+21:21:45:189 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Denoise.fx" in 0.006 s.
+21:21:45:189 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MagicHDR.fx" in 0.014 s.
+21:21:45:190 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\TrackingRays.fx" in 0.006 s.
+21:21:45:190 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_deband.fx" in 0.005 s.
+21:21:45:190 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\VolumetricFog.fx" in 0.006 s.
+21:21:45:190 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Emphasize.fx" in 0.007 s.
+21:21:45:191 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Spotlight.fx" in 0.006 s.
+21:21:45:190 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CrossProcess.fx" in 0.005 s.
+21:21:45:191 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\M_Sharp.fx" in 0.006 s.
+21:21:45:192 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_01A_RT_Correct_Contrast.fx" in 0.007 s.
+21:21:45:192 [30468] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ChromaSubSampling.fx" in 0.005 s.
+21:21:45:192 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorfulPoster.fx" in 0.005 s.
+21:21:45:193 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Pirate_Bloom.fx" in 0.006 s.
+21:21:45:193 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Gr8mmFilm.fx" in 0.008 s.
+21:21:45:194 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Color_Temperature.fx" in 0.009 s.
+21:21:45:194 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\WatchDogs.fx" in 0.003 s.
+21:21:45:195 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorInversion.fx" in 0.002 s.
+21:21:45:196 [12312] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\UIMask.fx" in 0.005 s.
+21:21:45:196 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Layer.fx" in 0.02 s.
+21:21:45:196 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ArtisticVignette.fx" in 0.009 s.
+21:21:45:198 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FineSharp.fx" in 0.015 s.
+21:21:45:199 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DepthHaze.fx" in 0.009 s.
+21:21:45:199 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_01B_RT_Correct_Color.fx" in 0.006 s.
+21:21:45:200 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorIsolation.fx" in 0.003 s.
+21:21:45:200 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_dof.fx" in 0.009 s.
+21:21:45:200 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ASCII.fx" in 0.003 s.
+21:21:45:200 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Wave.fx" in 0.005 s.
+21:21:45:201 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Pirate_Depth_DOF.fx" in 0.008 s.
+21:21:45:201 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ExtendedLevels.fx" in 0.004 s.
+21:21:45:202 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CRT.fx" in 0.005 s.
+21:21:45:202 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Contrast_Brightness_Saturation.fx" in 0.009 s.
+21:21:45:203 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_01_Color_Gamut.fx" in 0.003 s.
+21:21:45:203 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MartyMcFlyDOF.fx" in 0.014 s.
+21:21:45:203 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DepthSharpen.fx" in 0.004 s.
+21:21:45:203 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AspectRatio.fx" in 0.003 s.
+21:21:45:203 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Fisheye Horizontal.fx" in 0.004 s.
+21:21:45:204 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RetroTV.fx" in 0.016 s.
+21:21:45:204 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\WhitepointFixer.fx" in 0.003 s.
+21:21:45:205 [15456] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SSAO.fx" in 0.013 s.
+21:21:45:206 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GTU.fx" in 0.007 s.
+21:21:45:206 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Pirate_Depth_GI.fx" in 0.004 s.
+21:21:45:206 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\EyeAdaption.fx" in 0.005 s.
+21:21:45:207 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AspectRatioComposition.fx" in 0.002 s.
+21:21:45:207 [13328] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\MatCap.fx" in 0.003 s.
+21:21:45:204 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorIsolation2.fx" in 0.004 s.
+21:21:45:210 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_lightroom.fx" in 0.009 s.
+21:21:45:212 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\WinUaeMaskGlow.fx" in 0.006 s.
+21:21:45:212 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NeoBloom.fx" in 0.02 s.
+21:21:45:212 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FakeHDR.fx" in 0.005 s.
+21:21:45:212 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Fisheye Vertical.fx" in 0.006 s.
+21:21:45:213 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Pirate_FXAA.fx" in 0.005 s.
+21:21:45:213 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DepthSharpenStaticDof.fx" in 0.007 s.
+21:21:45:214 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorMatrix.fx" in 0.006 s.
+21:21:45:214 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_02_Bloom.fx" in 0.011 s.
+21:21:45:214 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Magical_Rectangle.fx" in 0.012 s.
+21:21:45:215 [02356] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\NFAA.fx" in 0.002 s.
+21:21:45:215 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LensDiffusion.fx" in 0.019 s.
+21:21:45:215 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\XIVCopyright.fx" in 0.003 s.
+21:21:45:216 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Retro_Neon.fx" in 0.01 s.
+21:21:45:217 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FlexibleCA.fx" in 0.003 s.
+21:21:45:219 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorMod.fx" in 0.004 s.
+21:21:45:219 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Pixelate.fx" in 0.005 s.
+21:21:45:219 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Saturation_Limit.fx" in 0.004 s.
+21:21:45:219 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Depth_Cues.fx" in 0.005 s.
+21:21:45:219 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_motionvectors.fx" in 0.009 s.
+21:21:45:220 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\GuestCRT.fx" in 0.013 s.
+21:21:45:220 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_02_Bonus_LUT_pack.fx" in 0.005 s.
+21:21:45:220 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Rim.fx" in 0.003 s.
+21:21:45:222 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LensDistort.fx" in 0.006 s.
+21:21:45:222 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FakeMotionBlur.fx" in 0.005 s.
+21:21:45:222 [23868] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ColorToAlpha.fx" in 0.003 s.
+21:21:45:223 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FocalDOF.fx" in 0.005 s.
+21:21:45:223 [08044] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\ZigZag.fx" in 0.007 s.
+21:21:45:223 [22880] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\pkd_Backdrop.fx" in 0.004 s.
+21:21:45:224 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CRTGeomMOD.fx" in 0.021 s.
+21:21:45:225 [15116] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\LevelIO.fx" in 0.003 s.
+21:21:45:226 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FastSharp.fx" in 0.003 s.
+21:21:45:227 [24680] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_02_Cinetools_LUT.fx" in 0.006 s.
+21:21:45:227 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\RimLight.fx" in 0.006 s.
+21:21:45:227 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Halation.fx" in 0.006 s.
+21:21:45:227 [22840] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\PD80_04_Selective_Color.fx" in 0.007 s.
+21:21:45:228 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_mxao.fx" in 0.008 s.
+21:21:45:229 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\dh_anime.fx" in 0.006 s.
+21:21:45:230 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CRT_Lottes.fx" in 0.006 s.
+21:21:45:231 [26304] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FogRemoval.fx" in 0.008 s.
+21:21:45:231 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\SCurve.fx" in 0.003 s.
+21:21:45:231 [28500] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\FastSharpen.fx" in 0.004 s.
+21:21:45:232 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_sharp.fx" in 0.003 s.
+21:21:45:233 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\AtmosphericDensity.fx" in 0.025 s.
+21:21:45:233 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Halftone.fx" in 0.005 s.
+21:21:45:233 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\dh_crt.fx" in 0.003 s.
+21:21:45:234 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Curves.fx" in 0.003 s.
+21:21:45:235 [27960] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Sepia.fx" in 0.002 s.
+21:21:45:237 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BadBloomPS2.fx" in 0.004 s.
+21:21:45:237 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\HDR.fx" in 0.004 s.
+21:21:45:237 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\CuttingTool_Depth.fx" in 0.002 s.
+21:21:45:238 [18860] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\qUINT_ssr.fx" in 0.005 s.
+21:21:45:241 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BIAA.fx" in 0.003 s.
+21:21:45:241 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Daltonize.fx" in 0.003 s.
+21:21:45:243 [14496] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Heightfog.fx" in 0.005 s.
+21:21:45:244 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\dh_rtgi.fx" in 0.01 s.
+21:21:45:246 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Deband.fx" in 0.004 s.
+21:21:45:247 [23512] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\BilateralComic.fx" in 0.005 s.
+21:21:45:249 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\dh_undither.fx" in 0.004 s.
+21:21:45:249 [15224] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Deblur.fx" in 0.002 s.
+21:21:45:257 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DirectionalDepthBlur.fx" in 0.007 s.
+21:21:45:260 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DisplayDepth.fx" in 0.002 s.
+21:21:45:263 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\DisplayMod.fx" in 0.002 s.
+21:21:45:267 [15780] | INFO  | Successfully compiled "C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\reshade-shaders\Shaders\Dither.fx" in 0.003 s.
+21:21:45:903 [05420] | INFO  | Resizing image data for texture 'V__tMagicBloom_Dirt' from 1024x576 to 3840x2160.
+22:34:59:755 [05420] | INFO  | Destroyed runtime environment on runtime 00000244DB0D0470 ("C:\Games\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\ReShade.ini").
+22:34:59:757 [05420] | WARN  | Reference count for IDXGISwapChain0 object 00000244D21D78D0 (00000244D2A740D0) is inconsistent (1).

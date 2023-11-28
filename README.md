@@ -8,13 +8,8 @@ A drop-in patch for ReShade installations with presets, shaders, and fixes from 
 
 ### Getting Started (clean install)
 
-- [Download](https://www.mediafire.com/file/d9qwmrnsbh71wwd/ReShade_Setup_5.9.2_Addon.exe/file) ReShade version 5.9.2 with Add-on support, and start the installer.
-- Under the `Select a game or application` menu, select 'Final Fantasy XIV' (or browse for the `SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` folder.)
-- Select the desired rendering API (`DirectX 10/11/12` by default.)
-- Under `Select preset to install`, just click `Next`.
-- Under `Select effect packages to install`, select all available and click `Next`.
-- [Download](https://github.com/gposingway/gposingway/archive/refs/heads/main.zip) and unzip this Community Patch.
-- Copy and paste the `reshade-presets` and `reshare-shaders` from the unzipped file over the folders with the same name under the XIV game folder (`SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` by default.)
+- [Download](https://github.com/gposingway/gposingway/archive/refs/heads/ReShade580+presets.zip) and unzip this Community Patch.
+- Copy and paste all the files and folders from the unzipped file to the XIV `game` folder (`SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` by default.)
 - Launch the game. You're good to go!
 
 ---

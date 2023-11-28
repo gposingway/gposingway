@@ -8,8 +8,14 @@ A drop-in patch for ReShade installations with presets, shaders, and fixes from 
 
 ### Getting Started (clean install)
 
-- [Download](https://github.com/gposingway/gposingway/archive/refs/heads/ReShade580+presets.zip) and unzip this Community Patch.
-- Copy and paste all the files and folders from the unzipped file to the XIV `game` folder (`SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` by default.)
+- [Download](https://github.com/gposingway/gposingway/archive/refs/heads/ReShade580+presets.zip) and unzip this Community Patch. You'll see something like this:
+
+![image](https://github.com/gposingway/gposingway/assets/18711130/96fb1227-0c9f-481a-b773-f113e86c810d)
+
+- Copy and paste all the files and folders from the unzipped file to the XIV `game` folder (`SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` by default.) Once finished, you'll see something like this:
+
+![image](https://github.com/gposingway/gposingway/assets/18711130/51588dca-f4f7-445b-afe2-51e38c269755)
+
 - Launch the game. You're good to go!
 
 ---

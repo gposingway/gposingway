@@ -25,7 +25,7 @@ A drop-in patch for ReShade installations with presets, shaders, and fixes from 
 | Collection | Creator | License | Notes |
 | --- | --- | --- | --- |
 | Yomigami Okami | [Yomy](https://twitter.com/Yomigammy) | [License](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders/blob/main/LICENSE) - MIT | Original [ReShade port](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders#yomigamiokami-reshade-560-port) by [Meynan Aneytha](https://twitter.com/meynan_ffxiv) |
-
+| WiFi | [Wi-Fi ₍ᐢ.ˬ.ᐢ₎ 黒うさぎ](https://twitter.com/wifi_photospire) | MIT | [Download Page](https://potatoworshiper.wixsite.com/jagaimo-no-sekai/wifi-presets)  |
 ---
 
 [GPosingway · a ReShade / XIV Community Patch](https://github.com/gposingway/gposingway/tree/main) is licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1) 

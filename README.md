@@ -2,7 +2,7 @@
 
 A drop-in patch for ReShade installations with presets, shaders, and fixes from all around the Final Fantasy XIV community and beyond.
 
-**Current supported version**: ReShade 5.9.2 with add-on support
+**Current supported version**: ReShade 5.8.0 with add-on support
 
 ---
 

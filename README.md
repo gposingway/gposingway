@@ -2,7 +2,7 @@
 
 ![GPosingway Mascot](https://github.com/gposingway/gposingway/assets/18711130/c919c030-dff2-47e8-905d-f52d098aaa45)
 
-This is a drop-in set for Final Fantasy XIV containing the ReShade redistributable a stable collection of shaders, textures, and presets gathered from the community and beyond. Gposingway aims to ensure that presets will work as intended by avoiding conflicts, mismatches and missing files.
+This is a drop-in set for Final Fantasy XIV containing the ReShade redistributable a stable collection of shaders, textures, and presets gathered from the community and beyond. Gposingway aims to ensure that presets will work as intended by avoiding conflicts, mismatches and missing files, helping both preset users and creators.
 
 **Current ReShade version**: 5.8.0 with add-on support
 

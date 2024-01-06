@@ -1,8 +1,10 @@
 # GPosingway
 
+![GPosingway Mascot](https://github.com/gposingway/gposingway/assets/18711130/c919c030-dff2-47e8-905d-f52d098aaa45)
+
 A drop-in patch for ReShade installations with presets, shaders, and fixes from all around the Final Fantasy XIV community and beyond.
 
-**Current supported version**: ReShade 5.8.0 with add-on support
+**Current ReShade version**: 5.8.0 with add-on support
 
 ---
 

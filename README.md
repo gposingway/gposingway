@@ -10,7 +10,7 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 ## Getting Started (clean install)
 
-- [Download](https://github.com/gposingway/gposingway/archive/refs/heads/main.zip) and unzip this Community Patch. You'll see something like this:
+- [Download](https://github.com/gposingway/gposingway/archive/refs/heads/main.zip) and unzip this Community Patch (`gposingway-main.zip`). You'll see something like this:
 
 ![image](https://github.com/gposingway/gposingway/assets/18711130/96fb1227-0c9f-481a-b773-f113e86c810d)
 

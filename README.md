@@ -6,13 +6,14 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 ---
 
+**Current GPosingway version**: 5.8.0 Release 1
 **Current ReShade version**: 5.8.0 with add-on support
 
 ---
 
 ## Getting Started (clean install)
 
-- [Download](https://github.com/gposingway/gposingway/archive/refs/heads/main.zip) and unzip this Community Patch (`gposingway-main.zip`). You'll see something like this:
+- [Download](https://github.com/gposingway/gposingway/releases/download/5.8.0R1/gposingway-580-r1.zip) and unzip this Community Patch (`gposingway-580-r1.zip`). You'll see something like this:
 
 ![Screenshot of unzipped contents](https://github.com/gposingway/gposingway/assets/18711130/5fc2c3ba-7a64-4443-b048-961dd367dd91)
 

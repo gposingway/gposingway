@@ -18,7 +18,9 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 ![image](https://github.com/gposingway/gposingway/assets/18711130/c55110f0-deb1-446c-b869-7c7c4c639c61)
 
-- Launch the game. You're good to go!
+- Launch the game. If you see the following instructions you're good to go!
+
+![image](https://github.com/gposingway/gposingway/assets/18711130/65ef0e5f-f49e-4903-9105-acd9bb9c41e9)
 
 ## Features
 

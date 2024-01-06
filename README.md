@@ -10,7 +10,7 @@ A drop-in patch for ReShade installations with presets, shaders, and fixes from 
 
 ### Getting Started (clean install)
 
-- [Download](https://github.com/gposingway/gposingway/archive/refs/heads/ReShade580+presets.zip) and unzip this Community Patch. You'll see something like this:
+- [Download](https://github.com/gposingway/gposingway/archive/refs/heads/main.zip) and unzip this Community Patch. You'll see something like this:
 
 ![image](https://github.com/gposingway/gposingway/assets/18711130/96fb1227-0c9f-481a-b773-f113e86c810d)
 

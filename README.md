@@ -60,7 +60,7 @@ Before contributing, please review our [contribution guidelines](CONTRIBUTING.md
 
 ## Support and Feedback
 
-If you encounter issues, have suggestions, or simply want to connect with other Gposingway users, visit the [Sights of Eorzea Discord server]([https://discord.gg/gposingway](https://discord.com/servers/sights-of-eorzea-1124828911700811957)). We value your feedback and strive to create an inclusive and vibrant community.
+If you encounter issues, have suggestions, or simply want to connect with other Gposingway users, visit the [Sights of Eorzea Discord server]([https://discord.gg/gposingway](https://discord.com/servers/sights-of-eorzea-1124828911700811957). We value your feedback and strive to create an inclusive and vibrant community.
 
 ## Included Preset collections
 

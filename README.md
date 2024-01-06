@@ -16,7 +16,7 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 - Copy and paste all the files and folders from the unzipped file to the XIV `game` folder (`SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` by default.) Once finished, you'll see something like this:
 
-![image](https://github.com/gposingway/gposingway/assets/18711130/51588dca-f4f7-445b-afe2-51e38c269755)
+![image](https://github.com/gposingway/gposingway/assets/18711130/c55110f0-deb1-446c-b869-7c7c4c639c61)
 
 - Launch the game. You're good to go!
 

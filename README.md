@@ -35,4 +35,4 @@ A drop-in patch for ReShade installations with presets, shaders, and fixes from 
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
 
-Individual work elements (e.g. presets, shaders, textures) may have their own distribution terms; check the list of included works above for their respective licenses
+Individual work elements (e.g. presets, shaders, textures) may have their own distribution terms; check the list of included works above for their respective licenses.

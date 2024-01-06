@@ -51,15 +51,9 @@
  * Previous version features was broken when i was sleepy, than i did not touch this shader for months and forgot what i did there.
  * So, i commented messed up code in hope to fix it later, and reintroduced ACES in useful way.
  */
- // Lightly optimized by Marot Satil for the GShade project.
 
 
 #include "ReShade.fxh"
-
-#if GSHADE_DITHER
-    #include "TriDither.fxh"
-#endif
-
 static const float PI = 3.141592653589793238462643383279f;
 
 
@@ -163,8 +157,13 @@ uniform bool HighlightClipping <
 
 float3 ACESFilmRec2020( float3 x )
 {
+    float a = 15.8f;
+    float b = 2.12f;
+    float c = 1.2f;
+    float d = 5.92f;
+    float e = 1.9f;
     x = x * ACESLuminancePercentage * 0.005f; // Restores luminance
-    return ( x * ( 15.8f * x + 2.12f ) ) / ( x * ( 1.2f * x + 5.92f ) + 1.9f );
+    return ( x * ( a * x + b ) ) / ( x * ( c * x + d ) + e );
 }
 
 /*
@@ -228,7 +227,7 @@ float  Outputlevel(float color, float outputwhitepoint, float outputblackpoint)
 
 float3 LevelsPass(float4 vpos : SV_Position, float2 texcoord : TexCoord) : SV_Target
 {
-  const float3 InputColor = tex2D(ReShade::BackBuffer, texcoord).rgb;
+  float3 InputColor = tex2D(ReShade::BackBuffer, texcoord).rgb;
   float3 OutputColor = InputColor;
 
   // outPixel = (pow(((inPixel * 255.0) - inBlack) / (inWhite - inBlack), inGamma) * (outWhite - outBlack) + outBlack) / 255.0; // Nvidia reference formula
@@ -242,38 +241,59 @@ float3 LevelsPass(float4 vpos : SV_Position, float2 texcoord : TexCoord) : SV_Ta
 		/*
 		if (AvoidClipping == true)
 		{
+
+			//float3 OutputMaxBlackPoint = pow(((0 + (ColorRangeShift * ColorRangeShiftSwitch)) - InputBlackPoint)/(InputWhitePoint - InputBlackPoint) , InputGamma) * (OutputWhitePoint - OutputBlackPoint) + OutputBlackPoint;
+			//float3 OutputMaxWhitePoint = pow(((1 + (ColorRangeShift * ColorRangeShiftSwitch)) - InputBlackPoint)/(InputWhitePoint - InputBlackPoint) , InputGamma) * (OutputWhitePoint - OutputBlackPoint) + OutputBlackPoint;
+
 			if (AvoidClippingWhite == true)
 			{
 				//White
+				float3 OutputMaxWhitePoint;
+				float3 OutputMinWhitePoint;
+
 				// doest not give smooth gradient :-(
-				const float3 OutputMaxWhitePoint = Outputlevels(pow(InputLevels(OutputWhitePoint + (ColorRangeShift * ColorRangeShiftSwitch), InputWhitePoint, InputBlackPoint), InputGamma), OutputWhitePoint, OutputBlackPoint);
-				const float3 OutputMinWhitePoint = Outputlevels(pow(InputLevels(InputWhitePoint + (ColorRangeShift * ColorRangeShiftSwitch), InputWhitePoint, InputBlackPoint), InputGamma), OutputWhitePoint, OutputBlackPoint);
-
-				if (OutputColor.r >= OutputMinWhitePoint.r)
-					OutPutColor.r = Curve( InputColor.r, MinWhitePoint.r, OutputMinWhitePoint.r);
-
-				if (OutputColor.g >= OutputMinWhitePoint.g)
-					OutputColor.g = Curve( InputColor.g, MinWhitePoint.g, OutputMinWhitePoint.g);
+				OutputMaxWhitePoint = Outputlevels(pow(InputLevels(OutputWhitePoint + (ColorRangeShift * ColorRangeShiftSwitch), InputWhitePoint, InputBlackPoint), InputGamma), OutputWhitePoint, OutputBlackPoint);
+				OutputMinWhitePoint = Outputlevels(pow(InputLevels(InputWhitePoint + (ColorRangeShift * ColorRangeShiftSwitch), InputWhitePoint, InputBlackPoint), InputGamma), OutputWhitePoint, OutputBlackPoint);
       
-				if (OutputColor.b >= OutputMinWhitePoint.b)
-					OutputColor.b = Curve( InputColor.b, MinWhitePoint.b, OutputMinWhitePoint.b);
+				OutputColor.r = (OutputColor.r >= OutputMinWhitePoint.r)
+				? Curve( InputColor.r, MinWhitePoint.r, OutputMinWhitePoint.r)
+				//? Outputlevel( InputLevel( OutputColor.r, OutputMaxWhitePoint.r, OutputMinWhitePoint.r ), OutputWhitePoint.r, OutputMinWhitePoint.r)
+				: OutputColor.r;
+			
+				OutputColor.g = (OutputColor.g >= OutputMinWhitePoint.g)
+				? Curve( InputColor.g, MinWhitePoint.g, OutputMinWhitePoint.g)
+				//? Outputlevel( InputLevel( OutputColor.g, OutputMaxWhitePoint.g, OutputMinWhitePoint.g ), OutputWhitePoint.g, OutputMinWhitePoint.g)
+				: OutputColor.g;
+      
+				OutputColor.b = (OutputColor.b >= OutputMinWhitePoint.b)
+				? Curve( InputColor.b, MinWhitePoint.b, OutputMinWhitePoint.b)
+				//? Outputlevel( InputLevel( OutputColor.b, OutputMaxWhitePoint.b, OutputMinWhitePoint.b ), OutputWhitePoint.b, OutputMinWhitePoint.b)
+				: OutputColor.b;
 			}
     
 			if (AvoidClippingBlack == true)
 			{  
 				//Black
-				const float3 OutputMaxBlackPoint = pow(((0 + (ColorRangeShift * ColorRangeShiftSwitch)) - InputBlackPoint)/(InputWhitePoint - InputBlackPoint) , InputGamma) * (OutputWhitePoint - OutputBlackPoint) + OutputBlackPoint;  
-				const float3 OutputMinBlackPoint = MinBlackPoint;
-				const float3 OutputMinBlackPointY = pow(((OutputMinBlackPoint + (ColorRangeShift * ColorRangeShiftSwitch)) - InputBlackPoint)/(InputWhitePoint - InputBlackPoint) , InputGamma) * (OutputWhitePoint - OutputBlackPoint) + OutputBlackPoint;  
+    
+				float3 OutputMaxBlackPoint;  
+				float3 OutputMinBlackPoint;
+				float3 OutputMinBlackPointY;    
 
-				if (OutputColor.r <= OutputMinBlackPoint.r)
-					OutputColor.r = Curve(OutputMinBlackPoint.r,OutputMinBlackPointY.r,((OutputColor.r - OutputMaxBlackPoint.r)/(OutputMinBlackPoint.r - OutputMaxBlackPoint.r)) * (OutputMinBlackPoint.r - OutputBlackPoint.r) + OutputBlackPoint.r);
-
-				if (OutputColor.g <= OutputMinBlackPoint.g)
-					OutputColor.g = Curve(OutputMinBlackPoint.g,OutputMinBlackPointY.g,((OutputColor.g - OutputMaxBlackPoint.g)/(OutputMinBlackPoint.g - OutputMaxBlackPoint.g)) * (OutputMinBlackPoint.g - OutputBlackPoint.g) + OutputBlackPoint.g);
-
-				if (OutputColor.b <= OutputMinBlackPoint.b)
-					OutputColor.b = Curve(OutputMinBlackPoint.b,OutputMinBlackPointY.b,((OutputColor.b - OutputMaxBlackPoint.b)/(OutputMinBlackPoint.b - OutputMaxBlackPoint.b)) * (OutputMinBlackPoint.b - OutputBlackPoint.b) + OutputBlackPoint.b);
+				OutputMaxBlackPoint = pow(((0 + (ColorRangeShift * ColorRangeShiftSwitch)) - InputBlackPoint)/(InputWhitePoint - InputBlackPoint) , InputGamma) * (OutputWhitePoint - OutputBlackPoint) + OutputBlackPoint;  
+				OutputMinBlackPoint = MinBlackPoint;
+				OutputMinBlackPointY = pow(((OutputMinBlackPoint + (ColorRangeShift * ColorRangeShiftSwitch)) - InputBlackPoint)/(InputWhitePoint - InputBlackPoint) , InputGamma) * (OutputWhitePoint - OutputBlackPoint) + OutputBlackPoint;  
+          
+				OutputColor.r = (OutputColor.r <= OutputMinBlackPoint.r)
+				? Curve(OutputMinBlackPoint.r,OutputMinBlackPointY.r,((OutputColor.r - OutputMaxBlackPoint.r)/(OutputMinBlackPoint.r - OutputMaxBlackPoint.r)) * (OutputMinBlackPoint.r - OutputBlackPoint.r) + OutputBlackPoint.r)
+				: OutputColor.r;
+      
+				OutputColor.g = (OutputColor.g <= OutputMinBlackPoint.g)
+				? Curve(OutputMinBlackPoint.g,OutputMinBlackPointY.g,((OutputColor.g - OutputMaxBlackPoint.g)/(OutputMinBlackPoint.g - OutputMaxBlackPoint.g)) * (OutputMinBlackPoint.g - OutputBlackPoint.g) + OutputBlackPoint.g)
+				: OutputColor.g; 
+      
+				OutputColor.b = (OutputColor.b <= OutputMinBlackPoint.b)
+				? Curve(OutputMinBlackPoint.b,OutputMinBlackPointY.b,((OutputColor.b - OutputMaxBlackPoint.b)/(OutputMinBlackPoint.b - OutputMaxBlackPoint.b)) * (OutputMinBlackPoint.b - OutputBlackPoint.b) + OutputBlackPoint.b)
+				: OutputColor.b;
 			}
 		}
 		//
@@ -294,40 +314,23 @@ float3 LevelsPass(float4 vpos : SV_Position, float2 texcoord : TexCoord) : SV_Ta
   	 
 	if (HighlightClipping == true)
 	{
-		float3 ClippedColor;
-
-		// any colors whiter than white?
-		if (any(OutputColor > saturate(OutputColor)))
-			ClippedColor = float3(1.0, 1.0, 0.0);
-		else
-			ClippedColor = OutputColor;
-
-		// all colors whiter than white?
-		if (any(OutputColor > saturate(OutputColor)))
-			ClippedColor = float3(1.0, 0.0, 0.0);
-		else
-			ClippedColor = OutputColor;
-
-		// any colors blacker than black?
-		if (any(OutputColor < saturate(OutputColor)))
-			ClippedColor = float3(0.0, 1.0, 1.0);
-		else
-			ClippedColor = OutputColor;
-
-		// all colors blacker than black?
-		if (any(OutputColor < saturate(OutputColor)))
-			ClippedColor = float3(0.0, 0.0, 1.0);
-		else
-			ClippedColor = OutputColor;
-
+		float3 ClippedColor;    
+		ClippedColor = any(OutputColor > saturate(OutputColor)) // any colors whiter than white?
+			? float3(1.0, 1.0, 0.0)
+			: OutputColor;
+		ClippedColor = all(OutputColor > saturate(OutputColor)) // all colors whiter than white?
+			? float3(1.0, 0.0, 0.0)
+			: ClippedColor;
+		ClippedColor = any(OutputColor < saturate(OutputColor)) // any colors blacker than black?
+			? float3(0.0, 1.0, 1.0)
+			: ClippedColor;
+		ClippedColor = all(OutputColor < saturate(OutputColor)) // all colors blacker than black?
+			? float3(0.0, 0.0, 1.0)
+			: ClippedColor;
 		OutputColor = ClippedColor;
 	}
-
-#if GSHADE_DITHER
-	return OutputColor + TriDither(OutputColor, texcoord, BUFFER_COLOR_BIT_DEPTH);
-#else
+	  
 	return OutputColor;
-#endif
 }
 
 technique ExtendedLevels

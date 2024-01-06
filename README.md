@@ -4,6 +4,8 @@
 
 This is a drop-in set for Final Fantasy XIV containing the ReShade redistributable a stable collection of shaders, textures, and presets gathered from the community and beyond. Gposingway aims to ensure that presets will work as intended by avoiding conflicts, mismatches and missing files, helping both preset users and creators.
 
+---
+
 **Current ReShade version**: 5.8.0 with add-on support
 
 ---
@@ -32,6 +34,29 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 - **Regular Updates:** The project is actively maintained to keep up with the evolving FFXIV community and ReShade developments. Expect periodic updates that may include new presets, optimizations, and compatibility fixes.
 
+## Q&A
+
+### How does it work?
+
+The package contains the ReShade 5.8.0 injector (`dxgi.dll`) and all the necessary elements for the included preset collections to work as intended by their respective creators. Some community contributions like `FFKeepUI` were added, while some default shaders were renamed or removed to avoid conflicts.
+
+### Why does it use ReShade 5.8.0 instead of the latest?
+
+Gposingway currently utilizes ReShade version 5.8.0 as the baseline for compatibility reasons. This version has been thoroughly tested with the included shaders and provides a stable experience. Future updates may include support for newer ReShade versions.
+
+### Are there plans to support newer ReShade versions in the future?
+
+Yes, the Gposingway team has plans to support newer ReShade versions in future updates. We aim to stay up-to-date with ReShade developments and provide users with the latest enhancements. Keep an eye on our GitHub repository for announcements and updates.
+
+## Contribution Guidelines
+
+We welcome contributions from the FFXIV community. If you have a preset collection, shader, or fix that you believe would benefit Gposingway users, feel free to submit a pull request!
+
+Before contributing, please review our [contribution guidelines](CONTRIBUTING.md) to ensure a smooth collaboration process.
+
+## Support and Feedback
+
+If you encounter issues, have suggestions, or simply want to connect with other Gposingway users, visit the Sights of Eorzera [Discord server]([https://discord.gg/gposingway](https://discord.com/servers/sights-of-eorzea-1124828911700811957)). We value your feedback and strive to create an inclusive and vibrant community.
 
 ## Included Preset collections
 

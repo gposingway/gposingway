@@ -12,7 +12,7 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 - [Download](https://github.com/gposingway/gposingway/archive/refs/heads/main.zip) and unzip this Community Patch (`gposingway-main.zip`). You'll see something like this:
 
-![image](https://github.com/gposingway/gposingway/assets/18711130/96fb1227-0c9f-481a-b773-f113e86c810d)
+![Screenshot of unzipped contents](https://github.com/gposingway/gposingway/assets/18711130/5fc2c3ba-7a64-4443-b048-961dd367dd91)
 
 - Copy and paste all the files and folders from the unzipped file to the XIV `game` folder (`SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` by default.) Once finished, you'll see something like this:
 

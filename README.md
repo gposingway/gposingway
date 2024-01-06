@@ -6,7 +6,7 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 ---
 
-**Current GPosingway version**: 5.8.0 Release 1
+**Current GPosingway version**: 5.8.0 Release 1  
 **Current ReShade version**: 5.8.0 with add-on support
 
 ---

@@ -13,7 +13,8 @@ This is a drop-in set for Final Fantasy XIV containing the DirectX 10 ReShade in
 
 # Getting Started 
 
-> :warning: **If you installed any ReShade version on your XIV directory**: Because of the possibility of conflicts with pre-existing, mismatched shaders, it is not advisable to merge Gposingway with a previous ReShade installation. Uninstall ReShade, if possible; alternatively, you can rename your pre-existing `reshade-shaders` folder to something else, merge the contents of the `reshade-presets` folder and manually move specific textures under the old `reshade-shaders\textures` used by your presets to the new folder of the same name. There are **no guarantees** that previously existing presets will continue working, though.)
+> [!IMPORTANT]
+> **If you installed any ReShade version on your XIV directory**: Because of the possibility of conflicts with pre-existing, mismatched shaders, it is not advisable to merge Gposingway with a previous ReShade installation.
 
 <br>
 
@@ -50,8 +51,6 @@ This is a drop-in set for Final Fantasy XIV containing the DirectX 10 ReShade in
 
 - **Easy Integration:** Installing Gposingway is a breeze. Simply drop it into your existing FFXIV installation, and you're ready to go. No complex configurations or manual tweaks required.
 
-- **Regular Updates:** The project is actively maintained to keep up with the evolving FFXIV community and ReShade developments. Expect periodic updates that may include new presets, optimizations, and compatibility fixes.
-
 ## Q&A
 
 ### How does it work?
@@ -61,6 +60,10 @@ The package contains the ReShade 5.8.0 DirectX 10/11/12 injector (`dxgi.dll`) an
 ### Why does it use ReShade 5.8.0 instead of the latest?
 
 Gposingway currently utilizes ReShade version 5.8.0 as the baseline for compatibility reasons. This version has been thoroughly tested with the included shaders and provides a stable experience. Future updates may include support for newer ReShade versions.
+
+### I have ReShade (or other ReShade-based injectors) already installed. How should I proceed?
+
+Uninstall ReShade, if possible; alternatively, you can rename your pre-existing `reshade-shaders` folder to something else, merge the contents of the `reshade-presets` folder and manually move specific textures under the old `reshade-shaders\textures` used by your presets to the new folder of the same name. There are **no guarantees** that previously existing presets will continue working, though.
 
 ### Are there plans to support newer ReShade versions in the future?
 

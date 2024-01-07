@@ -14,7 +14,7 @@ This is a drop-in set for Final Fantasy XIV containing the DirectX 10/11/12 ReSh
 # Getting Started 
 
 > [!IMPORTANT]
-> **If you installed any ReShade version on your XIV directory**: Because of the possibility of conflicts with pre-existing, mismatched shaders, it is not advisable to merge Gposingway with a previous ReShade installation.
+> **If you currently have any ReShade version installed on your XIV game folder**: Because of the possibility of conflicts with pre-existing, mismatched shaders, it is not advisable to merge Gposingway with a previous ReShade installation.
 
 <br>
 

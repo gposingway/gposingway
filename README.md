@@ -11,19 +11,26 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 ---
 
-## Getting Started (clean install)
+# Getting Started 
 
-- [Download](https://github.com/gposingway/gposingway/releases/download/5.8.0R1/gposingway-580-r1.zip) this Community Patch (`gposingway-580-r1.zip`) and unzip. You'll see something like this:
+> :warning: **If you installed any ReShade version on your XIV directory**: Because of the possibility of conflicts with pre-existing, mismatched shaders, it is not advisable to merge Gposingway with a previous ReShade installation. Uninstalling is advisable; alternatively, you can rename your pre-existing `reshade-shaders` folder to something else, try merging the contents of the `reshade-presets` folder and manually move specific textures under the old `reshade-shaders\textures` used by your presets to the new folder of the same name. There are **no guarantees** that previously existing presets will continue working, though.)
 
+
+## Common scenario: Windows 10/11, DirectX 10/11/12
+
+* [Download](https://github.com/gposingway/gposingway/releases/download/5.8.0R1/gposingway-580-r1.zip) this Community Patch (`gposingway-580-r1.zip`) and unzip. You'll see something like this:  
 <img src='https://github.com/gposingway/gposingway/assets/18711130/5418bba7-784c-41eb-b751-b8310176d27b' alt='Screenshot of unzipped contents'>
 
-- Copy and paste all the files and folders from the unzipped file to the XIV `game` folder (`SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` by default.) Once finished, you'll see something like this:
+* Copy and paste all the files and folders from the unzipped file to the XIV `game` folder (`SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` by default.) Once finished, you'll see something like this:
 
-![image](https://github.com/gposingway/gposingway/assets/18711130/c55110f0-deb1-446c-b869-7c7c4c639c61)
+<img src='https://github.com/gposingway/gposingway/assets/18711130/a896aa20-8970-4a80-8328-3bf030db22ab' alt='Screenshot of unzipped contents'>
 
-- Launch the game. If you see the following instructions you're good to go!
+* Launch the game. If you see the following instructions you're good to go!
 
 ![image](https://github.com/gposingway/gposingway/assets/18711130/65ef0e5f-f49e-4903-9105-acd9bb9c41e9)
+
+## Alternative scenario: Other rendering APIs (DirectX 9, OpenGL, Vulkan)
+
 
 ## Features
 
@@ -39,11 +46,7 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 ### How does it work?
 
-The package contains the ReShade 5.8.0 DirectX 10/11/12 injector (`dxgi.dll`) and all the necessary elements for the included preset collections to work as intended by their respective creators. Some community contributions like `FFKeepUI` were added, while some default shaders were renamed or removed to avoid conflicts.
-
-### Can I drop it over previous installations of ReShade?
-
-Because of the possibility of conflicts with pre-existing, mismatched shaders, that's not advisable. You can however rename your pre-existing `reshade-shaders` folder to something else, and try merging the contents of the `reshade-presets` folder. (There are no guarantees that previously existing presets will continue working, though.)
+The package contains the ReShade 5.8.0 DirectX 10/11/12 injector (`dxgi.dll`) and all the necessary elements for the included preset collections to work as intended by their respective creators in the most common usage scenario; some community contributions like `FFKeepUI` were added, while some default shaders were renamed or removed to avoid conflicts.
 
 ### Why does it use ReShade 5.8.0 instead of the latest?
 

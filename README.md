@@ -13,8 +13,9 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 # Getting Started 
 
-> :warning: **If you installed any ReShade version on your XIV directory**: Because of the possibility of conflicts with pre-existing, mismatched shaders, it is not advisable to merge Gposingway with a previous ReShade installation. Uninstalling is advisable; alternatively, you can rename your pre-existing `reshade-shaders` folder to something else, try merging the contents of the `reshade-presets` folder and manually move specific textures under the old `reshade-shaders\textures` used by your presets to the new folder of the same name. There are **no guarantees** that previously existing presets will continue working, though.)
+> :warning: **If you installed any ReShade version on your XIV directory**: Because of the possibility of conflicts with pre-existing, mismatched shaders, it is not advisable to merge Gposingway with a previous ReShade installation. Uninstall ReShade, if possible; alternatively, you can rename your pre-existing `reshade-shaders` folder to something else, merge the contents of the `reshade-presets` folder and manually move specific textures under the old `reshade-shaders\textures` used by your presets to the new folder of the same name. There are **no guarantees** that previously existing presets will continue working, though.)
 
+<br>
 
 ## Common scenario: Windows 10/11, DirectX 10/11/12
 
@@ -29,8 +30,17 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 ![image](https://github.com/gposingway/gposingway/assets/18711130/65ef0e5f-f49e-4903-9105-acd9bb9c41e9)
 
-## Alternative scenario: Other rendering APIs (DirectX 9, OpenGL, Vulkan)
+<br>
 
+## Alternative scenario: Other rendering APIs (DirectX 9, OpenGL, Vulkan) or Operating Systems
+
+* [Download](https://www.mediafire.com/file/jtf9igqacroz5mz/ReShade_Setup_5.8.0.exe/file) and install ReShade 5.8.0, selecting no presets and no filters; that will only deploy the injector.
+
+* Download and unzip GPosingway as described before, but remove the bundled ReShade injector (`dxgi.dll`) from the unzipped folder.
+  
+* Proceed with the copy and paste of the remaining unzipped files as described above.
+
+---
 
 ## Features
 

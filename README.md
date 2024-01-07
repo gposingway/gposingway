@@ -39,7 +39,7 @@ This is a drop-in set for Final Fantasy XIV containing the ReShade redistributab
 
 ### How does it work?
 
-The package contains the ReShade 5.8.0 injector (`dxgi.dll`) and all the necessary elements for the included preset collections to work as intended by their respective creators. Some community contributions like `FFKeepUI` were added, while some default shaders were renamed or removed to avoid conflicts.
+The package contains the ReShade 5.8.0 DirectX 10/11/12 injector (`dxgi.dll`) and all the necessary elements for the included preset collections to work as intended by their respective creators. Some community contributions like `FFKeepUI` were added, while some default shaders were renamed or removed to avoid conflicts.
 
 ### Can I drop it over previous installations of ReShade?
 

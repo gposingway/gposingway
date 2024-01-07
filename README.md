@@ -67,7 +67,7 @@ Uninstall ReShade, if possible; alternatively, you can rename your pre-existing 
 
 ### Are there plans to support newer ReShade versions in the future?
 
-Yes, the Gposingway team has plans to support newer ReShade versions in future updates. We aim to stay up-to-date with ReShade developments and provide users with the latest enhancements. Keep an eye on our GitHub repository for announcements and updates.
+Yes, the plan is to support newer ReShade versions in future updates. We aim to stay up-to-date with ReShade developments and provide users with the latest enhancements. Keep an eye on our GitHub repository for announcements and updates.
 
 ## Contribution Guidelines
 

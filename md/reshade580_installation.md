@@ -1,4 +1,4 @@
-# A Visual Guide: ReShade 5.8.0 Installation for Gposingway
+# A Visual Guide: ReShade 5.8.0 Installation for GPosingway
 
 > [!IMPORTANT]
 > ReShade use MediaFire as a repository for all its versions, [as indicated in this post by crosire](https://reshade.me/forum/general-discussion/2207-older-versions).

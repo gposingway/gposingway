@@ -24,6 +24,6 @@
 
 ![image](https://github.com/gposingway/gposingway/assets/18711130/0ff6a3ae-32f4-408a-935a-db9c8d30fb89)
 
-- Click `Finish`. You're ready to run ReShade 5.8.in your game.
+- Click `Finish`. You're ready to run ReShade 5.8.0 in your game.
 
 ![image](https://github.com/gposingway/gposingway/assets/18711130/9ab2bf1f-a809-4130-aea7-0f767e8dbe84)

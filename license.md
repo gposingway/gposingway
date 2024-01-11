@@ -18,6 +18,8 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 
 - You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
 - No warranties are given. The license may not give you all the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
+- The contributors and maintainers of the project shall not be liable for any damages or liabilities arising from the use, distribution, or modification of this software.
+- By using, contributing to, or distributing this software, you agree to the terms and conditions of this license.
 
 ### Full License Text:
 
@@ -29,9 +31,4 @@ The full text of the Creative Commons Attribution 4.0 International License can 
 
 The GPosingway project includes contributions from various contributors, each of which is subject to its own license terms. By using, sharing, or contributing to the GPosingway project, you agree to comply with the terms of the respective licenses of the individual contributions.
 
-### Disclaimer
-
-The GPosingway project is provided "as is" and without any warranty. The contributors and maintainers of the project shall not be liable for any damages or liabilities arising from the use, distribution, or modification of this software.
-By using, contributing to, or distributing this software, you agree to the terms and conditions of this license.
-
-If you have any questions or need further clarification regarding the license, please contact the project maintainers. Thank you for using GPosingway!
+Thank you for using GPosingway!

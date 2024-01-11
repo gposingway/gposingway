@@ -13,7 +13,7 @@ This is a drop-in set for Final Fantasy XIV containing the DirectX 10/11/12 ReSh
 
 # Getting Started 
 
-Check out the latest [Release](https://github.com/gposingway/gposingway/releases/tag/5.8.0R1) - you'll find detailed instructions for ReShade installation and GPosing deploy.
+Check out the latest [Release](https://github.com/gposingway/gposingway/releases/tag/5.8.0R1) - you'll find detailed instructions for all the required steps.
 
 ---
 

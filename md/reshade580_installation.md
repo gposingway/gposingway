@@ -1,6 +1,6 @@
 # A Visual Guide: ReShade 5.8.0 Installation for GPosingway
 
-> [!IMPORTANT]
+> [!NOTE]
 > ReShade use MediaFire as a repository for all its versions, [as indicated in this post by its author](https://reshade.me/forum/general-discussion/2207-older-versions).
 
 - [Download the ReShade 5.8.0 with Add-On support installer](https://www.mediafire.com/file/ld302lmswv2dx1k/ReShade_Setup_5.8.0_Addon.exe/file) and run it:

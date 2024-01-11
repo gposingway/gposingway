@@ -29,7 +29,7 @@ Check out the latest [Release](https://github.com/gposingway/gposingway/releases
 
 ### How does it work?
 
-The package contains the ReShade 5.8.0 DirectX 10/11/12 injector (`dxgi.dll`) and all the necessary elements for the included preset collections to work as intended by their respective creators in the most common usage scenario; some community contributions like `FFKeepUI` were added, while some default shaders were renamed or removed to avoid conflicts.
+The package contains all the necessary elements for the majority of preset collections to work as intended by their respective creators in the most common usage scenarios; some community contributions like `FFKeepUI` were added, while some default shaders were renamed or removed to avoid conflicts.
 
 ### Why does it use ReShade 5.8.0 instead of the latest?
 
@@ -37,7 +37,7 @@ Gposingway currently utilizes ReShade version 5.8.0 as the baseline for compatib
 
 ### I have ReShade (or other ReShade-based injectors) already installed. How should I proceed?
 
-Uninstall ReShade, if possible; alternatively, you can rename your pre-existing `reshade-shaders` folder to something else, merge the contents of the `reshade-presets` folder and manually move specific textures under the old `reshade-shaders\textures` used by your presets to the new folder of the same name. There are **no guarantees** that previously existing presets will continue working, though.
+You can rename your pre-existing `reshade-shaders` and `reshade-shaders` folders to something else prior to deploying GPosingway; this way you can switch between GPosingway and your previous collection. There are **no guarantees** that GPosingway will work with different ReShade versions, however.
 
 ### Are there plans to support newer ReShade versions in the future?
 
@@ -47,7 +47,7 @@ Yes, the plan is to support newer ReShade versions in future updates. We aim to 
 
 We welcome contributions from the FFXIV community. If you have a preset collection, shader, or fix that you believe would benefit Gposingway users, feel free to submit a pull request!
 
-Before contributing, please review our [contribution guidelines](CONTRIBUTING.md) to ensure a smooth collaboration process.
+Before contributing, please review our [contribution guidelines](md/contributing.md) to ensure a smooth collaboration process.
 
 ## Support and Feedback
 

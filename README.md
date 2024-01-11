@@ -13,33 +13,7 @@ This is a drop-in set for Final Fantasy XIV containing the DirectX 10/11/12 ReSh
 
 # Getting Started 
 
-> [!IMPORTANT]
-> **If you currently have any ReShade version installed on your XIV game folder**: Because of the possibility of conflicts with pre-existing, mismatched shaders, it is not advisable to merge Gposingway with a previous ReShade installation.
-
-<br>
-
-## Common scenario: Windows 10/11, DirectX 10/11/12
-
-* [Download](https://github.com/gposingway/gposingway/releases/download/5.8.0R1/gposingway-580-r1.zip) this Community Patch (`gposingway-580-r1.zip`) and unzip. You'll see something like this:  
-<img src='https://github.com/gposingway/gposingway/assets/18711130/5418bba7-784c-41eb-b751-b8310176d27b' alt='Screenshot of unzipped contents'>
-
-* Copy and paste all the files and folders from the unzipped file to the XIV `game` folder (`SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game` by default.) Once finished, you'll see something like this:
-
-<img src='https://github.com/gposingway/gposingway/assets/18711130/a896aa20-8970-4a80-8328-3bf030db22ab' alt='Screenshot of unzipped contents'>
-
-* Launch the game. If you see the following instructions you're good to go!
-
-![image](https://github.com/gposingway/gposingway/assets/18711130/65ef0e5f-f49e-4903-9105-acd9bb9c41e9)
-
-<br>
-
-## Alternative scenario: Other rendering APIs (DirectX 9, OpenGL, Vulkan) or Operating Systems
-
-* [Download](https://www.mediafire.com/file/jtf9igqacroz5mz/ReShade_Setup_5.8.0.exe/file) and install ReShade 5.8.0, selecting no presets and no filters; that will only deploy the injector.
-
-* Download and unzip GPosingway as described before, but remove the bundled ReShade injector (`dxgi.dll`) from the unzipped folder.
-  
-* Proceed with the copy and paste of the remaining unzipped files as described above.
+Check out the latest [Release](https://github.com/gposingway/gposingway/releases/tag/5.8.0R1) - you'll find detailed instructions for ReShade installation and GPosing deploy.
 
 ---
 

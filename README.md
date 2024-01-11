@@ -2,7 +2,7 @@
 
 ![GPosingway Mascot](https://github.com/gposingway/gposingway/assets/18711130/c919c030-dff2-47e8-905d-f52d098aaa45)
 
-This is a drop-in set for Final Fantasy XIV containing the DirectX 10/11/12 ReShade injector, a stable collection of shaders, textures, and presets gathered from the community and beyond. Gposingway aims to ensure that presets will work as intended by its creators by avoiding conflicts, mismatches and missing files, giving users a consistent experience.
+This is a drop-in package for Final Fantasy XIV containing a stable collection of shaders, textures, and presets gathered from the community and beyond. Gposingway aims to ensure that presets will work as intended by its creators by avoiding conflicts, mismatches and missing files, giving users a consistent experience.
 
 ---
 
@@ -13,7 +13,7 @@ This is a drop-in set for Final Fantasy XIV containing the DirectX 10/11/12 ReSh
 
 # Installation
 
-Check out the latest [Release](https://github.com/gposingway/gposingway/releases/tag/5.8.0R1) - you'll find detailed instructions for all the required steps to get you started.
+Check out the latest [release](https://github.com/gposingway/gposingway/releases/tag/5.8.0R1) - you'll find detailed instructions for all the required steps to get you started.
 
 ---
 

@@ -45,10 +45,10 @@ Gposingway currently utilizes ReShade version 5.8.0 as the baseline for compatib
 You can rename your pre-existing `reshade-shaders` and `reshade-shaders` folders to something else prior to deploying GPosingway; this way you can switch between GPosingway and your previous collection. There are **no guarantees** that GPosingway will work with different ReShade versions, however.
 </dd></dl>
 
-### I can't find the [`Insert name here`] shader!
+### Help! I can't find the _{Insert shader collection name here}_ shaders!
 
 <dl><dd>
-Redistribution is strictly forbitten for some shader collections, like [iMMERSE](https://github.com/martymcmodding/iMMERSE/blob/main/LICENSE). You may download and install it, but at risk of mismatched versions (and, as a result, visual inconsistencies.)
+Redistribution is strictly forbitten for some shader collections, like (iMMERSE)[https://github.com/martymcmodding/iMMERSE/blob/main/LICENSE]. You may download and install it, but at risk of mismatched versions (and, as a result, visual inconsistencies.)
 </dd></dl>
 
 ### Are there plans to support newer ReShade versions in the future?

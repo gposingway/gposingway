@@ -19,14 +19,14 @@ Select the desired rendering API (for Windows 10/11 users, the usual choice woul
 
 <img src='https://github.com/gposingway/gposingway/assets/18711130/45358023-2100-455c-9619-7c04f5487b4d' width='408' />
 
-- In the `Select preset to install` window, click `Skip`:
+In the `Select preset to install` window, click `Skip`:
 
 <img src='https://github.com/gposingway/gposingway/assets/18711130/c458f994-5b5e-495f-9c4e-04122a63b4a6' width='408' />
 
-- In the `Select effect packages to install` window, click `Skip` as well:
+In the `Select effect packages to install` window, click `Skip` as well:
 
 <img src='https://github.com/gposingway/gposingway/assets/18711130/0ff6a3ae-32f4-408a-935a-db9c8d30fb89' width='408' />
 
-- Click `Finish`. You're ready to run ReShade 5.8.0 in your game.
+Click `Finish`. You're ready to run ReShade 5.8.0 in your game.
 
 <img src='https://github.com/gposingway/gposingway/assets/18711130/9ab2bf1f-a809-4130-aea7-0f767e8dbe84' width='408' />

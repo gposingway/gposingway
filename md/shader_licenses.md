@@ -15,7 +15,10 @@
 | PD80_03_Filmic_Adaptation.fx | prod80 (Bas Veth) | MIT License |
 | UIShadow.fx | Lolika | CC0 |
 
-## Redistributed shader collections
+## Redistributed Shader Collections
+
+> [!NOTE]
+> This list is based on ReShade's own [list of known shader repositories](https://www.pcgamingwiki.com/wiki/ReShade#List_of_known_shader_repositories).
 
 | Collection | Author | Description | License |
 |---|---|---|---|

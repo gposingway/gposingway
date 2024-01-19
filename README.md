@@ -29,39 +29,27 @@ Check out the latest [release](https://github.com/gposingway/gposingway/releases
 
 ### How does it work?
 
-<dl><dd>
-  The package contains all the necessary elements for the majority of preset collections to work as intended by their respective creators in the most common usage scenarios; some community contributions like `FFKeepUI` were added, while some default shaders were renamed or removed to avoid conflicts.
-</dd></dl>
+The package contains all the necessary elements for the majority of preset collections to work as intended by their respective creators in the most common usage scenarios; some community contributions like `FFKeepUI` were added, while some default shaders were renamed or removed to avoid conflicts.
 
 ### Why does it use ReShade 5.8.0 instead of the latest?
 
-<dl><dd>
 Gposingway currently utilizes ReShade version 5.8.0 as the baseline for compatibility reasons. This version has been thoroughly tested with the included shaders and provides a stable experience. Future updates may include support for newer ReShade versions.
-</dd></dl>
 
 ### I have ReShade (or other ReShade-based injectors) already installed. How should I proceed?
 
-<dl><dd>
 You can rename your pre-existing `reshade-shaders` and `reshade-shaders` folders to something else prior to deploying GPosingway; this way you can switch between GPosingway and your previous collection. There are **no guarantees** that GPosingway will work with different ReShade versions, however.
-</dd></dl>
 
 ### Help! I can't find the _{Insert shader collection name here}_ shaders!
 
-<dl><dd>
 Redistribution is strictly forbitten for some shader collections, like [iMMERSE](https://github.com/martymcmodding/iMMERSE/blob/main/LICENSE). You may download and install it, but at risk of mismatched versions (and, as a result, visual inconsistencies.)
-</dd></dl>
 
 ### Are there plans to support newer ReShade versions in the future?
 
-<dl><dd>
 Yes, the plan is to support newer ReShade versions in future updates. We aim to stay up-to-date with ReShade developments and provide users with the latest enhancements. Keep an eye on our GitHub repository for announcements and updates.
-</dd></dl>
   
 ## Contribution Guidelines
 
-<dl><dd>
 We welcome contributions from the FFXIV community. If you have a preset collection, shader, or fix that you believe would benefit Gposingway users, feel free to submit a pull request!
-</dd></dl>
   
 Before contributing, please review our [contribution guidelines](md/contributing.md) to ensure a smooth collaboration process.
 

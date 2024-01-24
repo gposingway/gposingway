@@ -29,7 +29,7 @@ Check out the latest [release](https://github.com/GPosingway/GPosingway/releases
 
 ### How does it work?
 
-The package contains all the necessary elements for the majority of preset collections to work as intended by their respective creators in the most common usage scenarios; some community contributions like `FFKeepUI` were added, while some default shaders were renamed or removed to avoid conflicts.
+The package contains all the necessary elements for the majority of preset collections to work as intended by their respective creators in the most common usage scenarios; some community contributions like `FFKeepUI` were added, while some default ReShade 5.8.0 shaders were renamed or removed to avoid conflicts.
 
 ### Why does it use ReShade 5.8.0 instead of the latest?
 
@@ -45,7 +45,7 @@ Redistribution is strictly forbitten for some shader collections like [iMMERSE](
 
 ### Are there plans to support newer ReShade versions in the future?
 
-Yes, the plan is to support newer ReShade versions in future updates. We aim to stay up-to-date with ReShade developments and provide users with the latest enhancements. Keep an eye on our GitHub repository for announcements and updates.
+Yes, the plan is to support newer ReShade versions in future updates, but in a different format fully compatible with the ReShade installation tool.
   
 ## Contribution Guidelines
 

@@ -45,7 +45,7 @@ Redistribution is strictly forbitten for some shader collections like [iMMERSE](
 
 ### Are there plans to support newer ReShade versions in the future?
 
-Yes, the plan is to support newer ReShade versions in future updates, but in a different format fully compatible with the ReShade installation tool.
+Yes, the plan is to support newer ReShade versions in future updates, but in a different format fully compatible with the ReShade installation tool; this version is meant as a starting point.
   
 ## Contribution Guidelines
 

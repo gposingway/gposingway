@@ -1,20 +1,3 @@
-## Redistributed community shaders
-
-| Shader | Author | License |
-|---|---|---|
-| ColorToAlpha.fx | Marot Satil | 3-Clause BSD License |
-| Composition.fx | Marot Satil | 3-Clause BSD License |
-| Copyright.fx | originalnicodr, prod80, uchu suzume, Marot Satil | MIT |
-| ExtendedLevels.fx | CeeJay.dk, Kirill Yarovoy, Marot Satil | Public Repository |
-| Glamayre_Fast_Effects.fx | Robert Jessop | MIT License |
-| KeepUI.fx | seri14 | Public Domain |
-| MXAO 4.0.2 EX.fx | Marty McFly, Marot Satil | CC BY-NC-ND 3.0 |
-| MagicBorder.fx | Frans Bouma aka Otis | 3-Clause BSD License |
-| MeshEdges.fx | Alexander Federwisch | BSD 3-Clause License |
-| MultiLUT.fx | Frans Bouma aka Otis, Marot Satil | MIT License |
-| PD80_03_Filmic_Adaptation.fx | prod80 (Bas Veth) | MIT License |
-| UIShadow.fx | Lolika | CC0 |
-
 ## Redistributed Shader Collections
 
 > [!NOTE]
@@ -48,3 +31,20 @@
 | [vort_Shaders](https://github.com/vortigern11/vort_Shaders) | vortigen11 | Repository of vort_HDR and vort_MotionBlur. | MIT License |
 | [VRToolkit](https://github.com/retroluxfilm/reshade-vrtoolkit) | VRToolkit | The VRToolkit is a modular shader created for ReShade to enhance the clarity & sharpness in VR to get most out of your HMD while keeping the performance impact minimal. | BSD 3-Clause License |
 | [Warp-FX](https://github.com/Radegast-FFXIV/reshade-shaders) | Radegast | Fun and abstract effects like Swirl, Wave, Slit Scan, etc. | GNU GPL V2.0 / MIT |
+
+## Redistributed Community Shaders
+
+| Shader | Author | License |
+|---|---|---|
+| ColorToAlpha.fx | Marot Satil | 3-Clause BSD License |
+| Composition.fx | Marot Satil | 3-Clause BSD License |
+| Copyright.fx | originalnicodr, prod80, uchu suzume, Marot Satil | MIT |
+| ExtendedLevels.fx | CeeJay.dk, Kirill Yarovoy, Marot Satil | Public Repository |
+| Glamayre_Fast_Effects.fx | Robert Jessop | MIT License |
+| KeepUI.fx | seri14 | Public Domain |
+| MXAO 4.0.2 EX.fx | Marty McFly, Marot Satil | CC BY-NC-ND 3.0 |
+| MagicBorder.fx | Frans Bouma aka Otis | 3-Clause BSD License |
+| MeshEdges.fx | Alexander Federwisch | BSD 3-Clause License |
+| MultiLUT.fx | Frans Bouma aka Otis, Marot Satil | MIT License |
+| PD80_03_Filmic_Adaptation.fx | prod80 (Bas Veth) | MIT License |
+| UIShadow.fx | Lolika | CC0 |

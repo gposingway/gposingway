@@ -13,7 +13,7 @@ This is a drop-in package for Final Fantasy XIV containing a stable collection o
 
 # Installation
 
-Check out the latest [release](https://github.com/GPosingway/GPosingway/releases/tag/5.8.0R1) - you'll find detailed instructions for all the required steps to get you started.
+Check out the latest [release](https://github.com/gposingway/gposingway/releases) - you'll find detailed instructions for all the required steps to get you started.
 
 ---
 

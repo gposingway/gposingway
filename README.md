@@ -13,7 +13,7 @@ This is a drop-in package for Final Fantasy XIV containing a stable collection o
 
 # Installation
 
-Check out the latest [release](https://github.com/GPosingway/GPosingway/releases/tag/5.8.0R1) - you'll find detailed instructions for all the required steps to get you started.
+Check out the latest [release](https://github.com/gposingway/gposingway/releases) - you'll find detailed instructions for all the required steps to get you started.
 
 ---
 
@@ -23,7 +23,7 @@ Check out the latest [release](https://github.com/GPosingway/GPosingway/releases
 
 - **Community Contributions:** GPosingway integrates presets, shaders, and fixes contributed by the FFXIV community; the patch contains a comprehensive package that reflects the diverse preferences and styles of preset creators.
 
-- **Easy Integration:** Installing GPosingway is a breeze. Simply drop it into your existing FFXIV installation, and you're ready to go. No complex configurations or manual tweaks required.
+- **Easy Integration:** Installing GPosingway is a breeze. Donload, unzip, drop it into your existing FFXIV installation, and you're ready to go. No complex configurations or manual tweaks required.
 
 ## Q&A
 
@@ -45,7 +45,7 @@ Redistribution is strictly forbitten for some shader collections like [iMMERSE](
 
 ### Are there plans to support newer ReShade versions in the future?
 
-Yes, the plan is to support newer ReShade versions in future updates, but in a different format fully compatible with the ReShade installation tool.
+Yes, the plan is to support newer ReShade versions in future updates, but in a different format fully compatible with the ReShade installation tool; this version is meant as a starting point.
   
 ## Contribution Guidelines
 

@@ -7,7 +7,7 @@ This is a drop-in package for Final Fantasy XIV containing a stable collection o
 ---
 
 **Current GPosingway version**: 5.8.0 Release 1  
-**Current ReShade version**: 5.8.0 with add-on support
+**Current ReShade version**: 6.0.1 with add-on support
 
 ---
 
@@ -31,11 +31,7 @@ Check out the latest [release](https://github.com/gposingway/gposingway/releases
 
 The package contains all the necessary elements for the majority of preset collections to work as intended by their respective creators in the most common usage scenarios; some community contributions like `FFKeepUI` were added, while some default ReShade 5.8.0 shaders were renamed or removed to avoid conflicts.
 
-### Why does it use ReShade 5.8.0 instead of the latest?
-
-GPosingway currently utilizes ReShade version 5.8.0 as the baseline for compatibility reasons. This version has been thoroughly tested with the included shaders and provides a stable experience. Future updates may include support for newer ReShade versions.
-
-### I have ReShade (or other ReShade-based injectors) already installed. How should I proceed?
+### I have ReShade (or other ReShade-based injectors like GShade) already installed. How should I proceed?
 
 You can rename your pre-existing `reshade-shaders` and `reshade-presets` folders to something else prior to deploying GPosingway; this way you can switch between GPosingway and your previous collection. There are **no guarantees** that GPosingway will work with different ReShade versions, however.
 

@@ -1,4 +1,4 @@
-## Gposingway 5.8.0 R1 Installation (Windows 10)
+## Gposingway 5.8.0 Installation (all releases, Windows 10)
 
 Right-click the downloaded package and select `Extract All...` in the context menu:
 

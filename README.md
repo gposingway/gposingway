@@ -37,7 +37,7 @@ You can rename your pre-existing `reshade-shaders` and `reshade-presets` folders
 
 ### Help! I can't find the `[Insert shader collection name here]` shaders!
 
-Redistribution is strictly forbitten for some shader collections like [iMMERSE](https://github.com/martymcmodding/iMMERSE/blob/main/LICENSE).
+Redistribution is strictly forbidden for some shader collections like [iMMERSE](https://github.com/martymcmodding/iMMERSE/blob/main/LICENSE).
 
 ### Are there plans to support newer ReShade versions in the future?
 

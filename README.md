@@ -6,8 +6,8 @@ This is a drop-in package for Final Fantasy XIV containing a stable collection o
 
 ---
 
-**Current GPosingway version**: 5.8.0 Release 2  
-**Current ReShade version**: 6.0.1 with add-on support
+**GPosingway version**: 5.8.0 Release 3  
+**Currently supported ReShade version**: 6.0.1 with add-on support
 
 ---
 
@@ -29,7 +29,7 @@ Check out the latest [release](https://github.com/gposingway/gposingway/releases
 
 ### How does it work?
 
-The package contains all the necessary elements for the majority of preset collections to work as intended by their respective creators in the most common usage scenarios; some community contributions like `FFKeepUI` were added, while some default ReShade 5.8.0 shaders were renamed or removed to avoid conflicts.
+The package contains all the necessary elements for the majority of preset collections to work as intended by their respective creators in the most common usage scenarios; some community contributions like `FFKeepUI` were added, while some default ReShade shaders were renamed or removed to avoid conflicts.
 
 ### I have ReShade (or other ReShade-based injectors like GShade) already installed. How should I proceed?
 

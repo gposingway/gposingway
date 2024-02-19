@@ -122,7 +122,9 @@
 #endif
 
 #define fLUT_GSTextureName "MultiLut_GShade.png"
-#define fLUT_RESTextureName "MultiLut_atlas4.png"
+#ifndef fLUT_RESTextureName
+    #define fLUT_RESTextureName "MultiLut_atlas4.png"
+#endif
 #define fLUT_JOHTextureName "MultiLut_Johto.png"
 #define fLUT_EGTextureName "FFXIVLUTAtlas.png"
 #define fLUT_MSTextureName "TMP_MultiLUT.png"

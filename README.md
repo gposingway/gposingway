@@ -35,6 +35,10 @@ The package contains all the necessary elements for the majority of preset colle
 
 You can rename your pre-existing `reshade-shaders` and `reshade-presets` folders to something else prior to deploying GPosingway; this way you can switch between GPosingway and your previous collection. There are **no guarantees** that GPosingway will work with different ReShade versions, however.
 
+### Can I use `[Insert preset collection name here]` with GPosingway?
+
+Absoutely! The only thing to keep in mind is that *you don't need to use bundled shaders anymore*, so just ignore any instructions to copy `.fx` and `.fxh` files to the `reshade-shaders\shaders` folder; GPosingway should have everything that most presets need to avoid conflicts.
+
 ### Help! I can't find the `[Insert shader collection name here]` shaders!
 
 Redistribution is strictly forbidden for some shader collections like [iMMERSE](https://github.com/martymcmodding/iMMERSE/blob/main/LICENSE).

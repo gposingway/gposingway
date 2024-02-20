@@ -1,9 +1,9 @@
 echo off
 cls
 echo ------------------------------------------------
-echo (\(\
-echo ( o.o)    GPosingway Update Tool
-echo O_(")(")
+echo  (\(\
+echo  ( o.o)    GPosingway Update Tool
+echo  O_(")(")
 echo ------------------------------------------------
 echo.
 
@@ -20,74 +20,32 @@ IF EXIST .gposingway\gposingway-version.txt (
 
 rem If not, offers some pre-installation management options
 
-echo It seems this is the first time GPosingway is being installed
-echo in this computer; I can help you back up all your current
-echo ReShade installation options before installing GPosingway.
+echo It seems this is the first time GPosingway is being installed!
 echo.
-echo Note: Your current shader collection will be cleared before
-echo installation to avoid conflicts. A Backup is recommended.
 echo.
 echo Options:
-echo [B] - Back Up before installing. Your current shaders, presets
-echo       and textures will be copied to 'gposingway-backup'.
-echo [I] - Continue with installation.
+echo.
+echo [I] - Install GPosingway.
+echo       Your current shaders, presets and textures will be copied
+echo       to '.gposingway\backup'; After that, your current shader 
+echo       collection will be cleared to avoid conflicts.
+echo.
 echo [C] - Cancel installation.
 
-CHOICE /C BIC /M "Press B for Backup, I for Install or C for Cancel."
+CHOICE /C IC /M "Press I for Install or C for Cancel."
 
 rem user selected Cancel.
-IF ERRORLEVEL ==3 GOTO user-choice-cancel
+IF ERRORLEVEL ==2 GOTO user-choice-cancel
 
-rem user selected Backup we'll take a detour here.
-IF ERRORLEVEL ==1 GOTO backup-current-installation
+rem let's set a flag to clear the current shader folder.
+set must-clear-shader-folder="true"
 
-GOTO clean-shader-folder
+GOTO start-installation
 
 :user-choice-cancel
 echo.
 echo Got it! The installation process was cancelled.
 GOTO done
-
-:backup-current-installation
-rem If backup directory doesn't exist, create it.
-if not exist ".gposingway\backup\" mkdir .gposingway\backup
-
-rem Obtaining Year, Month and Day values in Batch can be VERY messy...
-rem reference: https://stackoverflow.com/questions/3472631/how-do-i-get-the-day-month-and-year-from-a-windows-cmd-exe-script
-
-for /F "skip=1 delims=" %%F in ('
-    wmic PATH Win32_LocalTime GET Day^,Month^,Year /FORMAT:TABLE
-') do (
-    for /F "tokens=1-3" %%L in ("%%F") do (
-        set day=0%%L
-        set month=0%%M
-        set year=%%N
-    )
-)
-set day=%day:~-2%
-set month=%month:~-2%
-
-set backup-folder-name=%year%-%month%-%day%_%TIME:~0,2%-%TIME:~3,2%-%TIME:~6,2%
-set backup-folder-name=%backup-folder-name: =0%
-
-echo.
-echo Backing up current installation to .gposingway\backup\%backup-folder-name%...
-
-mkdir .gposingway\backup\%backup-folder-name%
-robocopy reshade-presets .gposingway\backup\%backup-folder-name%\reshade-presets /E /NFL /NDL /NJH /NJS /nc /ns >nul
-robocopy reshade-shaders .gposingway\backup\%backup-folder-name%\reshade-shaders /E /NFL /NDL /NJH /NJS /nc /ns >nul
-echo Backup complete.
-
-:clean-shader-folder
-
-rem easiest way is to just remove the folder and recreate it.
-
-echo Cleaning reshade-shaders\shaders...
-rd /s /q "reshade-shaders\shaders" > nul
-mkdir reshade-shaders\shaders > nul
-echo Cleaning complete.
-
-pause
 
 :start-installation
 IF EXIST ffxiv_dx11.exe (
@@ -134,10 +92,51 @@ rem The local and remote version files are different: let's download the latest 
 echo.
 echo Downloading the latest version. This may take a minute...
 bitsadmin /transfer gposingway-patch /download /priority FOREGROUND "https://github.com/gposingway/gposingway/releases/latest/download/gposingway.zip" "%cd%\gposingway-patch.zip" >nul
-echo ...download finished. Unpacking...
+
+
+:backup-current-installation
+rem If backup directory doesn't exist, create it.
+if not exist ".gposingway\backup\" mkdir .gposingway\backup
+
+rem Obtaining Year, Month and Day values in Batch can be VERY messy...
+rem reference: https://stackoverflow.com/questions/3472631/how-do-i-get-the-day-month-and-year-from-a-windows-cmd-exe-script
+rem This should work with all datetime formats.
+
+for /F "skip=1 delims=" %%F in ('
+    wmic PATH Win32_LocalTime GET Day^,Month^,Year /FORMAT:TABLE
+') do (
+    for /F "tokens=1-3" %%L in ("%%F") do (
+        set day=0%%L
+        set month=0%%M
+        set year=%%N
+    )
+)
+set day=%day:~-2%
+set month=%month:~-2%
+
+set backup-folder-name=%year%-%month%-%day%_%TIME:~0,2%-%TIME:~3,2%-%TIME:~6,2%
+set backup-folder-name=%backup-folder-name: =0%
+
+echo.
+echo Backing up current installation to .gposingway\backup\%backup-folder-name%...
+
+mkdir .gposingway\backup\%backup-folder-name%
+robocopy reshade-presets .gposingway\backup\%backup-folder-name%\reshade-presets /E /NFL /NDL /NJH /NJS /nc /ns >nul
+robocopy reshade-shaders .gposingway\backup\%backup-folder-name%\reshade-shaders /E /NFL /NDL /NJH /NJS /nc /ns >nul
+
+:clean-shader-folder
+
+if %must-clear-shader-folder%=="true" (
+	rem easiest way is to just remove the folder and recreate it.
+	echo Cleaning reshade-shaders\shaders...
+	rd /s /q "reshade-shaders\shaders" > nul
+	mkdir reshade-shaders\shaders > nul
+)
+
+echo Unpacking GPosingway update...
 powershell -command "Expand-Archive -Force '%~dp0gposingway-patch.zip' '%~dp0'"
 
-echo ...unpacking finished. Cleaning up...
+echo Wrapping up...
 
 rem remove the patch file...
 del gposingway-patch.zip
@@ -149,6 +148,8 @@ IF EXIST .gposingway\gposingway-version.txt (
 
 rem and rename the downloaded version file as the current version.
 ren .gposingway\gposingway-version-temp.txt gposingway-version.txt
+
+echo Done.
 
 echo.
 echo You now have the latest version. Happy GPosing!

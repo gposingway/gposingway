@@ -18,18 +18,16 @@ IF EXIST gposingway-version.txt (
 IF EXIST ffxiv_dx11.exe (
 	goto check-current-version
 ) ELSE (
-echo.
-echo The Final Fantasy XIV executable [ffxiv_dx11.exe] was not found!
-echo.
-echo Make sure this update tool is in the game folder:
-echo [..]SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game
-echo.
-echo Exiting the update tool.
+	echo.
+	echo The Final Fantasy XIV executable [ffxiv_dx11.exe] was not found!
+	echo.
+	echo Make sure this update tool is in the game folder:
+	echo [..]SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game
+	echo.
+	echo Exiting the update tool.
 
-goto done
+	goto done
 )
-
-
 
 rem Let's check the current version.
 :check-current-version

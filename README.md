@@ -9,11 +9,7 @@ This is a drop-in package for Final Fantasy XIV containing a stable collection o
 **GPosingway version**: 5.8.0 Release 4  
 **Currently supported ReShade version**: 6.0.1 with add-on support
 
----
-
-# Installation
-
-Check out the latest [release](https://github.com/gposingway/gposingway/releases) - you'll find detailed instructions for all the required steps to get you started.
+<a href='https://github.com/gposingway/gposingway/releases/latest'>![download](https://github.com/gposingway/gposingway/assets/18711130/e29bc268-09d3-4b00-9d80-a5d6f964c5de)</a>
 
 ---
 

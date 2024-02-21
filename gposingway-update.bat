@@ -2,10 +2,24 @@ echo off
 cls
 echo ------------------------------------------------
 echo  (\(\
-echo  ( o.o)    GPosingway Update Tool
+echo  ( o.o)    GPosingway Update/Installer Tool
 echo  O_(")(")
 echo ------------------------------------------------
 echo.
+
+set must-clear-shader-folder="false"
+
+rem Am I in the correct place?
+
+IF not exist ffxiv_dx11.exe (
+echo.
+echo Make sure this update script is in the game folder:
+echo [..]SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game
+echo.
+echo Exiting the update script.
+pause
+goto done
+)
 
 if not exist ".gposingway\" mkdir .gposingway
 
@@ -48,19 +62,6 @@ echo Got it! The installation process was cancelled.
 GOTO done
 
 :start-installation
-IF EXIST ffxiv_dx11.exe (
-	goto check-current-version
-) ELSE (
-echo.
-echo The Final Fantasy XIV executable [ffxiv_dx11.exe] was not found!
-echo.
-echo Make sure this update tool is in the game folder:
-echo [..]SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game
-echo.
-echo Exiting the update tool.
-
-goto done
-)
 
 rem Let's check the current version.
 :check-current-version
@@ -91,8 +92,7 @@ rem The local and remote version files are different: let's download the latest 
 :update-available
 echo.
 echo Downloading the latest version. This may take a minute...
-bitsadmin /transfer gposingway-patch /download /priority FOREGROUND "https://github.com/gposingway/gposingway/releases/latest/download/gposingway.zip" "%cd%\gposingway-patch.zip" >nul
-
+bitsadmin /transfer gposingway-patch /download /priority FOREGROUND "https://github.com/gposingway/gposingway/releases/latest/download/gposingway.zip" "%cd%\.gposingway\gposingway-patch.zip" >nul
 
 :backup-current-installation
 rem If backup directory doesn't exist, create it.
@@ -121,6 +121,7 @@ echo.
 echo Backing up current installation to .gposingway\backup\%backup-folder-name%...
 
 mkdir .gposingway\backup\%backup-folder-name%
+
 robocopy reshade-presets .gposingway\backup\%backup-folder-name%\reshade-presets /E /NFL /NDL /NJH /NJS /nc /ns >nul
 robocopy reshade-shaders .gposingway\backup\%backup-folder-name%\reshade-shaders /E /NFL /NDL /NJH /NJS /nc /ns >nul
 
@@ -134,12 +135,12 @@ if %must-clear-shader-folder%=="true" (
 )
 
 echo Unpacking GPosingway update...
-powershell -command "Expand-Archive -Force '%~dp0gposingway-patch.zip' '%~dp0'"
+powershell -command "Expand-Archive -Force '%~dp0.gposingway\gposingway-patch.zip' '%~dp0'"
 
 echo Wrapping up...
 
 rem remove the patch file...
-del gposingway-patch.zip
+del .gposingway\gposingway-patch.zip
 
 rem then the current version file...
 IF EXIST .gposingway\gposingway-version.txt (

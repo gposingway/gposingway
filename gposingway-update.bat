@@ -130,8 +130,8 @@ robocopy reshade-shaders .gposingway\backup\%backup-folder-name%\reshade-shaders
 if %must-clear-shader-folder%=="true" (
 	rem easiest way is to just remove the folder and recreate it.
 	echo Cleaning reshade-shaders\shaders...
-	rd /s /q "reshade-shaders\shaders" > nul
-	mkdir reshade-shaders\shaders > nul
+	rd /s /q "reshade-shaders\Shaders" > nul
+	mkdir reshade-shaders\Shaders > nul
 )
 
 echo Unpacking GPosingway update...

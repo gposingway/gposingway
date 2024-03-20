@@ -57,7 +57,7 @@ If you encounter issues, have suggestions, or simply want to connect with other 
 
 | Collection | Creator | License | Notes | Suggested Hashtag |
 | --- | --- | --- | --- | --- |
-| AcerolaFX | MIT - [Garrett Gunnell](https://github.com/GarrettGunnell) | [License](https://github.com/GarrettGunnell/AcerolaFX?tab=MIT-1-ov-file) | [Download](https://github.com/GarrettGunnell/AcerolaFX/archive/refs/heads/main.zip)  | `#AcerolaFX` |
+| AcerolaFX | [Garrett Gunnell](https://github.com/GarrettGunnell) | MIT - [License](https://github.com/GarrettGunnell/AcerolaFX?tab=MIT-1-ov-file) | [Download](https://github.com/GarrettGunnell/AcerolaFX/archive/refs/heads/main.zip)  | `#AcerolaFX` |
 | IpsuShade | [Ipsusu](https://twitter.com/ipsusu) | [License](https://github.com/ipsusu/IpsuShade/blob/master/LICENSE.md) | [Download Page](https://github.com/ipsusu/IpsuShade)  | `#IpsuShade` |
 | WiFi | [Wi-Fi ₍ᐢ.ˬ.ᐢ₎ 黒うさぎ](https://twitter.com/wifi_photospire) | MIT | [Download Page](https://potatoworshiper.wixsite.com/jagaimo-no-sekai/wifi-presets)  | `#WifiPresets` |
 | Witch's Presets | [Mana](https://github.com/WitchMana) | WTFPL | [Repository](https://github.com/WitchMana/WitchsPresetsReshade)  | `#witchspresets` |

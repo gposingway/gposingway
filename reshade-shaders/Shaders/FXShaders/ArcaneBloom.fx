@@ -1,6 +1,12 @@
 #include "ArcaneBloom.fxh"
 //#include "ReShade.fxh"
 
+#if GSHADE_DITHER
+    #include "TriDither.fxh"
+#endif
+
+// Lightly optimized by Marot Satil for the GShade project.
+
 // Would be unenecessary if we had "using namespace".
 namespace ArcaneBloom { namespace _ {
 
@@ -37,11 +43,11 @@ namespace ArcaneBloom { namespace _ {
 #endif
 
 #ifndef ARCANE_BLOOM_PRECISION_FIX
-#define ARCANE_BLOOM_PRECISION_FIX 0
+#define ARCANE_BLOOM_PRECISION_FIX 1
 #endif
 
 #ifndef ARCANE_BLOOM_WHITE_POINT_FIX
-#define ARCANE_BLOOM_WHITE_POINT_FIX 0
+#define ARCANE_BLOOM_WHITE_POINT_FIX 1
 #endif
 
 #ifndef ARCANE_BLOOM_GAMMA_MODE
@@ -85,11 +91,11 @@ MAKE_PASS(DownSample_##SOURCE, DEST)
 
 #define DEF_BLUR_SHADER(A, B, DIV) \
 MAKE_SHADER(BlurX_##A) { \
-	float2 dir = float2(BUFFER_RCP_WIDTH * DIV, 0.0); \
+	const float2 dir = float2(BUFFER_RCP_WIDTH * DIV, 0.0); \
 	return float4(gaussian_blur(s##A, uv, dir), 1.0); \
 } \
 MAKE_SHADER(BlurY_##B) { \
-	float2 dir = float2(0.0, BUFFER_RCP_HEIGHT * DIV); \
+	const float2 dir = float2(0.0, BUFFER_RCP_HEIGHT * DIV); \
 	return float4(gaussian_blur(s##B, uv, dir), 1.0); \
 }
 
@@ -137,7 +143,7 @@ uniform float uBloomIntensity <
 	ui_label = "Intensity";
 	ui_category = "Bloom";
 	ui_tooltip = "Default: 1.0";
-	ui_type = "drag";
+	ui_type = "slider";
 	ui_min = 0.0;
 	ui_max = 100.0;
 	ui_step = 0.01;
@@ -149,7 +155,7 @@ uniform float uBloomTemperature <
 	ui_label = "Bloom Temperature";
 	ui_category = "Bloom";
 	ui_tooltip = "Default: 1.0";
-	ui_type = "drag";
+	ui_type = "slider";
 	ui_min = 0.0;
 	ui_max = 3.0;
 	ui_step = 0.001;
@@ -163,7 +169,7 @@ uniform float uBloomSaturation <
 	ui_label = "Bloom Saturation";
 	ui_category = "Bloom";
 	ui_tooltip = "Default: 1.0";
-	ui_type = "drag";
+	ui_type = "slider";
 	ui_min = 0.0;
 	ui_max = 3.0;
 	ui_step = 0.001;
@@ -177,7 +183,7 @@ uniform float uDirtIntensity <
 	ui_label = "Intensity";
 	ui_category = "Dirt";
 	ui_tooltip = "Default: 1.0";
-	ui_type = "drag";
+	ui_type = "slider";
 	ui_min = 0.0;
 	ui_max = 100.0;
 	ui_step = 0.01;
@@ -191,7 +197,7 @@ uniform float uAdapt_Intensity <
 	ui_label   = "Intensity";
 	ui_category = "Adaptation";
 	ui_tooltip = "Default: 1.0";
-	ui_type    = "drag";
+	ui_type    = "slider";
 	ui_min     = 0.0;
 	ui_max     = 1.0;
 	ui_step    = 0.001;
@@ -201,7 +207,7 @@ uniform float uAdapt_Time <
 	ui_label   = "Time to Adapt (Seconds)";
 	ui_category = "Adaptation";
 	ui_tooltip = "Default: 100.0";
-	ui_type    = "drag";
+	ui_type    = "slider";
 	ui_min     = 0.01;
 	ui_max     = 10.0;
 	ui_step    = 0.01;
@@ -211,21 +217,21 @@ uniform float uAdapt_Sensitivity <
 	ui_label   = "Sensitivity";
 	ui_category = "Adaptation";
 	ui_tooltip = "Default: 1.0";
-	ui_type    = "drag";
+	ui_type    = "slider";
 	ui_min     = 0.0;
 	ui_max     = 3.0;
 	ui_step    = 0.001;
 > = 1.0;
 
-uniform int uAdapt_Precision <
+uniform float uAdapt_Precision <
 	ui_label   = "Precision";
 	ui_category = "Adaptation";
-	ui_tooltip = "Default: 0";
-	ui_type    = "drag";
-	ui_min     = 0;
-	ui_max     = 11;
+	ui_tooltip = "Default: 0.0";
+	ui_type    = "slider";
+	ui_min     = 0.0;
+	ui_max     = 11.0;
 	ui_step    = 0.01;
-> = 0;
+> = 0.0;
 
 uniform bool uAdapt_DoLimits <
 	ui_label   = "Use Limits";
@@ -237,7 +243,7 @@ uniform float2 uAdapt_Limits <
 	ui_label   = "Limits (Min/Max)";
 	ui_category = "Adaptation";
 	ui_tooltip = "Default: (0.0, 1.0)";
-	ui_type    = "drag";
+	ui_type    = "slider";
 	ui_min     = 0.0;
 	ui_max     = 1.0;
 	ui_step    = 0.001;
@@ -250,7 +256,7 @@ uniform float2 uAdapt_Limits <
 uniform float uMean <
 	ui_label = "Mean";
 	ui_category = "Distribution";
-	ui_type = "drag";
+	ui_type = "slider";
 	ui_min = -2.0;
 	ui_max = 5.0;
 	ui_step = 0.01;
@@ -259,7 +265,7 @@ uniform float uMean <
 uniform float uVariance <
 	ui_label = "Variance";
 	ui_category = "Distribution";
-	ui_type = "drag";
+	ui_type = "slider";
 	ui_min = 1.0;
 	ui_max = 100.0;
 	ui_step = 0.01;
@@ -271,7 +277,7 @@ uniform float uExposure <
 	ui_label   = "Exposure";
 	ui_category = "Miscellaneous";
 	ui_tooltip = "Default: 1.0";
-	ui_type    = "drag";
+	ui_type    = "slider";
 	ui_min     = 0.001;
 	ui_max     = 3.0;
 	ui_step    = 0.001;
@@ -281,7 +287,7 @@ uniform float uMaxBrightness <
 	ui_label   = "Max Brightness";
 	ui_category = "Miscellaneous";
 	ui_tooltip = "Default: 100.0";
-	ui_type    = "drag";
+	ui_type    = "slider";
 	ui_min     = 1.0;
 	ui_max     = 100.0;
 	ui_step    = 0.1;
@@ -293,7 +299,7 @@ uniform float uWhitePoint <
 	ui_label = "White Point";
 	ui_category = "Miscellaneous";
 	ui_tooltip = "Default: 1.0";
-	ui_type = "drag";
+	ui_type = "slider";
 	ui_min = 0.0;
 	ui_max = 10.0;
 	ui_step = 0.01;
@@ -307,7 +313,7 @@ uniform float uTemporalIntensity <
 	ui_label = "Temporal Intensity";
 	ui_category = "Miscellaneous";
 	ui_tooltip = "Default: 1.0";
-	ui_type = "drag";
+	ui_type = "slider";
 	ui_min = 1.0;
 	ui_max = 1000.0;
 	ui_step = 0.01;
@@ -320,7 +326,7 @@ uniform float uGamma <
 	ui_label   = "Gamma";
 	ui_category = "Miscellaneous";
 	ui_tooltip = "Default: 2.2";
-	ui_type    = "drag";
+	ui_type    = "slider";
 	ui_min     = 0.4545;
 	ui_max     = 6.6;
 	ui_step    = 0.001;
@@ -391,7 +397,7 @@ sampler2D sLastAdapt {
 #if ARCANE_BLOOM_USE_DIRT
 
 texture2D tArcaneBloom_Dirt <
-	source = "ArcaneBloom_Dirt.png";
+	source = "SharedBloom_Dirt.png";
 > {
 	Width = BUFFER_WIDTH;
 	Height = BUFFER_HEIGHT;
@@ -441,7 +447,7 @@ float get_bloom_weight(int i) {
 }
 
 float3 blend_overlay(float3 a, float3 b, float w) {
-	float3 c = lerp(
+	const float3 c = lerp(
 		2.0 * a * b,
 		1.0 - 2.0 * (1.0 - a) * (1.0 - b),
 		step(0.5, a)
@@ -469,8 +475,14 @@ void VS_PostProcess(
 	out float4 position : SV_POSITION,
 	out float2 uv : TEXCOORD
 ) {
-	uv.x = (id == 2) ? 2.0 : 0.0;
-	uv.y = (id == 1) ? 2.0 : 0.0;
+	if (id == 2)
+		uv.x = 2.0;
+	else
+		uv.x = 0.0;
+	if (id == 1)
+		uv.y = 2.0;
+	else
+		uv.y = 0.0;
 	position = float4(
 		uv * float2(2.0, -2.0) + float2(-1.0, 1.0),
 		0.0,
@@ -519,7 +531,7 @@ MAKE_SHADER(SaveTemporal) {
 #if ARCANE_BLOOM_USE_ADAPTATION
 
 MAKE_SHADER(GetSmall) {
-	float3 color = tex2D(sBloom0Alt, uv).rgb;
+	const float3 color = tex2D(sBloom0Alt, uv).rgb;
 	return float4(get_luma_linear(color), 0.0, 0.0, 1.0);
 }
 
@@ -583,9 +595,10 @@ MAKE_SHADER(Blend) {
 
 	#if ARCANE_BLOOM_DEBUG
 
-	color = uDebugOptions == 1 ?
-		bloom :
-		color + bloom;
+	if (uDebugOptions == 1)
+		color = bloom;
+	else
+		color = color + bloom;
 
 	#else
 
@@ -595,19 +608,19 @@ MAKE_SHADER(Blend) {
 
 	#if ARCANE_BLOOM_USE_ADAPTATION
 	//float adapt = tex2Dfetch(sAdapt, (int4)0).x;
-	float adapt = tex2D(sAdapt, 0).x;
-	float exposure = uExposure / max(adapt, 0.001);
+	const float adapt = tex2D(sAdapt, 0).x;
+	const float exposure = uExposure / max(adapt, 0.001);
 
 	color *= lerp(1.0, exposure, uAdapt_Intensity);
 	
 	#if ARCANE_BLOOM_WHITE_POINT_FIX
-	float white = uWhitePoint * lerp(1.0, exposure, uAdapt_Intensity);
+	const float white = uWhitePoint * lerp(1.0, exposure, uAdapt_Intensity);
 	#endif
 
 	#else
 
 	#if ARCANE_BLOOM_WHITE_POINT_FIX
-	float white = uWhitePoint * uExposure;
+	const float white = uWhitePoint * uExposure;
 	#endif
 
 	color *= uExposure;
@@ -624,7 +637,11 @@ MAKE_SHADER(Blend) {
 	color = pow(color, 1.0 / uGamma);
 	#endif
 
+#if GSHADE_DITHER
+	return float4(color + TriDither(color.rgb, uv, BUFFER_COLOR_BIT_DEPTH), 1.0);
+#else
 	return float4(color, 1.0);
+#endif
 }
 
   //============//

@@ -3,7 +3,7 @@
 > [!NOTE]
 > ReShade use MediaFire as a repository for all its versions, [as indicated in this post by its author](https://reshade.me/forum/general-discussion/2207-older-versions).
 
-[Download the ReShade 6.0.1 with Add-On support installer](https://www.mediafire.com/file/0rhdfhlihnsnd1c/ReShade_Setup_6.0.1_Addon.exe/file) and run it:
+[Download the ReShade 6.1.0 with Add-On support installer](https://www.mediafire.com/file/0rhdfhlihnsnd1c/ReShade_Setup_6.1.0_Addon.exe/file) and run it:
 
 <img src='https://github.com/gposingway/gposingway/assets/18711130/6a57b0d1-5684-441b-94b3-01254d38095a' width='408' /><br/><br/>
 

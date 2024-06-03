@@ -53,7 +53,7 @@ Before contributing, please review our [contribution guidelines](md/contributing
 
 If you encounter issues, have suggestions, or simply want to connect with other GPosingway users, visit the [Sights of Eorzea Discord server](https://discord.com/servers/sights-of-eorzea-1124828911700811957). We value your feedback and strive to create an inclusive and vibrant community.
 
-## Included Preset collections
+## Included Preset Collections
 
 | Collection | Creator | License | Notes | Suggested Hashtag |
 | --- | --- | --- | --- | --- |
@@ -64,6 +64,16 @@ If you encounter issues, have suggestions, or simply want to connect with other 
 | WiFi | [Wi-Fi ₍ᐢ.ˬ.ᐢ₎ 黒うさぎ](https://twitter.com/wifi_photospire) | MIT | [Download Page](https://potatoworshiper.wixsite.com/jagaimo-no-sekai/wifi-presets)  | `#WifiPresets` |
 | Witch's Presets | [Mana](https://github.com/WitchMana) | WTFPL | [Repository](https://github.com/WitchMana/WitchsPresetsReshade)  | `#witchspresets` |
 | Yomigami Okami | [Yomy](https://twitter.com/Yomigammy) | MIT - [License](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders/blob/main/LICENSE) | Original [ReShade port](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders#yomigamiokami-reshade-560-port) by [Meynan Aneytha](https://twitter.com/meynan_ffxiv) | `#okamishader` |
+
+## Community Preset Contributions
+
+`Community` is a collection comprised of individual presets contributed to the project.
+
+| Preset | Creator | License | Notes |
+| --- | --- | --- | --- |
+| naelgameplay | [Nael](https://x.com/naelwynn_xiv) | Distribution Permitted | iMMERSE compatible |
+
+
 
 You can find a list of all included shader collections and their respective licenses [here](md/shader_licenses.md).
 

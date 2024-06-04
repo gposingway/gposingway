@@ -62,7 +62,7 @@ If you encounter issues, have suggestions, or simply want to connect with other 
 | SOFTGLOW ✮⋆˙ | [Hana](https://twitter.com/sheepysoftie) | Distribution Permitted | [Download Page](https://ko-fi.com/s/1942b62bb5)  | `#hanasofties` |
 | TRUEREALISM | [Nyeps](https://twitter.com/FFXIVNyeps) | Distribution Permitted | 🍔 [Download Page](https://ko-fi.com/s/ac0d1c86a2)  | `#NyepsRealism` |
 | WiFi | [Wi-Fi ₍ᐢ.ˬ.ᐢ₎ 黒うさぎ](https://twitter.com/wifi_photospire) | MIT | [Download Page](https://potatoworshiper.wixsite.com/jagaimo-no-sekai/wifi-presets)  | `#WifiPresets` |
-| Witch's Presets | [Mana](https://github.com/WitchMana) | WTFPL | [Repository](https://github.com/WitchMana/WitchsPresetsReshade)  | `#witchspresets` |
+| Witch's Presets | [🍸 Ann-A 🍸](https://twitter.com/NIRVANN_A) | WTFPL | [Repository](https://github.com/WitchMana/WitchsPresetsReshade)  | `#witchspresets` |
 | Yomigami Okami | [Yomy](https://twitter.com/Yomigammy) | MIT - [License](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders/blob/main/LICENSE) | Original [ReShade port](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders#yomigamiokami-reshade-560-port) by [Meynan Aneytha](https://twitter.com/meynan_ffxiv) | `#okamishader` |
 
 ## Community Preset Contributions

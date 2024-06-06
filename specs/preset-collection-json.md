@@ -1,4 +1,4 @@
-## preset-collection.json Specification (Markdown Table)
+## preset-collection.json Specification
 
 This file defines a collection of presets for distribution, targeting a general folder structure.
 

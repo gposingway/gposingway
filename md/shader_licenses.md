@@ -31,6 +31,7 @@
 | [vort_Shaders](https://github.com/vortigern11/vort_Shaders) | vortigen11 | Repository of vort_HDR and vort_MotionBlur. | MIT License |
 | [VRToolkit](https://github.com/retroluxfilm/reshade-vrtoolkit) | VRToolkit | The VRToolkit is a modular shader created for ReShade to enhance the clarity & sharpness in VR to get most out of your HMD while keeping the performance impact minimal. | BSD 3-Clause License |
 | [Warp-FX](https://github.com/Radegast-FFXIV/reshade-shaders) | Radegast | Fun and abstract effects like Swirl, Wave, Slit Scan, etc. | GNU GPL V2.0 / MIT |
+| [ZN_FX](https://github.com/Zenteon/ZN_FX) | Zenteon | Repository of ZN_FX, featuring the Depth-Aware Mipmapped Ray Tracing (DAMP_RT) shader. | GNU GPL V3.0 |
 
 ## Redistributed Community Shaders
 

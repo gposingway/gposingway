@@ -25,6 +25,10 @@ This file defines a collection of presets for distribution, targeting a general 
 
 The `preset-collection.json` file should be placed at the root level of the preset collection ZIP file. This allows the installer to identify and process the collection information.
 
+## Additional Considerations
+
+- **Image Size**: Keep the image referenced by the `image` and `examples.source` properties under a maximum size of 2160x2160 pixels. This ensures compatibility with various UI elements and avoids unnecessarily large file sizes within the collection.
+- **Folder Name Length**: Keep the folder name under 48 characters to avoid potential issues with different operating systems or file path limitations. Descriptive yet concise folder names are ideal.
 
 ## Simple Example (Minimal Information)
 
@@ -100,9 +104,9 @@ This example utilizes all the properties of `preset-collection.json`:
 * `name`, `folder`: Similar to the simple example.
 * `version`: "1.2.1" - Specifies the collection's version number.
 * `license`: "CC BY-NC-SA 4.0" - Defines the license under which the collection is distributed.
-* `tags`: ["vintage", "film", "emulation", "analog", "abstract"] - Keywords for searchability.
-* `dependencies`: Requires the well-known "iMMERSE" collection.
+* `tags`: `["vintage", "film", "emulation", "analog", "abstract"]` - Keywords for searchability.
+* `dependencies`: Requires the well-known "iMMERSE" collection, as well as a custom dependency available for download.
 * `author`: Information about the author, including name and links to social media profiles.
 * `description`: A detailed description of the collection's purpose.
 * `image`: A URL pointing to a preview image of the collection.
-* `examples`: An array of example files showcasing the presets before and after application.
+* `examples`: An array of example files showcasing the presets.

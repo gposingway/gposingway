@@ -19,7 +19,7 @@ This is a drop-in package for Final Fantasy XIV containing a stable collection o
 
 - **Community Contributions:** GPosingway integrates presets, shaders, and fixes contributed by the FFXIV community; the patch contains a comprehensive package that reflects the diverse preferences and styles of preset creators.
 
-- **Easy Integration:** Installing GPosingway is a breeze. Donload, unzip, drop it into your existing FFXIV installation, and you're ready to go. No complex configurations or manual tweaks required.
+- **Easy Integration:** Installing GPosingway is a breeze. Download, unzip, drop it into your existing FFXIV installation, and you're ready to go. No complex configurations or manual tweaks required.
 
 ## Q&A
 

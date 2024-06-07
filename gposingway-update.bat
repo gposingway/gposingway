@@ -71,7 +71,7 @@ if defined CURRENT_VERSION (
 if defined INITIAL_INSTALL (
     :INSTALL_CHOICE
     echo No previous GPosingway found^^! Proceed with installation?
-    choice /c YC /m "[Y]es or [C]ancel"
+    choice /c YN /m "[Y]es or [N]o"
     if errorlevel 2 (
         echo Installation aborted.
         exit /b 0
@@ -129,11 +129,12 @@ echo Current version: %CURRENT_VERSION%
 
     if "!LATEST_VERSION!" == "!CURRENT_VERSION!" (
         echo Seems you have the latest version already, no updates necessary^^!
+        GOTO :deprecated-cleanup
     )
 
     if not "!LATEST_VERSION!" == "!CURRENT_VERSION!" (
         echo A newer version of GPosingway is available^^! Do you want to install this update?
-        CHOICE /C YC /M "[Y]es, [C]ancel"
+        CHOICE /C YN /M "[Y]es or [N]o"
         if errorlevel 2 exit /b 0
         set INSTALL_UPDATE=1
         goto :do-installation
@@ -182,6 +183,8 @@ call :EXTRACT "%TEMP_DIR%\gposingway.zip" "."
 
 :: Process definitions JSON
 
+:deprecated-cleanup
+
 :: Deprecated items
 echo.
 echo Doing some clean-up...
@@ -189,8 +192,8 @@ if not exist "%TEMP_DIR%\gposingway-definitions.json" exit /b 1
 for /f "delims=" %%a in ('powershell -command "Get-Content '%TEMP_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty Deprecated"') do (
     for %%b in (%%a) do (
 
-        rd /s /q "%%~b" 2>nul
-        del /q /f "%%~b" 2>nul
+        rmdir /s /q "%GAME_DIR%%%~b" 2>nul
+        del /q /f "%GAME_DIR%%%~b" 2>nul
     )
 )
 
@@ -213,7 +216,7 @@ echo Some optional add-ons are available^^!
 for %%a in (!OPTIONAL_NAMES!) do (
 
     echo Would you like to install %%a?
-    choice /c YS /m "[Y]es or [S]kip"
+    choice /c YN /m "[Y]es or [N]o"
     if !errorlevel! equ 1 (
 
         for /f "tokens=*" %%c in ('powershell -command "Get-Content '%TEMP_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty Optional | Where-Object {$_.Name -eq '%%a'} | Select-Object -ExpandProperty Url"') do set "OPTIONAL_URL=%%c"

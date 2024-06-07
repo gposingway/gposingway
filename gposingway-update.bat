@@ -1,161 +1,254 @@
-echo off
+@echo off
 cls
+setlocal enabledelayedexpansion
+setlocal ENABLEEXTENSIONS
+
+:: Bunny Emoji
+for /f %%a in ('chcp') do set "CP=%%a"
+set "BUNNY="
+if /i "%CP%"=="437" set "BUNNY=º"
+if /i "%CP%"=="65001" set "BUNNY=🐰"
+
+:: Configuration 
+set "GPOSINGWAY_DEFINITIONS_URL=https://github.com/gposingway/gposingway/releases/latest/download/gposingway-definitions.json"
+set "GAME_DIR=%~dp0"
+set "GPOSINGWAY_WORK_DIR=%GAME_DIR%.gposingway"
+set "BACKUP_DIR=%GPOSINGWAY_WORK_DIR%\Backup"
+set "TEMP_DIR=%GPOSINGWAY_WORK_DIR%\temp"
+
+for /f "tokens=1-6 delims=/: " %%a in ('robocopy "|" . /njh /ndl ^| find ":"') do (
+    set "DATE_TIME=%%a-%%b-%%c-%%d-%%e-%%f"
+)
+
+:: Welcome Message
 echo ------------------------------------------------
 echo  (\(\
 echo  ( o.o)    GPosingway Update/Installer Tool
 echo  O_(")(")
 echo ------------------------------------------------
 echo.
-
-set must-clear-shader-folder="false"
-
-rem Am I in the correct place?
-
-IF not exist ffxiv_dx11.exe (
+echo Welcome to the GPosingway Installer^^! %BUNNY%
 echo.
-echo Make sure this update script is in the game folder:
-echo [..]SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game
-echo.
-echo Exiting the update script.
-pause
-goto done
+echo Let's check some things before we start...
+
+:: Check FFXIV executable and working directory
+if not exist ffxiv_dx11.exe (
+    echo.
+    echo Please make sure this .BAT file is placed in your FFXIV game directory:
+    echo "[...]\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game"
+    pause
+    exit /b 1
 )
 
-if not exist ".gposingway\" mkdir .gposingway
-
-rem Shows the user the currently installed version, if available:
-
-IF EXIST .gposingway\gposingway-version.txt (
-	echo Current version: 
-	copy .gposingway\gposingway-version.txt con >nul
-	echo.
-	goto start-installation
-) 
-
-rem If not, offers some pre-installation management options
-
-echo It seems this is the first time GPosingway is being installed!
-echo.
-echo.
-echo Options:
-echo.
-echo [I] - Install GPosingway.
-echo       Your current shaders, presets and textures will be copied
-echo       to '.gposingway\backup'; After that, your current shader 
-echo       collection will be cleared to avoid conflicts.
-echo.
-echo [C] - Cancel installation.
-
-CHOICE /C IC /M "Press I for Install or C for Cancel."
-
-rem user selected Cancel.
-IF ERRORLEVEL ==2 GOTO user-choice-cancel
-
-rem let's set a flag to clear the current shader folder.
-set must-clear-shader-folder="true"
-
-GOTO start-installation
-
-:user-choice-cancel
-echo.
-echo Got it! The installation process was cancelled.
-GOTO done
-
-:start-installation
-
-rem Let's check the current version.
-:check-current-version
-echo.
-echo Latest version: 
-bitsadmin /transfer gposingway-version /download /priority FOREGROUND "https://github.com/gposingway/gposingway/releases/latest/download/gposingway-version.txt" "%cd%\.gposingway\gposingway-version-temp.txt" >nul
-copy .gposingway\gposingway-version-temp.txt con >nul
-echo.
-
-rem compare the versions, but only if gposingway-version.txt exists locally:
-IF EXIST .gposingway\gposingway-version.txt (
-	fc .gposingway\gposingway-version.txt .gposingway\gposingway-version-temp.txt > nul
-	if errorlevel 1 goto update-available
-	goto newest-version-installed
-) ELSE (
-    goto update-available
+:: Check ReShade installation
+if not exist dxgi.dll (
+    echo WARNING: ReShade with full add-on support not found.
+    echo GPosingway requires the latest version of ReShade.
+    echo Download it from: https://reshade.me/
+    pause
 )
 
-rem Both the local and remote version files are identical, so there's nothing to do!
-:newest-version-installed
-echo.
-echo You have the latest version!
-del .gposingway\gposingway-version-temp.txt
-goto done
+:: Create working directory
+if not exist "%GPOSINGWAY_WORK_DIR%" md "%GPOSINGWAY_WORK_DIR%"
+if not exist "%TEMP_DIR%" md "%TEMP_DIR%"
 
-rem The local and remote version files are different: let's download the latest available patch from the repository
+:: Check GPosingway installation status
 
-:update-available
-echo.
-echo Downloading the latest version. This may take a minute...
-bitsadmin /transfer gposingway-patch /download /priority FOREGROUND "https://github.com/gposingway/gposingway/releases/latest/download/gposingway.zip" "%cd%\.gposingway\gposingway-patch.zip" >nul
+set "CURRENT_VERSION="
+if exist "%GPOSINGWAY_WORK_DIR%\gposingway-definitions.json" (
+    for /f "delims=" %%a in ('powershell -command "Get-Content '%GPOSINGWAY_WORK_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty version"') do set "CURRENT_VERSION=%%a"
+) else if exist "%GPOSINGWAY_WORK_DIR%\gposingway-version.txt" (
+    set /p CURRENT_VERSION=<"%GPOSINGWAY_WORK_DIR%\gposingway-version.txt"
+)
 
-:backup-current-installation
-rem If backup directory doesn't exist, create it.
-if not exist ".gposingway\backup\" mkdir .gposingway\backup
+if defined CURRENT_VERSION (
+    echo.
+) else (
+    set "INITIAL_INSTALL=true"
+)
 
-rem Obtaining Year, Month and Day values in Batch can be VERY messy...
-rem reference: https://stackoverflow.com/questions/3472631/how-do-i-get-the-day-month-and-year-from-a-windows-cmd-exe-script
-rem This should work with all datetime formats.
-
-for /F "skip=1 delims=" %%F in ('
-    wmic PATH Win32_LocalTime GET Day^,Month^,Year /FORMAT:TABLE
-') do (
-    for /F "tokens=1-3" %%L in ("%%F") do (
-        set day=0%%L
-        set month=0%%M
-        set year=%%N
+:: User choice for initial installation
+if defined INITIAL_INSTALL (
+    :INSTALL_CHOICE
+    echo No previous GPosingway found^^! Proceed with installation?
+    choice /c YC /m "[Y]es or [C]ancel"
+    if errorlevel 2 (
+        echo Installation aborted.
+        exit /b 0
+    ) else if errorlevel 1 (
+        goto :MAIN
     )
 )
-set day=%day:~-2%
-set month=%month:~-2%
 
-set backup-folder-name=%year%-%month%-%day%_%TIME:~0,2%-%TIME:~3,2%-%TIME:~6,2%
-set backup-folder-name=%backup-folder-name: =0%
+GOTO :MAIN
 
-echo.
-echo Backing up current installation to .gposingway\backup\%backup-folder-name%...
+:: Download subroutine
+:DOWNLOAD
 
-mkdir .gposingway\backup\%backup-folder-name%
+set result=
 
-robocopy reshade-presets .gposingway\backup\%backup-folder-name%\reshade-presets /E /NFL /NDL /NJH /NJS /nc /ns >nul
-robocopy reshade-shaders .gposingway\backup\%backup-folder-name%\reshade-shaders /E /NFL /NDL /NJH /NJS /nc /ns >nul
+echo - Downloading %2...
+bitsadmin /transfer "Job_gposingway_transfer_!result!" /download /priority FOREGROUND %1 %3 >nul
+if !errorlevel! neq 0 (
+    echo ERROR: Failed to download %2.
+    pause
+    exit /b 1
+)
+ echo - ...done^^!
+GOTO :EOF
 
-:clean-shader-folder
-
-if %must-clear-shader-folder%=="true" (
-	rem easiest way is to just remove the folder and recreate it.
-	echo Cleaning reshade-shaders\shaders...
-	rd /s /q "reshade-shaders\Shaders" > nul
-	mkdir reshade-shaders\Shaders > nul
+:: Extract subroutine
+:EXTRACT
+if not exist "%TEMP_DIR%" md "%TEMP_DIR%"
+powershell -command "Expand-Archive -Force '%1' '%2%'" >nul
+if !errorlevel! neq 0 (
+    echo ERROR: Failed to extract %1.
+    pause
+    exit /b 1
 )
 
-echo Unpacking GPosingway update...
-powershell -command "Expand-Archive -Force '%~dp0.gposingway\gposingway-patch.zip' '%~dp0'"
+GOTO :EOF
 
-echo Wrapping up...
+:: Main installation/update process
 
-rem remove the patch file...
-del .gposingway\gposingway-patch.zip
+:MAIN
 
-rem then the current version file...
-IF EXIST .gposingway\gposingway-version.txt (
-	del .gposingway\gposingway-version.txt
-)
+:: Download definitions file
+call :DOWNLOAD "%GPOSINGWAY_DEFINITIONS_URL%" "Latest GPosingway definitions" "%TEMP_DIR%\gposingway-definitions.json"
 
-rem and rename the downloaded version file as the current version.
-ren .gposingway\gposingway-version-temp.txt gposingway-version.txt
+:: Get latest version and patch URL from definitions
 
-echo Done.
+for /f "delims=:," %%a in ('powershell -command "Get-Content '%TEMP_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty version"') do set "LATEST_VERSION=%%a"
+
+echo  Latest version: %LATEST_VERSION%
+
+if defined INITIAL_INSTALL goto :do-installation
+
+echo Current version: %CURRENT_VERSION%
+
+
+    if "!LATEST_VERSION!" == "!CURRENT_VERSION!" (
+        echo Seems you have the latest version already, no updates necessary^^!
+    )
+
+    if not "!LATEST_VERSION!" == "!CURRENT_VERSION!" (
+        echo A newer version of GPosingway is available^^! Do you want to install this update?
+        CHOICE /C YC /M "[Y]es, [C]ancel"
+        if errorlevel 2 exit /b 0
+        set INSTALL_UPDATE=1
+        goto :do-installation
+    )
+
+goto :optional-installations
+
+:do-installation
+
+if not exist "%TEMP_DIR%\gposingway-definitions.json" exit /b 1
+for /f "delims=" %%a in ('powershell -command "Get-Content '%TEMP_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty gposingwayUrl"') do set "GPOSINGWAY_PATCH_URL=%%a"
 
 echo.
-echo You now have the latest version. Happy GPosing!
-goto done
+echo Backing up existing shaders and presets...
 
-:done
-pause
-exit /b
+if not exist "%BACKUP_DIR%" md "%BACKUP_DIR%"
+if not exist "%BACKUP_DIR%\%DATE_TIME%" md "%BACKUP_DIR%\%DATE_TIME%"
+
+robocopy "reshade-shaders" "%BACKUP_DIR%\%DATE_TIME%\reshade-shaders" /e >nul
+
+if !errorlevel! gtr 8 (
+    echo ERROR: Failed to back up reshade-shaders.
+    pause
+    exit /b 1
+)
+robocopy "reshade-presets" "%BACKUP_DIR%\%DATE_TIME%\reshade-presets" /e >nul
+if !errorlevel! gtr 8 (
+    echo ERROR: Failed to back up reshade-presets.
+    pause
+    exit /b 1
+)
+
+echo Done^^! You can find your full backup here:
+echo   %BACKUP_DIR%\%DATE_TIME%
+
+
+:: Clean shaders folder for initial installation
+if defined INITIAL_INSTALL rd /s /q "reshade-shaders\shaders"
+
+:: Download and extract patch
+
+echo.
+Echo Now I'll download and install the update. Sit tight^^!
+call :DOWNLOAD "%GPOSINGWAY_PATCH_URL%" "latest GPosingway package" "%TEMP_DIR%\gposingway.zip"
+call :EXTRACT "%TEMP_DIR%\gposingway.zip" "."
+
+:: Process definitions JSON
+
+:: Deprecated items
+echo.
+echo Doing some clean-up...
+if not exist "%TEMP_DIR%\gposingway-definitions.json" exit /b 1
+for /f "delims=" %%a in ('powershell -command "Get-Content '%TEMP_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty Deprecated"') do (
+    for %%b in (%%a) do (
+
+        rd /s /q "%%~b" 2>nul
+        del /q /f "%%~b" 2>nul
+    )
+)
+
+::Optional installation
+:optional-installations
+
+if not exist "%TEMP_DIR%\gposingway-definitions.json" exit /b 1
+set "OPTIONAL_NAMES="
+for /f "tokens=*" %%a in ('powershell -command "Get-Content '%TEMP_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty Optional | Select-Object -ExpandProperty Name"') do (
+    set "OPTIONAL_NAMES=!OPTIONAL_NAMES! %%a"
+)
+
+if not defined OPTIONAL_NAMES (
+    goto :wrap-up
+) 
+
+echo.
+echo Some optional add-ons are available^^!
+
+for %%a in (!OPTIONAL_NAMES!) do (
+
+    echo Would you like to install %%a?
+    choice /c YS /m "[Y]es or [S]kip"
+    if !errorlevel! equ 1 (
+
+        for /f "tokens=*" %%c in ('powershell -command "Get-Content '%TEMP_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty Optional | Where-Object {$_.Name -eq '%%a'} | Select-Object -ExpandProperty Url"') do set "OPTIONAL_URL=%%c"
+        for /f "tokens=*" %%c in ('powershell -command "Get-Content '%TEMP_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty Optional | Where-Object {$_.Name -eq '%%a'} | Select-Object -ExpandProperty Mappings"') do set "OPTIONAL_MAPPINGS=%%c"
+
+        echo Installing optional add-on: %%a
+
+        if not exist "%TEMP_DIR%\%%a" md "%TEMP_DIR%\%%a"
+        call :DOWNLOAD !OPTIONAL_URL! %%a "%TEMP_DIR%\%%a\%%a.zip"
+        call :EXTRACT "%TEMP_DIR%\%%a\%%a.zip" "%TEMP_DIR%\%%a"
+
+        for %%d in (!OPTIONAL_MAPPINGS!) do (
+            for /f "tokens=1,2 delims=;:" %%e in ("%%~d") do (
+                if exist "%TEMP_DIR%\%%a\%%~e" (
+                    echo - %%~e to "%%~f"
+
+                    set "MAP_SOURCE=%TEMP_DIR%\%%a\%%~e"
+                    set "MAP_DEST=%%~f"
+
+                    robocopy "!MAP_SOURCE!" "!MAP_DEST!" /e >nul
+                )
+            )
+        )
+        echo.
+    )
+)
+
+:wrap-up
+copy "%TEMP_DIR%\gposingway-definitions.json" "%GPOSINGWAY_WORK_DIR%\gposingway-definitions.json" >nul
+
+:: Clean up
+echo.
+echo Removing all temporary files (%TEMP_DIR%)...
+
+rd /s /q "%TEMP_DIR%"
+
+echo.
+echo GPosingway installation/update complete. Happy GPosing^^!

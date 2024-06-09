@@ -3,11 +3,7 @@ cls
 setlocal enabledelayedexpansion
 setlocal ENABLEEXTENSIONS
 
-:: Bunny Emoji
-for /f %%a in ('chcp') do set "CP=%%a"
-set "BUNNY="
-if /i "%CP%"=="437" set "BUNNY=º"
-if /i "%CP%"=="65001" set "BUNNY=🐰"
+:: 2024/06/08   1.0.1   FIX - Added checks for pre-existing directories before attempting backup
 
 :: Configuration 
 set "GPOSINGWAY_DEFINITIONS_URL=https://github.com/gposingway/gposingway/releases/latest/download/gposingway-definitions.json"
@@ -27,7 +23,7 @@ echo  ( o.o)    GPosingway Update/Installer Tool
 echo  O_(")(")
 echo ------------------------------------------------
 echo.
-echo Welcome to the GPosingway Installer^^! %BUNNY%
+echo Welcome to the GPosingway Installer^^!
 echo.
 echo Let's check some things before we start...
 
@@ -153,26 +149,32 @@ echo Backing up existing shaders and presets...
 if not exist "%BACKUP_DIR%" md "%BACKUP_DIR%"
 if not exist "%BACKUP_DIR%\%DATE_TIME%" md "%BACKUP_DIR%\%DATE_TIME%"
 
-robocopy "reshade-shaders" "%BACKUP_DIR%\%DATE_TIME%\reshade-shaders" /e >nul
+if exist "reshade-shaders\" (
+    robocopy "reshade-shaders" "%BACKUP_DIR%\%DATE_TIME%\reshade-shaders" /e >nul
 
-if !errorlevel! gtr 8 (
-    echo ERROR: Failed to back up reshade-shaders.
-    pause
-    exit /b 1
+    if !errorlevel! gtr 8 (
+        echo ERROR: Failed to back up reshade-shaders.
+        pause
+        exit /b 1
+    )
 )
-robocopy "reshade-presets" "%BACKUP_DIR%\%DATE_TIME%\reshade-presets" /e >nul
-if !errorlevel! gtr 8 (
-    echo ERROR: Failed to back up reshade-presets.
-    pause
-    exit /b 1
+
+if exist "reshade-presets\" (
+    robocopy "reshade-presets" "%BACKUP_DIR%\%DATE_TIME%\reshade-presets" /e >nul
+    if !errorlevel! gtr 8 (
+        echo ERROR: Failed to back up reshade-presets.
+        pause
+        exit /b 1
+    )
 )
 
 echo Done^^! You can find your full backup here:
 echo   %BACKUP_DIR%\%DATE_TIME%
 
-
-:: Clean shaders folder for initial installation
-if defined INITIAL_INSTALL rd /s /q "reshade-shaders\shaders"
+if exist "reshade-shaders\" (
+    :: Clean shaders folder for initial installation
+    if defined INITIAL_INSTALL rd /s /q "reshade-shaders\shaders"
+)
 
 :: Download and extract patch
 
@@ -255,3 +257,5 @@ rd /s /q "%TEMP_DIR%"
 
 echo.
 echo GPosingway installation/update complete. Happy GPosing^^!
+
+pause

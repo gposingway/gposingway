@@ -3,6 +3,7 @@ cls
 setlocal enabledelayedexpansion
 setlocal ENABLEEXTENSIONS
 
+:: 2024/06/08   1.0.2   FIX - replaced BITSADMIN with powershell for file transfer
 :: 2024/06/08   1.0.1   FIX - Added checks for pre-existing directories before attempting backup
 
 :: Configuration 
@@ -84,13 +85,14 @@ GOTO :MAIN
 set result=
 
 echo - Downloading %2...
-bitsadmin /transfer "Job_gposingway_transfer_!result!" /download /priority FOREGROUND %1 %3 >nul
+
+powershell.exe -Command "& { (New-Object System.Net.WebClient).DownloadFile('%1', '%3') }"
 if !errorlevel! neq 0 (
     echo ERROR: Failed to download %2.
     pause
     exit /b 1
 )
- echo - ...done^^!
+echo - ...done^^!
 GOTO :EOF
 
 :: Extract subroutine

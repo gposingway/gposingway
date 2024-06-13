@@ -3,6 +3,7 @@ cls
 setlocal enabledelayedexpansion
 setlocal ENABLEEXTENSIONS
 
+:: 2024/06/09   1.0.3   Added ReShade.ini to the list of copied items for backup.
 :: 2024/06/08   1.0.2   FIX - replaced BITSADMIN with powershell for file transfer
 :: 2024/06/08   1.0.1   FIX - Added checks for pre-existing directories before attempting backup
 
@@ -145,11 +146,15 @@ goto :optional-installations
 if not exist "%TEMP_DIR%\gposingway-definitions.json" exit /b 1
 for /f "delims=" %%a in ('powershell -command "Get-Content '%TEMP_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty gposingwayUrl"') do set "GPOSINGWAY_PATCH_URL=%%a"
 
+:: Backup Section
+
 echo.
-echo Backing up existing shaders and presets...
+echo Backing up existing shaders, presets and settings...
 
 if not exist "%BACKUP_DIR%" md "%BACKUP_DIR%"
 if not exist "%BACKUP_DIR%\%DATE_TIME%" md "%BACKUP_DIR%\%DATE_TIME%"
+
+
 
 if exist "reshade-shaders\" (
     robocopy "reshade-shaders" "%BACKUP_DIR%\%DATE_TIME%\reshade-shaders" /e >nul
@@ -165,6 +170,15 @@ if exist "reshade-presets\" (
     robocopy "reshade-presets" "%BACKUP_DIR%\%DATE_TIME%\reshade-presets" /e >nul
     if !errorlevel! gtr 8 (
         echo ERROR: Failed to back up reshade-presets.
+        pause
+        exit /b 1
+    )
+)
+
+if exist "ReShade.ini" (
+    copy /Y "ReShade.ini" "%BACKUP_DIR%\%DATE_TIME%\ReShade.ini" >nul
+    if !errorlevel! gtr 0 (
+        echo ERROR: Failed to back up ReShade.ini.
         pause
         exit /b 1
     )

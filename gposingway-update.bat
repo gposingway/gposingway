@@ -3,6 +3,7 @@ cls
 setlocal enabledelayedexpansion
 setlocal ENABLEEXTENSIONS
 
+:: 2024/06/21   1.0.4   Added guardrails for deprecation list handler.
 :: 2024/06/09   1.0.3   Added ReShade.ini to the list of copied items for backup.
 :: 2024/06/08   1.0.2   FIX - replaced BITSADMIN with powershell for file transfer
 :: 2024/06/08   1.0.1   FIX - Added checks for pre-existing directories before attempting backup
@@ -207,11 +208,18 @@ call :EXTRACT "%TEMP_DIR%\gposingway.zip" "."
 echo.
 echo Doing some clean-up...
 if not exist "%TEMP_DIR%\gposingway-definitions.json" exit /b 1
+
 for /f "delims=" %%a in ('powershell -command "Get-Content '%TEMP_DIR%\gposingway-definitions.json' | ConvertFrom-Json | Select-Object -ExpandProperty Deprecated"') do (
     for %%b in (%%a) do (
 
-        rmdir /s /q "%GAME_DIR%%%~b" 2>nul
-        del /q /f "%GAME_DIR%%%~b" 2>nul
+        REM Guardrail: Check if %%b starts with the expected prefixes
+        if /i "%%~nb"=="reshade-shaders" (
+            rmdir /s /q "%GAME_DIR%\%%~b" 2>nul
+            del /q /f "%GAME_DIR%\%%~b" 2>nul
+        ) else if /i "%%~nb"=="reshade-presets" (
+            rmdir /s /q "%GAME_DIR%\%%~b" 2>nul
+            del /q /f "%GAME_DIR%\%%~b" 2>nul
+        )
     )
 )
 

@@ -1,4 +1,4 @@
-# GPosingway Troubleshooting Guide (Simplified)
+# GPosingway Troubleshooting Guide
 
 If you're having trouble with GPosingway, here are some things to try:
 

@@ -2,7 +2,7 @@
 
 If you're having trouble with GPosingway, here are some things to try:
 
-**Installation Problems**
+## Installation Problems
 
 ### GPosingway isn't working after installing
   * Make sure you have the right version of GPosingway for your ReShade.
@@ -17,7 +17,16 @@ If you're having trouble with GPosingway, here are some things to try:
 ### Presets look wrong or cause glitches
   * If you're using shaders from other sources, they might be conflicting. Most preset collections should work fine with GPosingway without needing extra shaders.
 
-**Other Problems**
+## Usage problems
+
+### Changes make to presets (like shortcuts or adjusted shaders) aren't saved
+- This seems to be permission related (i.e. ReShade isn't able to save changes to the preset files). You can try adjusting the permissions of the preset files themselves: On Windows Explorer, right-click the `reshade-presets` folder, select `properties`, go to the `Security` tab and locate the `Users` entry. If it looks like this:  
+![image](https://github.com/user-attachments/assets/01b232c3-f2a7-40e5-8b4a-bbdc674ed15f)  
+Then you may need to modify it. Click `Edit`, Select `Users`, check the `Modify` permission, like this:  
+![image](https://github.com/user-attachments/assets/8cf8b772-69d7-45a2-ab3c-1eb210ad2e8a)  
+And then click Apply. This will allow ReShade to save the preset with your new hotkey.
+
+## Other Problems
 
 ### Can't find GPosingway presets
   * Look in the "reshade-presets" folder in your game folder.

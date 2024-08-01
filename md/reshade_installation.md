@@ -27,6 +27,6 @@ In the `Select effect packages to install` window, click `Skip` as well:
 
 <img src='https://github.com/gposingway/gposingway/assets/18711130/0ff6a3ae-32f4-408a-935a-db9c8d30fb89' width='408' /><br/><br/>
 
-Click `Finish`. You're ready to run ReShade 5.8.0 in your game.
+Click `Finish`. You're ready to run ReShade in your game.
 
 <img src='https://github.com/gposingway/gposingway/assets/18711130/9ab2bf1f-a809-4130-aea7-0f767e8dbe84' width='408' />

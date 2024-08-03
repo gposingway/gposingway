@@ -1,4 +1,4 @@
-## Gposingway Installation (all releases, Windows 10)
+## Gposingway Manual Installation (all releases, Windows 10)
 
 Right-click the downloaded package and select `Extract All...` in the context menu:
 

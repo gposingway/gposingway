@@ -34,6 +34,20 @@ Having problems with GPosingway? Let's get you back on track!
   ![image](https://github.com/user-attachments/assets/8cf8b772-69d7-45a2-ab3c-1eb210ad2e8a)
   * Click `Apply`.
 
+### My screenshot shows some effect areas displaced to the side
+**Scaling Issues**: This is caused by a incompatible resolution scaling value, like trhe example below:  
+![image](https://github.com/user-attachments/assets/bdd9d332-3d06-443e-b373-cc39ac175d64)  
+Resulting in misplaced effect areas like the following example:  
+![image-mh](https://github.com/user-attachments/assets/9c6410aa-821d-4e51-9ad7-cb3e15e0beeb)
+* Fix:
+  * Make sure the following options are **disabled**:
+    * `Enable dynamic resolution`
+    * `Naturally darken the edges of the screen (Limb Darkening)`
+    * `Enable depth of field`
+  * Make sure the following options are set:
+   * `3D Resolution Scaling` to `100`
+   * `Edge Smoothing (Anti-aliasing)` to `FXAA` or `Off`
+
 # Other Problems
 
 ### FFXIV is running slower with GPosingway

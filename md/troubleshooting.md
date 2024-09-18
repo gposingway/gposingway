@@ -35,7 +35,7 @@ Having problems with GPosingway? Let's get you back on track!
   * Click `Apply`.
 
 ### My screenshot shows some effect areas displaced to the side
-**Scaling Issues**: This is caused by a incompatible resolution scaling value, like trhe example below:  
+**Scaling Issues**: This is caused by a incompatible resolution scaling value, like in the example below:  
 ![image](https://github.com/user-attachments/assets/bdd9d332-3d06-443e-b373-cc39ac175d64)  
 Resulting in misplaced effect areas like the following example:  
 ![image-mh](https://github.com/user-attachments/assets/9c6410aa-821d-4e51-9ad7-cb3e15e0beeb)

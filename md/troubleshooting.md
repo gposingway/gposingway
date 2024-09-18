@@ -23,7 +23,7 @@ Having problems with GPosingway? Let's get you back on track!
 
 **Permissions Issue**: This is likely due to ReShade not having permission to save changes to the preset files.
 * Fix:
-  * Right-click the reshade-presets folder in your game folder.
+  * Right-click the `reshade-presets` folder in your `game` folder.
   * Select `Properties`.
   * Go to the `Security` tab.
   * Find the `Users` entry.

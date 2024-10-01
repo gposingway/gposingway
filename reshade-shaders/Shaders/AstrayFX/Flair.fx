@@ -183,11 +183,11 @@ uniform bool Flair_Falloff <
 	ui_category = "Depth Map Masking";
 > = false;
 
-#if __RENDERER__ >= 0x20000 //Vulkan
+// #if __RENDERER__ >= 0x20000 //Vulkan
 	#define Rend 1
-#else
-	#define Rend 0
-#endif
+// #else
+//	#define Rend 0
+// #endif
 /////////////////////////////////////////////////////D3D Starts Here/////////////////////////////////////////////////////////////////
 #define pix float2(BUFFER_RCP_WIDTH, BUFFER_RCP_HEIGHT)
 uniform float timer < source = "timer"; >;

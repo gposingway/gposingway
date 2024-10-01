@@ -87,20 +87,17 @@
 //
 // GloomAO Update Notes are at the bottom
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#if exists "Overwatch.fxh"                                           //Overwatch Interceptor//
-	#include "Overwatch.fxh"
-	#define OS 0
-#else// DA_Y = [Depth Adjust] DA_Z = [Offset] DA_W = [Depth Linearization] DB_X = [Depth Flip]
-	static const float DA_Y = 7.5, DA_Z = 0.0, DA_W = 0.0, DB_X = 0;
-	// DC_X = [Barrel Distortion K1] DC_Y = [Barrel Distortion K2] DC_Z = [Barrel Distortion K3] DC_W = [Barrel Distortion Zoom]
-	static const float DC_X = 0, DC_Y = 0, DC_Z = 0, DC_W = 0;
-	// DD_X = [Horizontal Size] DD_Y = [Vertical Size] DD_Z = [Horizontal Position] DD_W = [Vertical Position]
-	static const float DD_X = 1, DD_Y = 1, DD_Z = 0.0, DD_W = 0.0;
-	//Triggers
-	static const int RE = 0, NC = 0, RH = 0, NP = 0, ID = 0, SP = 0, DC = 0, HM = 0, DF = 0, NF = 0, DS = 0, LBC = 0, LBM = 0, DA = 0, NW = 0, PE = 0, FV = 0, ED = 0;
-	//Overwatch.fxh State
-	#define OS 1
-#endif
+
+// DA_Y = [Depth Adjust] DA_Z = [Offset] DA_W = [Depth Linearization] DB_X = [Depth Flip]
+static const float DA_Y = 7.5, DA_Z = 0.0, DA_W = 0.0, DB_X = 0;
+// DC_X = [Barrel Distortion K1] DC_Y = [Barrel Distortion K2] DC_Z = [Barrel Distortion K3] DC_W = [Barrel Distortion Zoom]
+static const float DC_X = 0, DC_Y = 0, DC_Z = 0, DC_W = 0;
+// DD_X = [Horizontal Size] DD_Y = [Vertical Size] DD_Z = [Horizontal Position] DD_W = [Vertical Position]
+static const float DD_X = 1, DD_Y = 1, DD_Z = 0.0, DD_W = 0.0;
+//Triggers
+static const int RE = 0, NC = 0, RH = 0, NP = 0, ID = 0, SP = 0, DC = 0, HM = 0, DF = 0, NF = 0, DS = 0, LBC = 0, LBM = 0, DA = 0, NW = 0, PE = 0, FV = 0, ED = 0;
+//Overwatch.fxh State
+#define OS 1
 
 //Depth Buffer Adjustments
 #define DB_Size_Position 1    //[Off | On]         This is used to reposition and adjust the size of the depth buffer.
@@ -992,7 +989,7 @@ float4 CEAGD_V_SSDO(float4 vpos : SV_Position, float2 texcoords : TEXCOORD) : SV
 	return Denoise(SamplerSSDOH, texcoords, EvenSteven[clamp(SamplesXY,0,20)], 1, 2.5 );
 }
 
-float4 TAA_SSDO(float2 texcoords,float Mip)
+float4 TAA_SSDO_Helper(float2 texcoords,float Mip)
 {
 	return tex2Dlod(SamplerSSDOV, float4(texcoords, 0, Mip)).rgba;
 }
@@ -1001,22 +998,22 @@ float4 TAA_SSDO(float4 vpos : SV_Position, float2 texcoords : TEXCOORD) : SV_Tar
 {
 	float Per = 1-Persistence;
     float4 PastColor = tex2Dlod(SSDOaccuFrames,float4(texcoords,0,0) );//Past Back Buffer
-		   PastColor = (1-Per) * TAA_SSDO(texcoords, 0) + Per * PastColor;
+		   PastColor = (1-Per) * TAA_SSDO_Helper(texcoords, 0) + Per * PastColor;
 
     float3 antialiased = PastColor.xyz;
     float mixRate = min(PastColor.w, 0.5), MB = 0.0;//WIP
 
-    float3 BB = TAA_SSDO(texcoords, 0).rgb;
+    float3 BB = TAA_SSDO_Helper(texcoords, 0).rgb;
 
     antialiased = lerp(antialiased * antialiased, BB * BB, mixRate);
     antialiased = sqrt(antialiased);
 
-	float3 minColor = encodePalYuv( TAA_SSDO(texcoords, 0).rgb ) - MB;
-	float3 maxColor = encodePalYuv( TAA_SSDO(texcoords, 0).rgb ) + MB;
+	float3 minColor = encodePalYuv( TAA_SSDO_Helper(texcoords, 0).rgb ) - MB;
+	float3 maxColor = encodePalYuv( TAA_SSDO_Helper(texcoords, 0).rgb ) + MB;
 	for(int i = 1; i < 8; ++i)
 	{   //DX9 work around.
-		minColor = min(minColor,encodePalYuv( TAA_SSDO( texcoords + XYoffset[i], 0).rgb )) - MB;
-		maxColor = max(maxColor,encodePalYuv( TAA_SSDO( texcoords + XYoffset[i], 0).rgb )) + MB;
+		minColor = min(minColor,encodePalYuv( TAA_SSDO_Helper( texcoords + XYoffset[i], 0).rgb )) - MB;
+		maxColor = max(maxColor,encodePalYuv( TAA_SSDO_Helper( texcoords + XYoffset[i], 0).rgb )) + MB;
 	}
    	antialiased = encodePalYuv(antialiased);
 

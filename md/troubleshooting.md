@@ -4,6 +4,21 @@ Having problems with GPosingway? Let's get you back on track!
 
 # Installation Issues
 
+### Not Enough Permissions
+
+**Permissions Issue**: This is likely due to the installation script not having permission to download and extract files.
+* Fix:
+  * Right-click the `game` folder.
+  * Select `Properties`.
+  * Go to the `Security` tab.
+  * Find the `Users` entry.
+  * If the `Modify` permission is not checked like in the following image, click `Edit`:  
+  ![image](https://github.com/user-attachments/assets/01b232c3-f2a7-40e5-8b4a-bbdc674ed15f)  
+  * Select `Users`.
+  * Check the `Modify` permission so the list looks like this:  
+  ![image](https://github.com/user-attachments/assets/8cf8b772-69d7-45a2-ab3c-1eb210ad2e8a)
+  * Click `Apply`.
+
 ### GPosingway isn't working after install
   * **Version Check**: Ensure you've downloaded the correct GPosingway version for your installed ReShade.
   * **Installer Script**: If you're using the installer script, place the file directly in your main FFXIV folder.
@@ -19,6 +34,8 @@ Having problems with GPosingway? Let's get you back on track!
 
 # Usage
 
+### Can't install Gposingway
+or
 ### Changes to presets (like shortcuts or adjusted configurations) aren't saved
 
 **Permissions Issue**: This is likely due to ReShade not having permission to save changes to the preset files.

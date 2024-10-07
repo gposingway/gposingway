@@ -3,6 +3,7 @@ cls
 setlocal enabledelayedexpansion
 setlocal ENABLEEXTENSIONS
 
+:: 2024/09/07   1.0.5   Added guardrails for insufficient permissions on Win11.
 :: 2024/06/21   1.0.4   Added guardrails for deprecation list handler.
 :: 2024/06/09   1.0.3   Added ReShade.ini to the list of copied items for backup.
 :: 2024/06/08   1.0.2   FIX - replaced BITSADMIN with powershell for file transfer
@@ -35,6 +36,25 @@ if not exist ffxiv_dx11.exe (
     echo.
     echo Please make sure this .BAT file is placed in your FFXIV game directory:
     echo "[...]\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game"
+    pause
+    exit /b 1
+)
+
+:: Check if the batch file has permission to write to the current directory
+echo write-test > gposingway.temp 2>nul
+
+rem Check if the file was created
+if exist gposingway.temp (
+  del gposingway.temp
+) else (
+    echo WARNING: Seems I don't have permission to write to this directory,
+    echo and that's required to download and install GPosingway components.
+    echo (This also means that ReShade probably will experience issues as well.)
+    echo .
+    echo Follow the instructions here to fix this issue:
+    echo https://github.com/gposingway/gposingway/blob/main/md/troubleshooting.md#not-enough-permissions
+    echo Alternatively, use the manual download as described here:
+    echo https://github.com/gposingway/gposingway/blob/main/md/gposingway_installation.md
     pause
     exit /b 1
 )

@@ -268,7 +268,7 @@
     #define UI_INT_D(var, label, tooltip, minval, maxval, defval) \
         uniform int var \
         < \
-            ui_type     = "slider"; \
+            ui_type     = "drag"; \
             ui_label    = label; \
             ui_tooltip  = tooltip; \
             ui_min      = minval; \
@@ -278,7 +278,7 @@
     #define CAT_INT_D(var, category, label, tooltip, minval, maxval, defval) \
         uniform int var \
         < \
-            ui_type     = "slider"; \
+            ui_type     = "drag"; \
             ui_category = category; \
             ui_label    = label; \
             ui_tooltip  = tooltip; \
@@ -329,7 +329,7 @@
     #define UI_FLOAT_D(var, label, tooltip, minval, maxval, defval) \
         uniform float var \
         < \
-            ui_type     = "slider"; \
+            ui_type     = "drag"; \
             ui_label    = label; \
             ui_tooltip  = tooltip; \
             ui_min      = minval; \
@@ -339,7 +339,7 @@
     #define CAT_FLOAT_D(var, category, label, tooltip, minval, maxval, defval) \
         uniform float var \
         < \
-            ui_type     = "slider"; \
+            ui_type     = "drag"; \
             ui_category = category; \
             ui_label    = label; \
             ui_tooltip  = tooltip; \
@@ -415,7 +415,7 @@
     #define UI_FLOAT2_D(var, label, tooltip, minval, maxval, defval1, defval2) \
         uniform float2 var \
         < \
-            ui_type     = "slider"; \
+            ui_type     = "drag"; \
             ui_label    = label; \
             ui_tooltip  = tooltip; \
             ui_min      = minval; \
@@ -425,7 +425,7 @@
     #define CAT_FLOAT2_D(var, category, label, tooltip, minval, maxval, defval1, defval2) \
         uniform float2 var \
         < \
-            ui_type     = "slider"; \
+            ui_type     = "drag"; \
             ui_category = category; \
             ui_label    = label; \
             ui_tooltip  = tooltip; \
@@ -501,7 +501,7 @@
     #define UI_FLOAT3_D(var, label, tooltip, defval1, defval2, defval3) \
         uniform float3 var \
         < \
-            ui_type     = "slider"; \
+            ui_type     = "drag"; \
             ui_label    = label; \
             ui_tooltip  = tooltip; \
         >               = float3(defval1, defval2, defval3);
@@ -509,7 +509,7 @@
     #define CAT_FLOAT3_D(var, category, label, tooltip, defval1, defval2, defval3) \
         uniform float3 var \
         < \
-            ui_type     = "slider"; \
+            ui_type     = "drag"; \
             ui_category = category; \
             ui_label    = label; \
             ui_tooltip  = tooltip; \

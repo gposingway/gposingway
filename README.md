@@ -59,6 +59,7 @@ If you encounter issues, have suggestions, or simply want to connect with other 
 | --- | --- | --- | --- | --- |
 | AcerolaFX | [Garrett Gunnell](https://github.com/GarrettGunnell) | MIT - [License](https://github.com/GarrettGunnell/AcerolaFX?tab=MIT-1-ov-file) | [Download](https://github.com/GarrettGunnell/AcerolaFX/archive/refs/heads/main.zip)  | [`#AcerolaFX`](https://twitter.com/intent/tweet?text=%23AcerolaFX) |
 | ipsuShade | [ipsusu](https://twitter.com/ipsusu) | [License](https://github.com/ipsusu/IpsuShade/blob/master/LICENSE.md) | [Download Page](https://github.com/ipsusu/IpsuShade)<br/>iMMERSE and METEOR required for some presets | [`#ipsuShade`](https://twitter.com/intent/tweet?text=%23ipsuShade) |
+| nael | [Nael](https://x.com/naelwynn_xiv) | Distribution Permitted | iMMERSE compatible | [`#naelpresets`](https://twitter.com/intent/tweet?text=%23naelpresets) |
 | nyanya.studio | [Nya Nya](https://x.com/nyanyaxiv) | [License](https://github.com/nyanyastudio/presets/blob/main/LICENSE) | [Download Page](https://github.com/nyanyastudio/presets) | [`#nyanyastudio`](https://twitter.com/intent/tweet?text=%23nyanyastudio) |
 | SOFTGLOW ✮⋆˙ | [Hana](https://twitter.com/sheepysoftie) | Distribution Permitted | [Download Page](https://ko-fi.com/s/1942b62bb5)  | [`#hanasofties`](https://twitter.com/intent/tweet?text=%23hanasofties) |
 | TRUEREALISM | [Nyeps](https://twitter.com/FFXIVNyeps) | Distribution Permitted | 🍔 [Download Page](https://ko-fi.com/s/ac0d1c86a2)  | [`#NyepsRealism`](https://twitter.com/intent/tweet?text=%23NyepsRealism) |
@@ -72,8 +73,7 @@ If you encounter issues, have suggestions, or simply want to connect with other 
 
 | Preset | Creator | License | Notes |
 | --- | --- | --- | --- |
-| naelgameplay | [Nael](https://x.com/naelwynn_xiv) | Distribution Permitted | iMMERSE compatible |
-
+| None at the moment. |
 
 
 You can find a list of all included shader collections and their respective licenses [here](md/shader_licenses.md).

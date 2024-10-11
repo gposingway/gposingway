@@ -24,7 +24,7 @@ for /f "tokens=1-6 delims=/: " %%a in ('robocopy "|" . /njh /ndl ^| find ":"') d
 echo ------------------------------------------------
 echo  (\(\
 echo  ( o.o)    GPosingway Update/Installer Tool
-echo  O_(")(")
+echo  O_(")(")  1.0.5
 echo ------------------------------------------------
 echo.
 echo Welcome to the GPosingway Installer^^!
@@ -47,14 +47,16 @@ rem Check if the file was created
 if exist gposingway.temp (
   del gposingway.temp
 ) else (
-    echo WARNING: Seems I don't have permission to write to this directory,
-    echo and that's required to download and install GPosingway components.
-    echo (This also means that ReShade probably will experience issues as well.)
-    echo .
-    echo Follow the instructions here to fix this issue:
-    echo https://github.com/gposingway/gposingway/blob/main/md/troubleshooting.md#not-enough-permissions
-    echo Alternatively, use the manual download as described here:
-    echo https://github.com/gposingway/gposingway/blob/main/md/gposingway_installation.md
+    echo.
+    echo WARNING: It appears I don't have permission to write to the game directory.
+    echo This is necessary to download and install GPosingway components.
+    echo.
+    echo To fix this issue, please follow the instructions here:
+    echo  https://github.com/gposingway/gposingway/blob/main/md/troubleshooting.md#not-enough-permissions
+    echo.
+    echo Alternatively, you can manually download and install GPosingway:
+    echo  https://github.com/gposingway/gposingway/blob/main/md/gposingway_installation.md
+    echo.
     pause
     exit /b 1
 )

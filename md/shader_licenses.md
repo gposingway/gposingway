@@ -1,7 +1,7 @@
 ## Redistributed Shader Collections
 
 > [!NOTE]
-> This list is based on ReShade's own [list of known shader repositories](https://www.pcgamingwiki.com/wiki/ReShade#List_of_known_shader_repositories).
+> This list is based on and expandend upon ReShade's own [list of known shader repositories](https://www.pcgamingwiki.com/wiki/ReShade#List_of_known_shader_repositories).
 
 | Collection | Author | Description | License |
 |---|---|---|---|
@@ -28,6 +28,7 @@
 | [Shaders (brussell1)](https://github.com/brussell1/Shaders) | brussell1 | Home of Eye Adaptation and UI Detect shaders. | CC BY 4.0 |
 | [Shaders (MadCake)](https://github.com/ConstantineRudenko/Shaders/tree/master/reshade/Shaders) | MadCake | Contains alternative implementation of Ambient Occlusion and Tonemapping. | CC BY 4.0 |
 | [SweetFX](https://github.com/CeeJayDK/SweetFX) | CeeJay.dk | The original shader suite that ReShade was created to support.<br/>Home of many useful effects like SMAA, FXAA, LumaSharpen and CAS, as well as many ports of effects from the SweetFX injector. | MIT License |
+| [SHADERDECK](https://github.com/TreyM/SHADERDECK) | TreyM | Home of the AtmosphericDensity, LensDiffusion and VHSM shaders. A classic collection for compatibility purposes. | Permission kindly granted by the author |
 | [vort_Shaders](https://github.com/vortigern11/vort_Shaders) | vortigen11 | Repository of vort_HDR and vort_MotionBlur. | MIT License |
 | [VRToolkit](https://github.com/retroluxfilm/reshade-vrtoolkit) | VRToolkit | The VRToolkit is a modular shader created for ReShade to enhance the clarity & sharpness in VR to get most out of your HMD while keeping the performance impact minimal. | BSD 3-Clause License |
 | [Warp-FX](https://github.com/Radegast-FFXIV/reshade-shaders) | Radegast | Fun and abstract effects like Swirl, Wave, Slit Scan, etc. | GNU GPL V2.0 / MIT |

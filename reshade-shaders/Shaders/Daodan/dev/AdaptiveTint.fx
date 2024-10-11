@@ -36,8 +36,8 @@
 *******************************************************/
 
 #include "ReShade.fxh"
-#include "Dao_Stats.fxh"
-#include "Dao_Tools.fxh"
+#include "Stats.fxh"
+#include "Tools.fxh"
 
 #if GSHADE_DITHER
     #include "TriDither.fxh"

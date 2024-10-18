@@ -6,7 +6,7 @@ This is a drop-in package for Final Fantasy XIV containing a stable collection o
 
 ---
 
-**GPosingway version**: Release 8.0.2   
+**GPosingway version**: Release 8.0.2 SP1  
 **Currently supported ReShade version**: 6.3.1 with add-on support
 
 <a href='https://github.com/gposingway/gposingway/releases/latest'>![download](https://github.com/gposingway/gposingway/assets/18711130/e29bc268-09d3-4b00-9d80-a5d6f964c5de)</a>
@@ -59,6 +59,7 @@ If you encounter issues, have suggestions, or simply want to connect with other 
 | --- | --- | --- | --- | --- |
 | AcerolaFX | [Garrett Gunnell](https://github.com/GarrettGunnell) | MIT - [License](https://github.com/GarrettGunnell/AcerolaFX?tab=MIT-1-ov-file) | [Download](https://github.com/GarrettGunnell/AcerolaFX/archive/refs/heads/main.zip)  | [`#AcerolaFX`](https://twitter.com/intent/tweet?text=%23AcerolaFX) |
 | ipsuShade | [ipsusu](https://twitter.com/ipsusu) | [License](https://github.com/ipsusu/IpsuShade/blob/master/LICENSE.md) | [Download Page](https://github.com/ipsusu/IpsuShade)<br/>iMMERSE and METEOR required for some presets | [`#ipsuShade`](https://twitter.com/intent/tweet?text=%23ipsuShade) |
+| LeoLights | [✦Leo](https://x.com/Leo__xiv) | Distribution Permitted | [Download Page](https://ko-fi.com/leo__xiv/shop) | [`#leolights`](https://twitter.com/intent/tweet?text=%23leolights) |
 | nael | [Nael](https://x.com/naelwynn_xiv) | Distribution Permitted | iMMERSE compatible | [`#naelpresets`](https://twitter.com/intent/tweet?text=%23naelpresets) |
 | nyanya.studio | [Nya Nya](https://x.com/nyanyaxiv) | [License](https://github.com/nyanyastudio/presets/blob/main/LICENSE) | [Download Page](https://github.com/nyanyastudio/presets) | [`#nyanyastudio`](https://twitter.com/intent/tweet?text=%23nyanyastudio) |
 | SOFTGLOW ✮⋆˙ | [Hana](https://twitter.com/sheepysoftie) | Distribution Permitted | [Download Page](https://ko-fi.com/s/1942b62bb5)  | [`#hanasofties`](https://twitter.com/intent/tweet?text=%23hanasofties) |

@@ -67,6 +67,13 @@ The blending and prefiltering methods come from kino-bloom.
 	#define COMPUTE 0
 #endif
 
+#if __VENDOR__ == 0x1002 // AMD Vendor ID
+	technique Bessel_Bloom< enabled = false; ui_tooltip = "** Disabled by default on AMD cards due to artifact issues. **";>
+	{
+#warning "Disabled by default on AMD cards due to artifact issues."
+	}
+#else
+
 #if COMPUTE != 0
 static const float4 coefficients = float4(1, 1.5, -0.8333333, 0.1666667);
 namespace Bessel_Bloom
@@ -428,7 +435,7 @@ namespace Bessel_Bloom
 		}
 			
 	}
-	
+
 	technique Bessel_Bloom< ui_tooltip = "Instead of using the typical Gaussian filter used by bloom, an approximate is implemented instead\n"
 	                                     "using a 2nd order Bessel IIR filter.\n\n"
 										 "Part of Insane Shaders\n"
@@ -475,5 +482,8 @@ namespace Bessel_Bloom
 			PixelShader = OutputPS;
 		}
 	}
+#endif
+
+	
 }
 #endif

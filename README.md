@@ -77,7 +77,7 @@ Yes, the plan is to support newer ReShade versions in future updates, but in a d
 
 | Preset | Creator | License | Notes |
 |---|---|---|---|
-| **Submit Your Presets\!** |  |  |  This section will showcase community-contributed presets. See [Contribution Guidelines](https://www.google.com/url?sa=E&source=gmail&q=#contribution-guidelines) to submit yours\! |
+| **Submit Your Presets\!** |  |  |  This section will showcase community-contributed presets. See [Contribution Guidelines](https://github.com/gposingway/gposingway/blob/main/md/contributing.md) to submit yours\! |
 | None at the moment. | | | |
 
 

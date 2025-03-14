@@ -78,7 +78,6 @@ Yes, the plan is to support newer ReShade versions in future updates, but in a d
 | Preset | Creator | License | Notes |
 |---|---|---|---|
 | **Submit Your Presets\!** |  |  |  This section will showcase community-contributed presets. See [Contribution Guidelines](https://github.com/gposingway/gposingway/blob/main/md/contributing.md) to submit yours\! |
-| None at the moment. | | | |
 
 
 You can find a list of all included shader collections and their respective licenses [here](md/shader_licenses.md).

@@ -27,6 +27,9 @@
 // Lightly optimized by Marot Satil for the GShade project.
 // Special thanks to Sleeps_Hungry for the addition of the FFOccludeUI technique.
 
+// Changelog:
+// 2025-04-10: Leon Aquitaine - Added opacity threshold for occlusion to the FF standard pipeline
+
 #ifndef KeepUIDebug
     #define KeepUIDebug 0 // Set to 1 if you need to use KeepUI's debug features.
 #endif
@@ -88,7 +91,6 @@ uniform bool bKeepUIOcclude <
     #define KeepUIOccludeAssist 0
 #endif
 
-#if KeepUIOccludeAssist
 uniform float fKeepUIOccludeMinAlpha <
     ui_type = "slider";
     ui_category = "Options";
@@ -96,7 +98,6 @@ uniform float fKeepUIOccludeMinAlpha <
     ui_tooltip = "Set a minimum opacity threshold for occlusion assistance. If UI opacity is below the threshold, occlusion assistance will not be applied. Helps with screenspace illumination and DoF shaders.";
     ui_min = 0; ui_max = 1;
 > = 0;
-#endif
 
 uniform bool bKeepUIHideInScreenshot <
     ui_category = "Options";
@@ -139,7 +140,10 @@ sampler KeepUI_Sampler { Texture = KeepUI_Tex; };
 
 void PS_KeepUI(float4 pos : SV_Position, float2 texcoord : TEXCOORD, out float4 color : SV_Target)
 {
-    color = tex2D(ReShade::BackBuffer, texcoord);
+	float4 keep = tex2D(ReShade::BackBuffer, texcoord);
+    keep.a *= step(fKeepUIOccludeMinAlpha, keep.a);
+	color = float4(lerp(tex2D(ReShade::BackBuffer, texcoord), keep, keep.a).rgb, keep.a);
+	
 #if KeepUIType == 2
     color.a = step(1.0, 1.0 - ReShade::GetLinearizedDepth(texcoord));
 #elif KeepUIType == 3

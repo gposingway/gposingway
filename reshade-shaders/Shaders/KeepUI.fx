@@ -1,4 +1,4 @@
-// KeepUI for FFXIV, Phantasy Star Online, and other games with a UI present as alpha data or a depth of 0.
+// KeepUI for Final Fantasy XIV and other games with a UI present as alpha data or a depth of 0.
 // Authors: seri14 & Marot Satil
 // 
 // This is free and unencumbered software released into the public domain.
@@ -26,26 +26,19 @@
 //
 // Lightly optimized by Marot Satil for the GShade project.
 // Special thanks to Sleeps_Hungry for the addition of the FFOccludeUI technique.
-
-// Changelog:
-// 2025-04-10: Leon Aquitaine - Added opacity threshold for occlusion to the FF standard pipeline
+// Special thanks to Leon Aquitaine for the addition of the UI detection opacity threshold.
 
 #ifndef KeepUIDebug
     #define KeepUIDebug 0 // Set to 1 if you need to use KeepUI's debug features.
 #endif
 
 #ifndef KeepUIType
-    #define KeepUIType 0 // 0 - Default, turns off UI saving for unsupported games only. | 1 - Alpha-based/Final Fantasy XIV's UI saving mode | 2 - Shared depth buffer UI saving. | 3 - Dedicated depth buffer/Phantasy Star Online 2: New Genesis's UI saving mode.
+    #define KeepUIType 0 // 0 - Default, turns off UI saving for games without automatic detection. | 1 - Alpha-based/Final Fantasy XIV's UI saving mode | 2 - Depth buffer UI saving.
 
     #if (__APPLICATION__ == 0x6f24790f || (__APPLICATION__ == 0xf133c441 && !(__RENDERER__ & 0x20000))) && KeepUIType == 0 // Final Fantasy XIV & The Sims 4 (DirectX 9 Only)
         #undef KeepUIType
         #define KeepUIType 1
         #define KeepUIOverride 1
-    // PSO 2 depth saving via GShade's Depth II addon.
-    #elif (__APPLICATION__ == 0x21050ce9 || __APPLICATION__ == 0x31d39829 || __APPLICATION__ == 0xfe44e135) && KeepUIType == 0 // Phantasy Star Online 2: New Genesis
-        #undef KeepUIType
-        #define KeepUIType 3
-        #define KeepUIOverride 3
     #endif
 #endif
 
@@ -53,37 +46,49 @@ uniform int bKeepUIForceType <
     ui_type = "combo";
     ui_category = "Options";
     ui_label = "UI Detection Type Override";
-#ifndef __GSHADE__
 #if !ADDON_RESHADE_EFFECT_SHADER_TOGGLER
-    ui_tooltip = "Manually enable a specific UI detection type for unsupported games.\n\nIn order to use this setting as shown, please install the \"UIBind\" addon created by cot6.\n\nAlternatively, you may specify the type of UI saving you would like to use in the Preprocessor Definitions below by adjusting KeepUIType";
+    ui_tooltip = "Manually enable a specific UI detection type for games without automatic detection.\n\nIn order to use this setting as shown, please install the \"UIBind\" addon created by cot6.\n\nAlternatively, you may specify the type of UI saving you would like to use in the Preprocessor Definitions below by adjusting KeepUIType";
 #else
     ui_tooltip = "KeepUI.fx is currently disabled due to the presence of the ReShade Effect Toggler (REST) Add-on. Changing this setting will have no effect.";
 #endif
     ui_items = "Disabled\0Alpha\0Shared Depth\0";
-#else
-#if !ADDON_RESHADE_EFFECT_SHADER_TOGGLER
-    ui_tooltip = "Manually enable a specific UI detection type for unsupported games.";
-#else
-    ui_tooltip = "KeepUI.fx is currently disabled due to the presence of the ReShade Effect Toggler (REST) Add-on. Changing this setting will have no effect.";
-#endif
-    ui_items = "Disabled\0Alpha\0Shared Depth\0Dedicated Depth\0";
-#endif
     ui_bind = "KeepUIType";
-#if KeepUIOverride == 1 // Final Fantasy XIV (DirectX 11 Only) & The Sims 4 (DirectX 9 Only)
+#if KeepUIOverride == 1 // Final Fantasy XIV & The Sims 4 (DirectX 9 Only)
 > = 1;
 #elif KeepUIOverride == 2
 > = 2;
-#elif KeepUIOverride == 3 // Phantasy Star Online 2
-> = 3;
 #else
 > = 0;
 #endif
 
-#if KeepUIType != 0 && !ADDON_RESHADE_EFFECT_SHADER_TOGGLER // Supported game & REST add-on is not present.
+#if KeepUIType != 0 && !ADDON_RESHADE_EFFECT_SHADER_TOGGLER // Enabled & REST add-on is not present.
+#if KeepUIType == 1
+uniform bool bKeepUIAlpha <
+    ui_category = "Options";
+    ui_label = "Max Alpha Adjustment";
+    ui_tooltip = "Enable if you notice transparent UI elements which are not detected by the shader. May lead to false-positives.\n\nIn order to use this setting as shown, please install the \"UIBind\" addon created by cot6.\n\nAlternatively, you may enable or disable this setting in the Preprocessor Definitions below by adjusting KeepUIOccludeAssist";
+    ui_bind = "KeepUIAlpha";
+> = 1;
+
+#ifndef KeepUIAlpha
+    #define KeepUIAlpha 1
+#endif
+
+#if KeepUIAlpha
+uniform float fKeepUIMaxAlpha <
+    ui_type = "slider";
+    ui_category = "Options";
+    ui_label = "Alpha Threshold";
+    ui_tooltip = "Set a maximum opacity threshold for UI detection. If UI opacity is below the threshold, UI saving will be applied.";
+    ui_min = 0; ui_max = 1;
+> = 0.8;
+#endif
+#endif
+
 uniform bool bKeepUIOcclude <
     ui_category = "Options";
     ui_label = "Occlusion Assistance";
-    ui_tooltip = "Enable if you notice odd graphical issues with Bloom or similar shaders. May cause problems with SSDO when enabled.";
+    ui_tooltip = "Enable if you notice odd graphical issues with Bloom or similar shaders. May cause problems with SSDO when enabled.\n\nIn order to use this setting as shown, please install the \"UIBind\" addon created by cot6.\n\nAlternatively, you may enable or disable this setting in the Preprocessor Definitions below by adjusting KeepUIOccludeAssist";
     ui_bind = "KeepUIOccludeAssist";
 > = 0;
 
@@ -91,18 +96,20 @@ uniform bool bKeepUIOcclude <
     #define KeepUIOccludeAssist 0
 #endif
 
+#if KeepUIOccludeAssist
 uniform float fKeepUIOccludeMinAlpha <
     ui_type = "slider";
     ui_category = "Options";
     ui_label = "Occlusion Assistance Alpha Threshold";
     ui_tooltip = "Set a minimum opacity threshold for occlusion assistance. If UI opacity is below the threshold, occlusion assistance will not be applied. Helps with screenspace illumination and DoF shaders.";
     ui_min = 0; ui_max = 1;
-> = .75;
+> = 0;
+#endif
 
 uniform bool bKeepUIHideInScreenshot <
     ui_category = "Options";
     ui_label = "Hide KeepUI In Screenshots";
-    ui_tooltip = "Enable to hide the effects of KeepUI when taking screenshots.\n\nThis is very helpful in games where portions of the screen which are not part of the UI may be detected as such.";
+    ui_tooltip = "Enable to hide the effects of KeepUI when taking screenshots.\n\nThis is very helpful in games where portions of the screen which are not part of the UI may be detected as such.\n\nIn order to use this setting as shown, please install the \"UIBind\" addon created by cot6.\n\nAlternatively, you may enable or disable this setting in the Preprocessor Definitions below by adjusting KeepUIHideInScreenshots";
     ui_bind = "KeepUIHideInScreenshots";
 > = 0;
 
@@ -129,31 +136,22 @@ uniform int iBlendSource <
 #endif
 
 #include "ReShade.fxh"
-#if KeepUIType == 3
-#include "GShade.fxh"
-#endif
 #endif
 
-#if KeepUIType != 0 && !ADDON_RESHADE_EFFECT_SHADER_TOGGLER // Supported game & REST add-on is not present.
+#if KeepUIType != 0 && !ADDON_RESHADE_EFFECT_SHADER_TOGGLER // Enabled & REST add-on is not present.
 texture KeepUI_Tex { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; };
 sampler KeepUI_Sampler { Texture = KeepUI_Tex; };
 
 void PS_KeepUI(float4 pos : SV_Position, float2 texcoord : TEXCOORD, out float4 color : SV_Target)
 {
-	if (fKeepUIOccludeMinAlpha == 0.0){
-		color = tex2D(ReShade::BackBuffer, texcoord);
-	}
-	else
-	{
-		float4 keep = tex2D(ReShade::BackBuffer, texcoord);
-		keep.a *= step(fKeepUIOccludeMinAlpha, keep.a);
-		color = float4(lerp(tex2D(ReShade::BackBuffer, texcoord), keep, keep.a).rgb, keep.a);
-	}
-	
-#if KeepUIType == 2
+#if KeepUIType == 1 && KeepUIAlpha
+    float4 keep = tex2D(ReShade::BackBuffer, texcoord);
+    color = keep;
+    keep.a *= step(fKeepUIMaxAlpha, keep.a);
+    color = float4(lerp(color, keep, keep.a).rgb, keep.a);
+#else
+    color = tex2D(ReShade::BackBuffer, texcoord);
     color.a = step(1.0, 1.0 - ReShade::GetLinearizedDepth(texcoord));
-#elif KeepUIType == 3
-    color.a = step(1.0, 1.0 - GShade::GetLinearizedDepthII(texcoord));
 #endif
 }
 
@@ -204,6 +202,7 @@ void PS_RestoreUI(float4 pos : SV_Position, float2 texcoord : TEXCOORD, out floa
 #endif
 
 technique FFKeepUI <
+    ui_label = "KeepUI";
 #if !ADDON_RESHADE_EFFECT_SHADER_TOGGLER
     ui_tooltip = "Place this at the top of your Technique list to save the UI into a texture for restoration with FFRestoreUI.\n"
                  "To use this Technique, you must also enable \"FFRestoreUI\".\n";
@@ -212,7 +211,7 @@ technique FFKeepUI <
 #endif
 >
 {
-#if KeepUIType != 0 && !ADDON_RESHADE_EFFECT_SHADER_TOGGLER // Supported game & REST add-on is not present.
+#if KeepUIType != 0 && !ADDON_RESHADE_EFFECT_SHADER_TOGGLER // Enabled & REST add-on is not present.
     pass
     {
         VertexShader = PostProcessVS;
@@ -230,6 +229,7 @@ technique FFKeepUI <
 }
 
 technique FFRestoreUI <
+    ui_label = "RestoreUI";
 #if !ADDON_RESHADE_EFFECT_SHADER_TOGGLER
     ui_tooltip = "Place this at the bottom of your Technique list to restore the UI texture saved by FFKeepUI.\n"
                  "To use this Technique, you must also enable \"FFKeepUI\".\n";
@@ -241,7 +241,7 @@ technique FFRestoreUI <
 #endif
 >
 {
-#if KeepUIType != 0 && !ADDON_RESHADE_EFFECT_SHADER_TOGGLER // Supported game & REST add-on is not present.
+#if KeepUIType != 0 && !ADDON_RESHADE_EFFECT_SHADER_TOGGLER // Enabled & REST add-on is not present.
     pass
     {
         VertexShader = PostProcessVS;

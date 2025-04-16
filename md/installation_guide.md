@@ -11,17 +11,17 @@ GPosingway is powered by ReShade, a powerful post-processing tool. To get starte
    - Visit the [ReShade website](https://reshade.me) or use the [MediaFire repository](https://www.mediafire.com/folder/reshade_versions) to download the latest version of ReShade with Add-On support.
 
 2. **Run the Installer**:
-   - Launch the ReShade installer and click `Browse...`.
+   - Launch the ReShade installer and click `Browse...`.  
      ![Browse Button](https://github.com/gposingway/gposingway/assets/18711130/6a57b0d1-5684-441b-94b3-01254d38095a)
-   - Locate the `ffxiv_dx11.exe` file in the `game` folder and click `Open`.
+   - Locate the `ffxiv_dx11.exe` file in the `game` folder and click `Open`.  
      ![Select Game File](https://github.com/gposingway/gposingway/assets/18711130/433815f2-3648-4efd-b8c3-18786bd1a657)
 
 3. **Select Rendering API**:
-   - Choose the appropriate rendering API (DirectX 10/11/12 for most users).
+   - Choose the appropriate rendering API (DirectX 10/11/12 for most users).  
      ![Rendering API](https://github.com/gposingway/gposingway/assets/18711130/45358023-2100-455c-9619-7c04f5487b4d)
 
 4. **Skip Optional Steps**:
-   - In the `Select preset to install` and `Select effect packages to install` windows, click `Skip`.
+   - In the `Select preset to install` and `Select effect packages to install` windows, click `Skip`.  
      ![Skip Preset](https://github.com/gposingway/gposingway/assets/18711130/c458f994-5b5e-495f-9c4e-04122a63b4a6)
      ![Skip Effects](https://github.com/gposingway/gposingway/assets/18711130/0ff6a3ae-32f4-408a-935a-db9c8d30fb89)
 

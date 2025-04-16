@@ -26,7 +26,7 @@ GPosingway is powered by ReShade, a powerful post-processing tool. To get starte
      ![Skip Effects](https://github.com/gposingway/gposingway/assets/18711130/0ff6a3ae-32f4-408a-935a-db9c8d30fb89)
 
 5. **Finish Installation**:
-   - Click `Finish` to complete the setup.
+   - Click `Finish` to complete the setup.  
      ![Finish Installation](https://github.com/gposingway/gposingway/assets/18711130/9ab2bf1f-a809-4130-aea7-0f767e8dbe84)
 
 ### Notes
@@ -39,34 +39,34 @@ GPosingway is powered by ReShade, a powerful post-processing tool. To get starte
 
 ### Manual Installation
 1. **Extract the Package**:
-   - Right-click the downloaded GPosingway package and select `Extract All...`.
+   - Right-click the downloaded GPosingway package and select `Extract All...`.  
      ![Extract All](https://github.com/gposingway/gposingway/assets/18711130/7968f27b-f5b5-4c1c-ba07-5911a8f7a79e)
-   - Click `Extract` in the dialog box.
+   - Click `Extract` in the dialog box.  
      ![Extract Button](https://github.com/gposingway/gposingway/assets/18711130/7d3c3978-355e-4b0e-9a74-c64ab2318f65)
 
 2. **Copy Files**:
-   - Copy all files and folders from the extracted package to the `game` folder of your FFXIV installation (e.g., `SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game`).
+   - Copy all files and folders from the extracted package to the `game` folder of your FFXIV installation (e.g., `SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game`).  
      ![Copy Files](https://github.com/gposingway/gposingway/assets/18711130/5654b154-4599-4623-94f2-d177c5668a18)
 
 3. **Verify Installation**:
-   - Launch the game. If you see GPosingway instructions on startup, the installation was successful.
+   - Launch the game. If you see GPosingway instructions on startup, the installation was successful.  
      ![Startup Instructions](https://github.com/gposingway/gposingway/assets/18711130/65ef0e5f-f49e-4903-9105-acd9bb9c41e9)
 
 ### Using the Installer
 1. **Prepare the Installer**:
-   - Copy the `gposingway-update.bat` file to the `game` folder of your FFXIV installation.
+   - Copy the `gposingway-update.bat` file to the `game` folder of your FFXIV installation.  
      ![Installer File](https://github.com/gposingway/gposingway/assets/18711130/ab2da9d6-bf6c-4c15-bf44-20a8ddae69a1)
 
 2. **Run the Installer**:
-   - Double-click `gposingway-update.bat`.
+   - Double-click `gposingway-update.bat`.  
      ![Run Installer](https://github.com/gposingway/gposingway/assets/18711130/9cf1ac93-20b7-41f3-b17e-4e44babb59fc)
-   - If prompted by Windows Defender, click `More Info` and then `Run Anyway`.
+   - If prompted by Windows Defender, click `More Info` and then `Run Anyway`.  
      ![Run Anyway](https://github.com/gposingway/gposingway/assets/18711130/a47d0795-caa3-4a7e-a9f8-75d7b2d8961e)
-   - Follow the on-screen instructions to complete the installation.
+   - Follow the on-screen instructions to complete the installation.  
      ![Installer Instructions](https://github.com/gposingway/gposingway/assets/18711130/57dbca2b-be15-4e7a-af70-ec97fbe3e03a)
 
 3. **Update GPosingway**:
-   - To update, run `gposingway-update.bat` again. The installer will patch your installation.
+   - To update, run `gposingway-update.bat` again. The installer will patch your installation.  
      ![Update Installer](https://github.com/gposingway/gposingway/assets/18711130/6dc7431a-9793-46b3-9889-434b645bac8e)
 
 ---

@@ -77,14 +77,17 @@ uniform bool EnableBloom < ui_label = "Bloom"; ui_tooltip = "Enables or disables
 uniform float BloomIntensity < ui_type = "slider"; ui_label = "Intensity"; ui_tooltip = "Controls how strong the bloom (glow) effect appears around sparkles."; ui_min = 0.1; ui_max = 3.1; ui_step = 0.05; ui_category = "Bloom Effect"; ui_spacing = 1; ui_bind = "EnableBloom"; > = 1.6;
 uniform float BloomRadius < ui_type = "slider"; ui_label = "Radius"; ui_tooltip = "Sets how far the bloom effect extends from each sparkle. Larger values create a wider glow."; ui_min = 1.0; ui_max = 10.2; ui_step = 0.2; ui_category = "Bloom Effect"; ui_bind = "EnableBloom"; > = 5.6;
 uniform float BloomDispersion < ui_type = "slider"; ui_label = "Dispersion"; ui_tooltip = "Adjusts how quickly the bloom fades at the edges. Higher values make the glow softer and more gradual."; ui_min = 1.0; ui_max = 3.0; ui_step = 0.05; ui_category = "Bloom Effect"; ui_bind = "EnableBloom"; > = 2.0;
-uniform int BloomQuality < ui_type = "combo"; ui_label = "Quality"; ui_tooltip = "Selects the quality level for the bloom effect. Higher quality reduces artifacts but may impact performance."; ui_items = "Low\0Medium\0High\0Ultra\0"; ui_category = "Bloom Effect"; ui_bind = "EnableBloom"; > = 2;
+uniform int BloomQuality < ui_type = "combo"; ui_label = "Quality"; ui_tooltip = "Selects the quality level for the bloom effect. Higher quality reduces artifacts but may impact performance."; ui_items = "Potato\0Low\0Medium\0High\0Ultra\0AI Overlord\0"; ui_category = "Bloom Effect"; ui_bind = "EnableBloom"; > = 2;
 uniform bool BloomDither < ui_label = "Dither"; ui_tooltip = "Adds subtle noise to the bloom to reduce color banding and grid patterns."; ui_category = "Bloom Effect"; ui_bind = "EnableBloom"; > = true;
 
 // --- Listeningway Integration ---
-uniform bool EnableListeningway < ui_label = "Enable"; ui_tooltip = "Enable audio-reactive controls using the Listeningway addon. When enabled, sparkles and bloom will respond to music and sound. [Learn more](https://github.com/gposingway/Listeningway)"; ui_category = "Listeningway Integration"; > = false;
-uniform float Listeningway_SparkleMultiplier < ui_type = "slider"; ui_label = "Sparkle"; ui_tooltip = "Controls how much the audio increases sparkle brightness. Higher values make sparkles react more strongly to sound."; ui_min = 0.0; ui_max = 5.0; ui_step = 0.05; ui_category = "Listeningway Integration"; ui_bind = "EnableListeningway"; > = 1.5;
-uniform float Listeningway_BloomMultiplier < ui_type = "slider"; ui_label = "Bloom"; ui_tooltip = "Controls how much the audio increases bloom intensity. Higher values make the glow react more strongly to sound."; ui_min = 0.0; ui_max = 10.0; ui_step = 0.1; ui_category = "Listeningway Integration"; ui_bind = "EnableListeningway"; > = 10.0;
-uniform float Listeningway_TimeScaleMultiplier < ui_type = "slider"; ui_label = "Time"; ui_tooltip = "Controls how much the audio increases animation speed. Higher values make sparkles animate faster with bass."; ui_min = 0.0; ui_max = 5.0; ui_step = 0.05; ui_category = "Listeningway Integration"; ui_bind = "EnableListeningway"; > = 1.0;
+uniform bool EnableListeningway < ui_label = "Enable Integration"; ui_tooltip = "Enable audio-reactive controls using the Listeningway addon. When enabled, sparkles and bloom will respond to music and sound. [Learn more](https://github.com/gposingway/Listeningway)"; ui_category = "Listeningway Integration"; > = false;
+uniform int Listeningway_SparkleSource < ui_type = "combo"; ui_label = "Sparkle Source"; ui_items = "Volume\0Beat\0Bass\0Treble\0"; ui_category = "Listeningway Integration"; ui_bind = "EnableListeningway"; > = 1;
+uniform float Listeningway_SparkleMultiplier < ui_type = "slider"; ui_label = "Sparkle Intensity"; ui_tooltip = "Controls how much the selected audio source increases sparkle brightness."; ui_min = 0.0; ui_max = 5.0; ui_step = 0.05; ui_category = "Listeningway Integration"; ui_bind = "EnableListeningway"; > = 1.5;
+uniform int Listeningway_BloomSource < ui_type = "combo"; ui_label = "Bloom Source"; ui_items = "Volume\0Beat\0Bass\0Treble\0"; ui_category = "Listeningway Integration"; ui_bind = "EnableListeningway"; > = 1;
+uniform float Listeningway_BloomMultiplier < ui_type = "slider"; ui_label = "Bloom Intensity"; ui_tooltip = "Controls how much the selected audio source increases bloom intensity."; ui_min = 0.0; ui_max = 10.0; ui_step = 0.1; ui_category = "Listeningway Integration"; ui_bind = "EnableListeningway"; > = 10.0;
+uniform int Listeningway_TimeScaleSource < ui_type = "combo"; ui_label = "Time Source"; ui_items = "Volume\0Beat\0Bass\0Treble\0"; ui_category = "Listeningway Integration"; ui_bind = "EnableListeningway"; > = 1;
+uniform float Listeningway_TimeScaleBand1Multiplier < ui_type = "slider"; ui_label = "Time Intensity"; ui_tooltip = "Controls how much the selected audio source increases animation speed."; ui_min = 0.0; ui_max = 5.0; ui_step = 0.05; ui_category = "Listeningway Integration"; ui_bind = "EnableListeningway"; > = 1.0;
 
 // --- Color Settings ---
 uniform float3 GlitterColor < ui_type = "color"; ui_label = "Color"; ui_tooltip = "Sets the base color of all sparkles."; ui_category = "Color Settings"; > = float3(1.0, 1.0, 1.0);
@@ -145,6 +148,15 @@ float3 applyBlendMode(float3 original, float3 sparkle, int blendMode) {
     float3 result = original;
     switch(blendMode) { case 0: result = original + sparkle; break; case 1: result = 1.0 - (1.0 - original) * (1.0 - sparkle); break; case 2: result = original / (1.0 - sparkle + 1e-6); break; } // Added safe divide
     return result;
+}
+
+// Helper function to select the audio source
+float GetListeningwaySource(int source) {
+    if (source == 0) return Listeningway_Volume;
+    if (source == 1) return Listeningway_Beat;
+    if (source == 2) return Listeningway_FreqBands[0]; // Bass
+    if (source == 3) return Listeningway_FreqBands[7]; // Treble
+    return 0.0;
 }
 
 //=====================================================================================//
@@ -228,14 +240,14 @@ float4 PS_RenderSparkles(float4 pos : SV_Position, float2 texcoord : TEXCOORD) :
     }
     float actualTimeScale = TimeScale / 333.33;
     if (EnableListeningway) {
-        actualTimeScale += Listeningway_Beat * Listeningway_TimeScaleMultiplier / 333.33;
+        actualTimeScale += GetListeningwaySource(Listeningway_TimeScaleSource) * Listeningway_TimeScaleBand1Multiplier / 333.33;
     }
     float time = frameCount * 0.005 * actualTimeScale; // Original timing logic
     float positionHash = hash21(floor(texcoord * 10.0)) * 10.0;
     float2 noiseCoord = texcoord * ReShade::ScreenSize * 0.005;
     float sparkleIntensity = sparkle(noiseCoord, positionHash + time); // Uses positionHash + scaled time
     if (EnableListeningway) {
-        sparkleIntensity *= (1.0 + Listeningway_FreqBands[0] * Listeningway_SparkleMultiplier);
+        sparkleIntensity *= (1.0 + GetListeningwaySource(Listeningway_SparkleSource) * Listeningway_SparkleMultiplier);
     }
     float3 viewDir = float3(0.0, 0.0, 1.0); float fresnel = pow(1.0 - saturate(dot(normal, viewDir)), 5.0);
     if (!forceEnable && ObeyOcclusion) { sparkleIntensity *= fresnel * depthMask; }
@@ -258,7 +270,7 @@ float4 PS_BloomH(float4 pos : SV_Position, float2 texcoord : TEXCOORD) : SV_Targ
     float2 noise = float2(1.0, 1.0); if (BloomDither) { noise = calculateDitherNoise(texcoord, float2(12.9898, 78.233), stepSize); }
     float bloomIntensity = BloomIntensity;
     if (EnableListeningway) {
-        bloomIntensity += (Listeningway_Beat * Listeningway_BloomMultiplier);
+        bloomIntensity += (GetListeningwaySource(Listeningway_BloomSource) * Listeningway_BloomMultiplier);
     }
     // Depth/occlusion mask for bloom
     float depth = ReShade::GetLinearizedDepth(texcoord);

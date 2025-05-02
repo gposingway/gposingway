@@ -79,7 +79,7 @@ This document lists the shader collections and individual shaders redistributed 
 
 (Sorted alphabetically by Shader name)
 
-We thank the original authors for their work. If you see your shader listed here and would like to provide license or author information, or request removal, please contact us so we can give proper credit or comply with your wishes.
+I thank the original authors for their work; some of these shaders are wildly used by popular preset sets used by the FFXIV community. If you see your shader listed here and would like to provide license or author information, or request removal, please contact us so we can give proper credit or comply with your wishes.
 
 | Shader | Notes |
 |--------|-------|

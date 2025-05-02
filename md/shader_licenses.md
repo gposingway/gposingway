@@ -6,6 +6,8 @@ This document lists the shader collections and individual shaders redistributed 
 
 ## Shader Collections
 
+(Sorted alphabetically by Collection name)
+
 | Collection | Author | Description | License |
 |------------|--------|-------------|---------|
 | [AstrayFX](https://blueskydefender.github.io/AstrayFX/) | BlueSkyDefender | Anti-aliasing shaders and more, including Smart Sharp and Temporal AA. | Public repository |
@@ -34,35 +36,78 @@ This document lists the shader collections and individual shaders redistributed 
 
 ## Individual Shaders
 
+(Sorted alphabetically by Shader name)
+
 | Shader | Author | License |
 |--------|--------|---------|
+| AdaptiveSharpen.fx | bacondither | BSD 2-Clause License |
 | ColorToAlpha.fx | Marot Satil | BSD 3-Clause License |
 | Composition.fx | Marot Satil | BSD 3-Clause License |
 | Copyright.fx | Various | MIT License |
-| ExtendedLevels.fx | Various | Public Repository |
-| Glamayre_Fast_Effects.fx | Robert Jessop | MIT License |
-| KeepUI.fx | seri14 | Public Domain |
-| MXAO 4.0.2 EX.fx | Marty McFly, Marot Satil | CC BY-NC-ND 3.0 |
-| MagicBorder.fx | Frans Bouma | BSD 3-Clause License |
-| MultiLUT.fx | Various | MIT License |
-| PD80_03_Filmic_Adaptation.fx | prod80 | MIT License |
-| UIShadow.fx | Lolika | CC0 |
+| CopyrightTex_XIV.fxh, CopyrightTex_PSO2.fxh, CopyrightTex_Custom.fxh | originalnicodr, prod80, uchu suzume, Marot Satil | No explicit license in file |
+| dh_canvas.fx | AlucardDH (Damien Hembert) | GNU GPL v2.0 |
+| Dimension_Plus.fx | Jose Negrete (BlueSkyDefender), Philippe David, Fubaxiusz | CC BY-ND 4.0 |
 | DropShadow.fx / DropShadow.fxh | CeeJay.dk, seri14, Marot Satil, Uchu Suzume, prod80, originalnicodr | MIT License |
-| MaskGlowAdvanced.fx | guest(r) | GNU GPL v2.0 or later |
-| FGFXEnergyConservativeFilmGrain.fx | Alex Tuduran | MIT License |
-| GrainSpread.fx | luluco250 | MIT License |
-| dh_canvas.fx | AlucardDH | GNU GPL v2.0 |
+| ExtendedLevels.fx | Various | Public Repository |
 | fastBlur.fx | Robert Jessop, Alex Tuderan | MIT License |
+| FGFXEnergyConservativeFilmGrain.fx | Alex Tuduran | MIT License |
+| Frequency_CS.fx | SirCobra | Public repository (see [https://github.com/LordKobra/CobraFX](https://github.com/LordKobra/CobraFX)) |
+| FXShadersAPI.fxh, FXShadersAspectRatio.fxh, FXShadersBlending.fxh, FXShadersCanvas.fxh, FXShadersCommon.fxh, FXShadersConvolution.fxh, FXShadersDithering.fxh, FXShadersMath.fxh, FXShadersTonemap.fxh, FXShadersTransform.fxh | luluco250 | MIT License |
+| Glamayre_Fast_Effects.fx | Robert Jessop | MIT License |
+| GrainSpread.fx | luluco250 | MIT License |
+| HoleFiller.fx | MJ_Ehsan | CC0 |
+| HotsamplingHelper.fx | Alexander Federwisch, Marot Satil | BSD 3-Clause License |
+| KeepUI.fx | seri14 | Public Domain |
+| ListeningwayUniforms.fxh | Leon Aquitaine | CC BY 4.0 |
+| MagicBorder.fx | Frans Bouma | BSD 3-Clause License |
+| MaskGlowAdvanced.fx | guest(r) | GNU GPL v2.0 or later |
+| MultiLUT.fx | Various | MIT License |
+| MXAO 4.0.2 EX.fx | Marty McFly, Marot Satil | CC BY-NC-ND 3.0 |
+| Oklab.fxh | Björn Ottosson | MIT License |
 | pColorNoise.fx | Gimle Larpes | MIT License |
 | pColors.fx | Gimle Larpes | MIT License |
 | pPalettePosterize.fx | Gimle Larpes | MIT License |
-| rj_sharpen.fx | rj200 | MIT License |
-| warpsharp.fx | Robert Jessop, Alex Tuderan | MIT License |
-| xBRv4.fx | Hyllian/Jararaca, ported by Bapho | GNU GPL v2.0 or later |
-| ListeningwayUniforms.fxh | Leon Aquitaine | CC BY 4.0 |
-| Oklab.fxh | Björn Ottosson | MIT License |
+| PD80_03_Filmic_Adaptation.fx | prod80 | MIT License |
 | pUtils.fxh | Gimle Larpes | MIT License |
-| FXShadersAPI.fxh, FXShadersAspectRatio.fxh, FXShadersBlending.fxh, FXShadersCanvas.fxh, FXShadersCommon.fxh, FXShadersConvolution.fxh, FXShadersDithering.fxh, FXShadersMath.fxh, FXShadersTonemap.fxh, FXShadersTransform.fxh | luluco250 | MIT License |
+| rj_sharpen.fx | Robert Jessop, Alex Tuderan | MIT License |
+| UIShadow.fx | Lolika | CC0 |
+| warpsharp.fx | Robert Jessop, Alex Tuderan | MIT License |
+
+---
+
+## Shaders with Unknown License or Author
+
+(Sorted alphabetically by Shader name)
+
+We thank the original authors for their work. If you see your shader listed here and would like to provide license or author information, or request removal, please contact us so we can give proper credit or comply with your wishes.
+
+| Shader | Notes |
+|--------|-------|
+| Action Bundle 95 MLUT.fx | No explicit author or license in file |
+| Action MLUT.fx | No explicit author or license in file |
+| Action Movie MLUT.fx | No explicit author or license in file |
+| BadBloomPS2.fx | No explicit author or license in file |
+| Blending.fxh | No explicit license in file |
+| Bloom.fx | No explicit license in file |
+| ChromaSubSampling.fx | No explicit author or license in file |
+| ChromaticAberration.fx | No explicit license in file |
+| Cobra_Mask.fx | No explicit license in file (repo: [https://github.com/LordKobra/CobraFX](https://github.com/LordKobra/CobraFX)) |
+| ColorFilter.fx | No explicit license in file |
+| ColorMatrix.fx | No explicit license in file |
+| ColorMod.fx | No explicit license in file |
+| CuttingTool_Depth.fx | No explicit license in file |
+| Daltonize.fx | No explicit license in file |
+| DisplayDepth.fx | No explicit license in file |
+| DPX.fx | No explicit license in file |
+| DrawText.fxh | No explicit license in file |
+| FilmicPass.fx | No explicit license in file |
+| FXAA.fx | No explicit author or license in file |
+| Halation.fx | No explicit license in file |
+| HDR.fx | No explicit license in file |
+| HighPassSharpen.fx | No explicit license in file |
+| HistogramCompute.fx | No explicit license in file |
+| HQ4X.fx | Based on Shadertoy (MslGRS), no explicit license in file |
+| HSLShift.fx | No explicit license in file |
 
 ---
 

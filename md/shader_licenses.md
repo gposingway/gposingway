@@ -47,6 +47,22 @@ This document lists the shader collections and individual shaders redistributed 
 | MultiLUT.fx | Various | MIT License |
 | PD80_03_Filmic_Adaptation.fx | prod80 | MIT License |
 | UIShadow.fx | Lolika | CC0 |
+| DropShadow.fx / DropShadow.fxh | CeeJay.dk, seri14, Marot Satil, Uchu Suzume, prod80, originalnicodr | MIT License |
+| MaskGlowAdvanced.fx | guest(r) | GNU GPL v2.0 or later |
+| FGFXEnergyConservativeFilmGrain.fx | Alex Tuduran | MIT License |
+| GrainSpread.fx | luluco250 | MIT License |
+| dh_canvas.fx | AlucardDH | GNU GPL v2.0 |
+| fastBlur.fx | Robert Jessop, Alex Tuderan | MIT License |
+| pColorNoise.fx | Gimle Larpes | MIT License |
+| pColors.fx | Gimle Larpes | MIT License |
+| pPalettePosterize.fx | Gimle Larpes | MIT License |
+| rj_sharpen.fx | rj200 | MIT License |
+| warpsharp.fx | Robert Jessop, Alex Tuderan | MIT License |
+| xBRv4.fx | Hyllian/Jararaca, ported by Bapho | GNU GPL v2.0 or later |
+| ListeningwayUniforms.fxh | Leon Aquitaine | CC BY 4.0 |
+| Oklab.fxh | Björn Ottosson | MIT License |
+| pUtils.fxh | Gimle Larpes | MIT License |
+| FXShadersAPI.fxh, FXShadersAspectRatio.fxh, FXShadersBlending.fxh, FXShadersCanvas.fxh, FXShadersCommon.fxh, FXShadersConvolution.fxh, FXShadersDithering.fxh, FXShadersMath.fxh, FXShadersTonemap.fxh, FXShadersTransform.fxh | luluco250 | MIT License |
 
 ---
 

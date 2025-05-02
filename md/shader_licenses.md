@@ -6,8 +6,6 @@ This document lists the shader collections and individual shaders redistributed 
 
 ## Shader Collections
 
-(Sorted alphabetically by Collection name)
-
 | Collection | Author | Description | License |
 |------------|--------|-------------|---------|
 | [AstrayFX](https://blueskydefender.github.io/AstrayFX/) | BlueSkyDefender | Anti-aliasing shaders and more, including Smart Sharp and Temporal AA. | Public repository |
@@ -35,8 +33,6 @@ This document lists the shader collections and individual shaders redistributed 
 ---
 
 ## Individual Shaders
-
-(Sorted alphabetically by Shader name)
 
 | Shader | Author | License |
 |--------|--------|---------|
@@ -76,8 +72,6 @@ This document lists the shader collections and individual shaders redistributed 
 ---
 
 ## Shaders with Unknown License or Author
-
-(Sorted alphabetically by Shader name)
 
 I thank the original authors for their work; some of these shaders are wildly used by popular preset sets used by the FFXIV community. If you see your shader listed here and would like to provide license or author information, or request removal, please contact us so we can give proper credit or comply with your wishes.
 

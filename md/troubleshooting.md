@@ -48,6 +48,11 @@ Having issues with GPosingway? Use this guide to resolve common problems.
     - `Enable depth of field`
   - Set `3D Resolution Scaling` to `100` and `Edge Smoothing` to `FXAA` or `Off`.
 
+### Empty or Placeholder Files
+- **Understanding**: Files like `zfast_crt.fx` with just a `_x_gposingway_placeholder` technique are intentional.
+- **Purpose**: These placeholder files prevent technique conflicts between different shader collections.
+- **What to Do**: Do not delete these files or modify them, as they are vital for compatibility.
+
 ---
 
 ## Q&A

@@ -1,5 +1,14 @@
 # GPosingway Project License
 
+<div align="right">
+  <b>Read this document in:</b>
+  <b>English</b> | 
+  <a href="./license.ja.md">日本語</a> | 
+  <a href="./license.ko.md">한국어</a> 
+</div>
+
+---
+
 ## Creative Commons Attribution 4.0 International License (CC BY 4.0)
 
 ### You are free to:

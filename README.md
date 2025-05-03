@@ -1,13 +1,16 @@
 # GPosingway
 
-![GPosingway Mascot](https://github.com/GPosingway/GPosingway/assets/18711130/c919c030-dff2-47e8-905d-f52d098aaa45)
-
 <div align="right">
   <b>Read this document in:</b>
   <a href="./README.md">English</a> | 
   <a href="./README.ja.md">日本語</a> | 
   <a href="./README.ko.md">한국어</a> 
 </div>
+
+<div align="center">
+  <img src='https://github.com/GPosingway/GPosingway/assets/18711130/c919c030-dff2-47e8-905d-f52d098aaa45'>
+</div>
+
 **GPosingway is a curated, drop-in package for Final Fantasy XIV, designed to provide a stable and consistent ReShade experience.** It bundles a hand-picked collection of shaders, textures, and presets from the community and beyond, ensuring presets work as intended by avoiding conflicts and missing files.
 
 ---

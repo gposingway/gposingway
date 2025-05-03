@@ -19,6 +19,16 @@
 
 <a href='https://github.com/gposingway/gposingway/releases/latest'>![download](https://github.com/gposingway/gposingway/assets/18711130/e29bc268-09d3-4b00-9d80-a5d6f964c5de)</a>
 
+
+---
+
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/GPosingway/GPosingway)](https://github.com/GPosingway/GPosingway/releases/latest) &nbsp;
+[![GitHub All Releases](https://img.shields.io/github/downloads/GPosingway/GPosingway/total)](https://github.com/GPosingway/GPosingway/releases) &nbsp;
+[![GitHub last commit](https://img.shields.io/github/last-commit/GPosingway/GPosingway)](https://github.com/GPosingway/GPosingway/commits/main) &nbsp;
+[![GitHub forks](https://img.shields.io/github/forks/GPosingway/GPosingway?style=social)](https://github.com/GPosingway/GPosingway/network/members) &nbsp;
+[![GitHub stars](https://img.shields.io/github/stars/GPosingway/GPosingway?style=social)](https://github.com/GPosingway/GPosingway/stargazers) &nbsp;
+[![Discord](https://img.shields.io/discord/1124828911700811957?label=Discord&logo=discord&logoColor=white)](https://discord.com/servers/sights-of-eorzea-1124828911700811957)
+
 ---
 
 ## GPosingway의 주요 이점

@@ -22,7 +22,7 @@
 ---
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/GPosingway/GPosingway)](https://github.com/GPosingway/GPosingway/releases/latest) &nbsp;
-[![GitHub All Releases](https://img.shields.io/github/downloads/gposingway/gposingway/gposingway.zip)](https://github.com/GPosingway/GPosingway/releases) &nbsp;
+[![GitHub All Releases](https://img.shields.io/github/downloads/gposingway/gposingway/gposingway.zip?style=flat&logo=instacart&logoColor=23bbea&color=1182c3)](https://github.com/GPosingway/GPosingway/releases) &nbsp;
 [![GitHub last commit](https://img.shields.io/github/last-commit/GPosingway/GPosingway)](https://github.com/GPosingway/GPosingway/commits/main) &nbsp;
 [![GitHub forks](https://img.shields.io/github/forks/GPosingway/GPosingway?style=social)](https://github.com/GPosingway/GPosingway/network/members) &nbsp;
 [![GitHub stars](https://img.shields.io/github/stars/GPosingway/GPosingway?style=social)](https://github.com/GPosingway/GPosingway/stargazers) &nbsp;

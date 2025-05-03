@@ -1,5 +1,14 @@
 # Contributing to GPosingway
 
+<div align="right">
+  <b>Read this document in:</b>
+  <b>English</b> | 
+  <a href="./contributing.ja.md">日本語</a> | 
+  <a href="./contributing.ko.md">한국어</a> 
+</div>
+
+---
+
 Thank you for your interest in contributing to GPosingway! Community contributions are vital to improving the ReShade experience for FFXIV players. Here's how you can get involved:
 
 ---
@@ -37,7 +46,7 @@ Thank you for your interest in contributing to GPosingway! Community contributio
 
 ## Community & Support
 
-- **Discord**: Join the [Sights of Eorzea Discord Server](https://discord.com/servers/sights-of-eorzea-1124828911700811957) for support and discussions.
+- **Discord**: Join the [Sights of Eorzea Discord Server](https://discord.com/servers/sights-of-eorzea-1124828911700811957) for support and discussions. (Note: The server is primarily English-based, but some users may be able to assist in other languages.)
 - **GitHub Issues**: Report bugs or suggest features via [GitHub Issues](https://github.com/GPosingway/GPosingway/issues).
 - **Contact**: Reach out to the maintainer, Leon Aquitaine, on [BlueSky](https://bsky.app/profile/leon.aquitaine.social).
 

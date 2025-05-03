@@ -21,6 +21,15 @@
 
 ---
 
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/GPosingway/GPosingway)](https://github.com/GPosingway/GPosingway/releases/latest) &nbsp;
+[![GitHub All Releases](https://img.shields.io/github/downloads/GPosingway/GPosingway/total)](https://github.com/GPosingway/GPosingway/releases) &nbsp;
+[![GitHub last commit](https://img.shields.io/github/last-commit/GPosingway/GPosingway)](https://github.com/GPosingway/GPosingway/commits/main) &nbsp;
+[![GitHub forks](https://img.shields.io/github/forks/GPosingway/GPosingway?style=social)](https://github.com/GPosingway/GPosingway/network/members) &nbsp;
+[![GitHub stars](https://img.shields.io/github/stars/GPosingway/GPosingway?style=social)](https://github.com/GPosingway/GPosingway/stargazers) &nbsp;
+[![Discord](https://img.shields.io/discord/1124828911700811957?label=Discord&logo=discord&logoColor=white)](https://discord.com/servers/sights-of-eorzea-1124828911700811957)
+
+---
+
 ## GPosingwayの主な利点
 
 - **手間のかからないプリセットのための安定したベースライン**: GPosingwayは、慎重に選択されテストされたシェーダーとテクスチャのコレクションを提供します。この安定した基盤により、一般的な互換性の問題が解消され、選択したプリセットがファイルの欠落や競合なしに確実に機能します。

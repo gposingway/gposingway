@@ -1,5 +1,14 @@
 # GPosingway Troubleshooting Guide
 
+<div align="right">
+  <b>Read this document in:</b>
+  <b>English</b> | 
+  <a href="./troubleshooting.ja.md">日本語</a> | 
+  <a href="./troubleshooting.ko.md">한국어</a> 
+</div>
+
+---
+
 Having issues with GPosingway? Use this guide to resolve common problems.
 
 ---
@@ -8,7 +17,7 @@ Having issues with GPosingway? Use this guide to resolve common problems.
 
 ### Permissions Error
 - **Problem**: The installation script lacks permission to modify files.
-- **Solution**:
+- **Solution**:  
   1. Right-click the `game` folder and select `Properties`.
   2. Go to the `Security` tab and select `Users`.
   3. Click `Edit` and check the `Modify` permission.
@@ -16,14 +25,14 @@ Having issues with GPosingway? Use this guide to resolve common problems.
 
 ### GPosingway Not Working
 - **Problem**: Incorrect installation or version mismatch.
-- **Solution**:
+- **Solution**:  
   - Ensure the correct GPosingway version is installed for your ReShade version.
   - Place the installer script or extracted files directly in the `game` folder.
   - Rename old shader and preset folders to avoid conflicts.
 
 ### Error Messages
 - **Problem**: Conflicts with other mods or missing files.
-- **Solution**:
+- **Solution**:  
   - Check for mod conflicts, especially with Dalamud.
   - Delete the `dxgi.log` file and restart the game.
 
@@ -33,7 +42,7 @@ Having issues with GPosingway? Use this guide to resolve common problems.
 
 ### Presets Not Saving
 - **Problem**: ReShade lacks permission to save changes.
-- **Solution**:
+- **Solution**:  
   1. Right-click the `reshade-presets` folder and select `Properties`.
   2. Go to the `Security` tab and select `Users`.
   3. Click `Edit` and check the `Modify` permission.
@@ -41,7 +50,7 @@ Having issues with GPosingway? Use this guide to resolve common problems.
 
 ### Misaligned Effects in Screenshots
 - **Problem**: Incompatible resolution scaling settings.
-- **Solution**:
+- **Solution**:  
   - Disable the following options:
     - `Enable dynamic resolution`
     - `Limb Darkening`
@@ -75,7 +84,7 @@ Yes, most presets should work without additional configuration. Ignore instructi
 
 ### Game Running Slowly
 - **Problem**: High resource usage from shaders.
-- **Solution**:
+- **Solution**:  
   - Press `Shift + F3` to toggle effects.
   - Disable unused shaders.
 
@@ -83,7 +92,7 @@ Yes, most presets should work without additional configuration. Ignore instructi
 
 ## Need More Help?
 - **GitHub Issues**: Report problems or request support via [GitHub Issues](https://github.com/gposingway/gposingway/issues).
-- **Discord**: Join the [Sights of Eorzea Discord Server](https://discord.com/servers/sights-of-eorzea-1124828911700811957) for community support.
+- **Discord**: Join the [Sights of Eorzea Discord Server](https://discord.com/servers/sights-of-eorzea-1124828911700811957) for community support. (Note: The server is primarily English-based, but some users may be able to assist in other languages.)
 
 ---
 

@@ -21,6 +21,15 @@
 
 ---
 
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/GPosingway/GPosingway)](https://github.com/GPosingway/GPosingway/releases/latest) &nbsp;
+[![GitHub All Releases](https://img.shields.io/github/downloads/GPosingway/GPosingway/total)](https://github.com/GPosingway/GPosingway/releases) &nbsp;
+[![GitHub last commit](https://img.shields.io/github/last-commit/GPosingway/GPosingway)](https://github.com/GPosingway/GPosingway/commits/main) &nbsp;
+[![GitHub forks](https://img.shields.io/github/forks/GPosingway/GPosingway?style=social)](https://github.com/GPosingway/GPosingway/network/members) &nbsp;
+[![GitHub stars](https://img.shields.io/github/stars/GPosingway/GPosingway?style=social)](https://github.com/GPosingway/GPosingway/stargazers) &nbsp;
+[![Discord](https://img.shields.io/discord/1124828911700811957?label=Discord&logo=discord&logoColor=white)](https://discord.com/servers/sights-of-eorzea-1124828911700811957)
+
+---
+
 ## Key Benefits of GPosingway
 
 - **Stable Baseline for Hassle-Free Presets**: GPosingway provides a carefully selected and tested collection of shaders and textures. This stable foundation eliminates common compatibility issues and ensures that your chosen presets work reliably, without missing files or conflicts.

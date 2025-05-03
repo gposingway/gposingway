@@ -2,7 +2,7 @@
 
 <div align="right">
   <b>Read this document in:</b>
-  <a href="./README.md">English</a> | 
+  English | 
   <a href="./README.ja.md">日本語</a> | 
   <a href="./README.ko.md">한국어</a> 
 </div>

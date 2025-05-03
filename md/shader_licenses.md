@@ -1,5 +1,14 @@
 # Shader Licenses
 
+<div align="right">
+  <b>Read this document in:</b>
+  <b>English</b> | 
+  <a href="./shader_licenses.ja.md">日本語</a> | 
+  <a href="./shader_licenses.ko.md">한국어</a> 
+</div>
+
+---
+
 This document lists the shader collections and individual shaders redistributed with GPosingway, along with their respective licenses and authors. For more details, visit the linked repositories.
 
 ---

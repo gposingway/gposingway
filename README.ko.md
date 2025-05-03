@@ -13,7 +13,7 @@
 
 ---
 
-**현재 지원되는 ReShade 버전**: 6.4.1(애드온 지원 포함)
+**현재 지원되는 ReShade 버전**: 6.4.1 (애드온 지원 포함)
 
 [![download](https://github.com/GPosingway/GPosingway/assets/18711130/e29bc268-09d3-4b00-9d80-a5d6f964c5de)](https://github.com/gposingway/gposingway/releases/latest)
 
@@ -40,7 +40,7 @@
 
 ## 기여 가이드라인
 
-FFXIV 커뮤니티의 기여를 환영합니다. GPosingway 사용자에게 도움이 될 것이라고 생각하는 프리셋 컬렉션, 셰이더 또는 수정 사항이 있다면 풀 리퀘스트를 제출해 주세요!  
+FFXIV 커뮤니티의 기여를 환영합니다. GPosingway 사용자에게 도움이 될 것이라고 생각하는 프리셋 컬렉션, 셰이더 또는 수정 사항이 있다면 풀 리퀘스트를 제출해 주세요!
 풀 리퀘스트 전 [기여 가이드라인](md/contributing.ko.md)을 검토해 주시면 감사하겠습니다.
 
 ## 문제 해결
@@ -53,10 +53,10 @@ FFXIV 커뮤니티의 기여를 환영합니다. GPosingway 사용자에게 도�
 | --- | --- | --- | --- | --- |
 | AcerolaFX | [Garrett Gunnell](https://github.com/GarrettGunnell)| MIT - [License](https://github.com/GarrettGunnell/AcerolaFX?tab=MIT-1-ov-file)| [Download](https://github.com/GarrettGunnell/AcerolaFX/archive/refs/heads/main.zip)| [`#AcerolaFX`](https://twitter.com/intent/tweet?text=%23AcerolaFX) |
 | ipsuShade | [ipsusu](https://twitter.com/ipsusu) | [License](https://github.com/ipsusu/IpsuShade/blob/master/LICENSE.md) | [Download Page](https://github.com/ipsusu/IpsuShade) 프리셋 전체 기능 사용 시 iMMERSE·METEOR 셰이더 별도 설치 필요 | [`#ipsuShade`](https://twitter.com/intent/tweet?text=%23ipsuShade) |
-| LeoLights | [✦Leo](https://x.com/Leo__xiv)  | 배포 허용 | [Download Page](https://ko-fi.com/leo__xiv/shop)| [`#leolights`](https://twitter.com/intent/tweet?text=%23leolights) |
+| LeoLights | [✦Leo](https://x.com/Leo__xiv) | 배포 허용 | [Download Page](https://ko-fi.com/leo__xiv/shop)| [`#leolights`](https://twitter.com/intent/tweet?text=%23leolights) |
 | nael | [Nael](https://x.com/naelwynn_xiv)| 배포 허용 | iMMERSE 호환 | [`#naelpresets`](https://twitter.com/intent/tweet?text=%23naelpresets)|
-| nyanya.studio  | [Nya Nya](https://x.com/nyanyaxiv)| [License](https://github.com/nyanyastudio/presets/blob/main/LICENSE)| [Download Page](https://github.com/nyanyastudio/presets)  | [`#nyanyastudio`](https://twitter.com/intent/tweet?text=%23nyanyastudio)|
-| SOFTGLOW ✮⋆˙| [Hana](https://twitter.com/sheepysoftie)  | 배포 허용 | [Download Page](https://ko-fi.com/s/1942b62bb5) | [`#hanasofties`](https://twitter.com/intent/tweet?text=%23hanasofties)|
+| nyanya.studio | [Nya Nya](https://x.com/nyanyaxiv)| [License](https://github.com/nyanyastudio/presets/blob/main/LICENSE)| [Download Page](https://github.com/nyanyastudio/presets) | [`#nyanyastudio`](https://twitter.com/intent/tweet?text=%23nyanyastudio)|
+| SOFTGLOW ✮⋆˙| [Hana](https://twitter.com/sheepysoftie) | 배포 허용 | [Download Page](https://ko-fi.com/s/1942b62bb5) | [`#hanasofties`](https://twitter.com/intent/tweet?text=%23hanasofties)|
 | TRUEREALISM | [Nyeps](https://twitter.com/FFXIVNyeps)| 배포 허용 | 🍔 [Download Page](https://ko-fi.com/s/ac0d1c86a2)| [`#NyepsRealism`](https://twitter.com/intent/tweet?text=%23NyepsRealism)|
 | WiFi | [Wi-Fi ₍ᐢ.ˬ.ᐢ₎ 黒うさぎ](https://twitter.com/wifi_photospire) | MIT| SFW 스크린샷만 허용(라이선스 제안) · [Download Page](https://lit.link/en/wifiphotospire)| [`#WifiPresets`](https://twitter.com/intent/tweet?text=%23WifiPresets)|
 | Witch's| [🍸 Ann-A 🍸](https://twitter.com/NIRVANN_A)| WTFPL| [Repository](https://github.com/WitchMana/WitchsPresetsReshade)| [`#witchspresets`](https://twitter.com/intent/tweet?text=%23witchspresets) |
@@ -67,20 +67,20 @@ FFXIV 커뮤니티의 기여를 환영합니다. GPosingway 사용자에게 도�
 `Community`는 프로젝트에 기여된 개별 프리셋으로 구성됩니다.
 
 | 프리셋 | 제작자 | 라이선스 | 참고 |
-| -------------------------- | ------ | -------- | --------------------------------------------------------- |
+| --- | --- | --- | --- |
 | **프리셋을 제출해주세요!** ||| [기여 가이드라인](md/contributing.ko.md)을 참고해 주세요! |
 
 포함된 모든 셰이더 컬렉션 및 라이선스 목록은 [셰이더 라이선스](md/shader_licenses.ko.md)에서 확인할 수 있습니다.
 
 ---
 
-[GPosingway · a ReShade / XIV Community Patch](https://github.com/GPosingway/GPosingway/tree/main)는 [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)에 따라 라이선스가 부여됩니다.  
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">  
+[GPosingway · a ReShade / XIV Community Patch](https://github.com/GPosingway/GPosingway/tree/main)는 [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)에 따라 라이선스가 부여됩니다. 
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"> 
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
 
 개별 작업 요소(예: 프리셋, 셰이더, 텍스처)에는 별도 배포 조건이 있을 수 있습니다. 각 라이선스를 확인해 주세요.
 
 ---
 
-**번역 관련 참고 사항:**  
+**번역 관련 참고 사항:** 
 이 한국어 문서는 가독성 향상을 위해 기계 번역을 기반으로 작성되었습니다. 부자연스러운 표현이나 사소한 오류가 있을 수 있으니, 한국어에 능숙하신 분들의 풀 리퀘스트나 이슈를 환영합니다!

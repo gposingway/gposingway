@@ -11,13 +11,13 @@ GPosingway는 강력한 후처리 도구인 ReShade로 구동됩니다. 시작�
     - [ReShade 웹사이트](https://reshade.me)를 방문하거나 [MediaFire 리포지토리](https://www.mediafire.com/folder/reshade_versions)를 사용하여 애드온 지원이 포함된 최신 버전의 ReShade를 다운로드합니다.
 
 2. **설치 프로그램 실행**:
-    - ReShade 설치 프로그램을 실행하고 `Browse...`를 클릭합니다.
+    - ReShade 설치 프로그램을 실행하고 `Browse...`를 클릭합니다.  
         ![Browse Button](https://github.com/gposingway/gposingway/assets/18711130/6a57b0d1-5684-441b-94b3-01254d38095a)
-    - `game` 폴더에서 `ffxiv_dx11.exe` 파일을 찾아 `Open`을 클릭합니다.
+    - `game` 폴더에서 `ffxiv_dx11.exe` 파일을 찾아 `Open`을 클릭합니다.  
         ![Select Game File](https://github.com/gposingway/gposingway/assets/18711130/433815f2-3648-4efd-b8c3-18786bd1a657)
 
 3. **렌더링 API 선택**:
-    - 적절한 렌더링 API를 선택합니다 (대부분의 사용자는 DirectX 10/11/12).
+    - 적절한 렌더링 API를 선택합니다 (대부분의 사용자는 DirectX 10/11/12).  
         ![Rendering API](https://github.com/gposingway/gposingway/assets/18711130/45358023-2100-455c-9619-7c04f5487b4d)
 
 4. **선택적 단계 건너뛰기**:

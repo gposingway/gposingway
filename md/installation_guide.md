@@ -6,6 +6,7 @@
   <a href="./installation_guide.ja.md">日本語</a> | 
   <a href="./installation_guide.ko.md">한국어</a> 
 </div>
+
 ---
 
 GPosingway is powered by ReShade, a powerful post-processing tool. To get started, you need to install ReShade first, followed by GPosingway. Follow the steps below to set up your environment.

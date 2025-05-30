@@ -22,3 +22,9 @@ Listeningway.addon
 Listeningway.ini
 listeningway.log
 /reshade-presets/AquitaineStudioPresets
+/reshade-presets/IniNotes
+*.addon64
+shadingway.addon
+shadingway.addon-state.json
+/reshade-shaders/Textures/AS
+/reshade-shaders/Shaders/IniNotes

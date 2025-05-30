@@ -61,8 +61,8 @@ uniform bool _Debug <
     [Textures & Samplers]
 */
 
-CREATE_TEXTURE(LumaTex, int2(256, 256), R16F, 9)
-CREATE_SAMPLER(SampleLumaTex, LumaTex, LINEAR, CLAMP)
+CREATE_TEXTURE(cShade_LumaTex, int2(256, 256), R16F, 9)
+CREATE_SAMPLER(SampleLumaTex, cShade_LumaTex, LINEAR, CLAMP)
 
 /*
     [Pixel Shaders]
@@ -149,7 +149,7 @@ technique CShade_AutoExposure
 
         VertexShader = VS_Quad;
         PixelShader = PS_Blit;
-        RenderTarget = LumaTex;
+        RenderTarget = cShade_LumaTex;
     }
 
     pass

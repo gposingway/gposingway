@@ -133,6 +133,14 @@ sampler N_Sampler_B
 		Texture = Normals_B;
 	};
 
+// Adding a temporary texture to avoid circular dependencies
+texture Normals_Temp { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RGBA16; MipLevels = 11;};
+
+sampler N_Sampler_Temp
+	{
+		Texture = Normals_Temp;
+	};
+
 texture BB_Depth_A  { Width = BUFFER_WIDTH; Height = BUFFER_HEIGHT; Format = RGBA8;MipLevels = 11;};
 
 sampler CDBuffer
@@ -226,7 +234,7 @@ float4 Mask(float2 texcoord)
 // I am silly I forgot what I did befor..... so I had to rewrite this from memory welp....Forgot a lot lol Fuck......
 //Not the same code in the video. since I forgot what I did and my cloud stroage seems to forget what I did if I rename the file.
 //New thing was made........ Happy guessing.
-float3 Normals = tex2Dlod(N_Sampler_B,float4(texcoord,0,0)).xyz;
+float3 Normals = tex2Dlod(N_Sampler_Temp,float4(texcoord,0,0)).xyz;
 //Changed my mind since my memory sucks New system Guessing where the user is looking at with 8 Detectors kind of like SuperDepth3D.
 float2 Location[8] = {
 						float2(0.25,0.5 ),//Left of Center
@@ -400,7 +408,7 @@ void Out(float4 position : SV_Position, float2 texcoord : TEXCOORD, out float3 c
 
 float3 SmoothNormals(float2 TC, int NS,int Dir, float SNOffset)
 {   //Smooth Normals done in two passes now Faster. But, still slow.
-	float4 StoredNormals_Depth = float4(Dir ? DepthNormals(TC) : tex2Dlod(N_Sampler_A,float4(TC,0,0)).xyz,DepthM(TC).x), SmoothedNormals = float4(StoredNormals_Depth.xyz,1);
+	float4 StoredNormals_Depth = float4(Dir ? DepthNormals(TC) : tex2Dlod(N_Sampler_Temp,float4(TC,0,0)).xyz,DepthM(TC).x), SmoothedNormals = float4(StoredNormals_Depth.xyz,1);
 
 	[loop] // -1 0 +1 on x and y
 	for(float xy = -NS; xy <= NS; xy++)
@@ -409,7 +417,7 @@ float3 SmoothNormals(float2 TC, int NS,int Dir, float SNOffset)
 			break;
 		float2 XY = Dir ? float2(xy,0) : float2(0,xy);
 		float2 offsetcoords = TC + XY * pix * SNOffset;
-		float4 Normals_Depth     = float4(Dir ? DepthNormals(offsetcoords) : tex2Dlod(N_Sampler_A,float4(offsetcoords,0,0)).xyz,DepthM(offsetcoords).x);
+		float4 Normals_Depth     = float4(Dir ? DepthNormals(offsetcoords) : tex2Dlod(N_Sampler_Temp,float4(offsetcoords,0,0)).xyz,DepthM(offsetcoords).x);
 		if (abs(StoredNormals_Depth.w - Normals_Depth.w) < 0.001 && dot(Normals_Depth.xyz, StoredNormals_Depth.xyz) > 0.5f)
 		{
 			SmoothedNormals.xyz += Normals_Depth.xyz;
@@ -445,6 +453,12 @@ void Buffers_C(float4 position : SV_Position, float2 texcoord : TEXCOORD, out fl
 
 technique OS_SnowScape
 	{
+			pass Init
+		{
+			VertexShader = PostProcessVS;
+			PixelShader = Buffers_B;
+			RenderTarget0 = Normals_Temp; // Store initial normals in temp texture first
+		}
 			pass Alpha
 		{
 			VertexShader = PostProcessVS;

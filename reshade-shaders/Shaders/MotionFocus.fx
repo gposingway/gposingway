@@ -1,5 +1,6 @@
 /**
 * Maded by Ganossa () ported by IDDQD
+* FIX: 2025-05-30 - LeonAquitaine - ReShade 6.5.0; Use fixed iteration counts to avoid compiler unroll issues
 */
 
 uniform bool mfDebug <
@@ -93,28 +94,39 @@ quadR = float4(0,0,0,0);
 if (!(texcoord.x <= BUFFER_RCP_WIDTH*2 && texcoord.y <= BUFFER_RCP_HEIGHT*2))
 discard;
 
-float2 coord = float2(0.0,0.0);
+// Use fixed iteration counts to avoid compiler unroll issues
+const int maxIterX = int(Ganossa_MF_BUFFERX / xSprint);
+const int maxIterY = int(Ganossa_MF_BUFFERY / ySprint);
 
-for (float i = 2.0f; i < Ganossa_MF_BUFFERX; i=i+xSprint)
+[loop]
+for (int i = 0; i < maxIterX; i++)
 {
-coord.x = BUFFER_RCP_WIDTH*i*2;
+	float fi = 2.0f + i * xSprint;
+	if (fi >= Ganossa_MF_BUFFERX) break;
+	
+	float coordX = BUFFER_RCP_WIDTH * fi * 2;
 
-[unroll]
-for (float j = 2.0f; j < Ganossa_MF_BUFFERY; j=j+ySprint )
-{
-coord.y = BUFFER_RCP_HEIGHT*j*2;
-float3 quadFull = tex2D(Ganossa_MF_QuadFullColor, coord).xyz;
-float quadFullPow = quadFull.x+quadFull.y+quadFull.z;
+	[loop]
+	for (int j = 0; j < maxIterY; j++)
+	{
+		float fj = 2.0f + j * ySprint;
+		if (fj >= Ganossa_MF_BUFFERY) break;
+		
+		float coordY = BUFFER_RCP_HEIGHT * fj * 2;
+		float2 coord = float2(coordX, coordY);
+		
+		float3 quadFull = tex2D(Ganossa_MF_QuadFullColor, coord).xyz;
+		float quadFullPow = quadFull.x + quadFull.y + quadFull.z;
 
-if(i < Ganossa_MF_BUFFERXHalf && j < Ganossa_MF_BUFFERYHalf)
-quadR.x += quadFullPow;
-else if(i > Ganossa_MF_BUFFERXHalf && j < Ganossa_MF_BUFFERYHalf)
-quadR.y += quadFullPow;
-else if(i < Ganossa_MF_BUFFERXHalf && j > Ganossa_MF_BUFFERYHalf)
-quadR.z += quadFullPow;
-else
-quadR.w += quadFullPow;
-}
+		if(fi < Ganossa_MF_BUFFERXHalf && fj < Ganossa_MF_BUFFERYHalf)
+			quadR.x += quadFullPow;
+		else if(fi > Ganossa_MF_BUFFERXHalf && fj < Ganossa_MF_BUFFERYHalf)
+			quadR.y += quadFullPow;
+		else if(fi < Ganossa_MF_BUFFERXHalf && fj > Ganossa_MF_BUFFERYHalf)
+			quadR.z += quadFullPow;
+		else
+			quadR.w += quadFullPow;
+	}
 }
 quadR.xyzw /= 5184f;
 }

@@ -33,11 +33,13 @@ This document lists the shader collections and individual shaders redistributed 
 | [OtisFX](https://github.com/FransBouma/OtisFX) | Otis_Inf | Cinematic DOF and utility shaders. | MIT License |
 | [Pirate-Shaders](https://github.com/Heathen/Pirate-Shaders) | Heathen | Abstract effects like Swirl and Wave. | Public repository |
 | [prod80-ReShade-Repository](https://github.com/prod80/prod80-ReShade-Repository) | prod80 | Advanced color grading shaders. | MIT License |
-| [qUINT](https://github.com/martymcmodding/qUINT) | Marty McFly | Includes MXAO, Lightroom, and Advanced DOF. | Public repository |
+| [qUINT](https://github.com/martymcmodding/qUINT/tree/8121afae7b1e487ea33d053a2bbe8892ca359e57?tab=readme-ov-file) | Marty McFly | Includes MXAO, Lightroom, and Advanced DOF. | CC BY-NC-ND 3.0 [1] |
 | [reshade-shaders](https://github.com/crosire/reshade-shaders) | crosire + community | Official shader repository. | Public repository |
 | [RSRetroArch](https://github.com/Matsilagi/RSRetroArch) | Matsilagi, luluco250, Marty McFly | CRT shaders ported from RetroArch. | Public repository |
 | [SweetFX](https://github.com/CeeJayDK/SweetFX) | CeeJay.dk | Original shader suite for ReShade. | MIT License |
 | [ZN_FX](https://github.com/Zenteon/ZN_FX) | Zenteon | Depth-Aware Mipmapped Ray Tracing (DAMP_RT). | GNU GPL v3.0 |
+
+[1] - This is the last version of the qUINT collection released under an opensource license.
 
 ---
 

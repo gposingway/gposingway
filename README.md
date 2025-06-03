@@ -65,13 +65,9 @@ If you encounter any issues, consult the [Troubleshooting Guide](md/troubleshoot
 | Witch's Presets | [🍸 Ann-A 🍸](https://twitter.com/NIRVANN_A) | WTFPL | [Repository](https://github.com/WitchMana/WitchsPresetsReshade)  | [`#witchspresets`](https://twitter.com/intent/tweet?text=%23witchspresets) |
 | Yomigami Okami | [Yomy](https://twitter.com/Yomigammy) | MIT - [License](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders/blob/main/LICENSE) | Original [ReShade port](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders#yomigamiokami-reshade-560-port) by [Meynan Aneytha](https://twitter.com/meynan_ffxiv) | [`#okamishader`](https://twitter.com/intent/tweet?text=%23okamishader) |
 
-## Community Preset Contributions
+---
 
-`Community` is a collection comprised of individual presets contributed to the project.
-
-| Preset | Creator | License | Notes |
-|---|---|---|---|
-| **Submit Your Presets!** |  |  |  This section will showcase community-contributed presets. See [Contribution Guidelines](md/contributing.md) to submit yours! |
+## Included Shader Collections
 
 You can find a list of all included shader collections and their respective licenses in the [Shader Licenses](md/shader_licenses.md).
 

@@ -37,8 +37,8 @@
 | [Pirate-Shaders](https://github.com/Heathen/Pirate-Shaders)| Heathen | Swirl 및 Wave와 같은 추상 효과.| MIT License |
 | [prod80-ReShade-Repository](https://github.com/prod80/prod80-ReShade-Repository) | prod80| 고급 색상 보정 셰이더. | MIT License|
 | [qUINT](https://github.com/martymcmodding/qUINT/tree/8121afae7b1e487ea33d053a2bbe8892ca359e57?tab=readme-ov-file) | Marty McFly| MXAO, Lightroom, Advanced DOF 포함. | CC BY-NC-ND 3.0 [1] |
-| [reshade-shaders](https://github.com/crosire/reshade-shaders)| crosire + community| 공식 셰이더 리포지토리.| Needs author contact |
-| [RSRetroArch](https://github.com/Matsilagi/RSRetroArch) | Matsilagi, luluco250, Marty McFly | RetroArch에서 포팅된 CRT 셰이더. | Needs author contact |
+| [reshade-shaders](https://github.com/crosire/reshade-shaders)| crosire + community| 공식 셰이더 리포지토리.| Public repository |
+| [RSRetroArch](https://github.com/Matsilagi/RSRetroArch) | Matsilagi, luluco250, Marty McFly | RetroArch에서 포팅된 CRT 셰이더. | Public repository |
 | [SHADERDECK](https://github.com/TreyM/SHADERDECK) | TreyM | 다양한 셰이더 효과 | Permission Granted |
 | [SweetFX](https://github.com/CeeJayDK/SweetFX)| CeeJay.dk| ReShade용 오리지널 셰이더 스위트.| MIT License|
 | [vort_Shaders](https://github.com/vortigern11/vort_Shaders) | vortigern11 | 셰이더 컬렉션 | Repository license |

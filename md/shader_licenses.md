@@ -52,6 +52,8 @@ This document lists the shader collections and individual shaders redistributed 
 
 ## Individual Shaders
 
+> This section lists only root shaders redistributed with GPosingway, with author and license information. Generated from root_shader_license_analysis.csv as of June 3, 2025. Sorted by license, then name. Shaders with unknown licenses are listed at the end.
+
 | Shader | Author | License |
 |--------|--------|---------|
 | AdaptiveSharpen.fx | bacondither | BSD 2-Clause License |
@@ -233,6 +235,8 @@ This document lists the shader collections and individual shaders redistributed 
 
 I thank the original authors for their work; some of these shaders are widely used by popular preset sets in the FFXIV community. If you see your shader listed here and would like to provide license or author information, or request removal, please contact us so we can give proper credit or comply with your wishes.
 
+| Shader | Author | License |
+|--------|--------|---------|
 | BadBloomPS2.fx | Unknown | Unknown |
 | CathodeRayTube.fx | Unknown | Unknown |
 | ChromaSubSampling.fx | Unknown | Unknown |

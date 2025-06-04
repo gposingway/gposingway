@@ -37,8 +37,8 @@ This document lists the shader collections and individual shaders redistributed 
 | [Pirate-Shaders](https://github.com/Heathen/Pirate-Shaders) | Heathen | Abstract effects like Swirl and Wave. | MIT License |
 | [prod80-ReShade-Repository](https://github.com/prod80/prod80-ReShade-Repository) | prod80 | Advanced color grading shaders. | MIT License |
 | [qUINT](https://github.com/martymcmodding/qUINT/tree/8121afae7b1e487ea33d053a2bbe8892ca359e57?tab=readme-ov-file) | Marty McFly | Includes MXAO, Lightroom, and Advanced DOF. | CC BY-NC-ND 3.0 [1] |
-| [reshade-shaders](https://github.com/crosire/reshade-shaders) | crosire + community | Official shader repository. | Needs author contact |
-| [RSRetroArch](https://github.com/Matsilagi/RSRetroArch) | Matsilagi, luluco250, Marty McFly | CRT shaders ported from RetroArch. | Needs author contact |
+| [reshade-shaders](https://github.com/crosire/reshade-shaders) | crosire + community | Official shader repository. | Public repository |
+| [RSRetroArch](https://github.com/Matsilagi/RSRetroArch) | Matsilagi, luluco250, Marty McFly | CRT shaders ported from RetroArch. | Public repository |
 | [SHADERDECK](https://github.com/TreyM/SHADERDECK) | TreyM | Various shader effects | Permission Granted |
 | [SweetFX](https://github.com/CeeJayDK/SweetFX) | CeeJay.dk | Original shader suite for ReShade. | MIT License |
 | [vort_Shaders](https://github.com/vortigern11/vort_Shaders) | vortigern11 | Shader collection | Repository license |

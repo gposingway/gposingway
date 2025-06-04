@@ -57,12 +57,16 @@ This document lists the shader collections and individual shaders redistributed 
 | Shader | Author | License |
 |--------|--------|---------|
 | AdaptiveSharpen.fx | bacondither | BSD 2-Clause License |
+| CAS.fx | CeeJay | BSD |
 | Colourfulness.fx | bacondither | BSD |
 | FastFourierTransform.fx | Unknown | BSD |
 | FFTCompute.fx | Unknown | BSD |
+| FluoroDuoTone.fx | Otis | BSD |
 | HotsamplingHelper.fx | Marot Satil | BSD |
 | HQAA.fx | Unknown | BSD |
 | M_Sharp.fx | BlueSkyDefender | BSD |
+| MultiSageDepth.fx | Marot Satil | BSD |
+| MultiStageDepth.fx | Marot Satil | BSD |
 | NLM_Sharp.fx | BlueSkyDefender | BSD |
 | pkd_FlatShade.fx | Packetdancer | BSD |
 | qUINT_mxao.fx | Marty McFly | BSD |
@@ -71,10 +75,13 @@ This document lists the shader collections and individual shaders redistributed 
 | StageDepth3.fx | uchu suzume | BSD |
 | StageDepth4.fx | uchu suzume | BSD |
 | StageDepth5.fx | uchu suzume | BSD |
-| CAS.fx | CeeJay | BSD |
-| FluoroDuoTone.fx | Otis | BSD |
-| MultiSageDepth.fx | Marot Satil | BSD |
-| MultiStageDepth.fx | Marot Satil | BSD |
+| BIAA.fx | Jose Negrete (BlueSkyDefender) | CC BY 3.0 |
+| Depth_Tool.fx | Jose Negrete (BlueSkyDefender) | CC BY 3.0 |
+| FilmGrain2.fx | Martins Upitis (martinsh) | CC BY 3.0 |
+| NFAA.fx | Jose Negrete (BlueSkyDefender) | CC BY 3.0 |
+| LinearMotionBlur.fx | Jakob Wapenhensch | CC BY-NC 4.0 |
+| MotionEstimation.fx | Jakob Wapenhensch | CC BY-NC 4.0 |
+| qUINT_motionvectors.fx | Marty McFly | CC BY-NC 4.0 |
 | AdaptiveColorGrading.fx | Marty McFly | CC BY-NC-ND 3.0 |
 | BlueNoiseMotionBlur.fx | Jakub Maksymilian Fober | CC BY-NC-ND 3.0 |
 | Bloom.fx | Marty McFly | CC BY-NC-ND 3.0 |
@@ -85,29 +92,41 @@ This document lists the shader collections and individual shaders redistributed 
 | MXAO 4.0.2 EX.fx | Marty McFly | CC BY-NC-ND 3.0 |
 | MXAO.fx | Marty McFly | CC BY-NC-ND 3.0 |
 | PerfectPerspective2.fx | Jakub Maksymilian Fober | CC BY-NC-ND 3.0 |
-| qUINT_motionvectors.fx | Marty McFly | CC BY-NC 4.0 |
 | ReflectiveBumpMapping.fx | Marty McFly | CC BY-NC-ND 3.0 |
 | Reinhard.fx | Marty McFly | CC BY-NC-ND 3.0 |
 | VHSPro.fx | Marty McFly | CC BY-NC-ND 3.0 |
-| LinearMotionBlur.fx | Jakob Wapenhensch | CC BY-NC 4.0 |
-| MotionEstimation.fx | Jakob Wapenhensch | CC BY-NC 4.0 |
-| BIAA.fx | Jose Negrete (BlueSkyDefender) | CC BY 3.0 |
-| Depth_Tool.fx | Jose Negrete (BlueSkyDefender) | CC BY 3.0 |
-| NFAA.fx | Jose Negrete (BlueSkyDefender) | CC BY 3.0 |
-| Scatter.fx | CeeJay | CC0 |
+| Chromakey2.fx | Jacob Maximilian Fober | CC BY-SA 4.0 |
 | DynamicRaindrops.fx | Unknown | CC0 |
 | FastSharp.fx | Unknown | CC0 |
 | FogRemoval.fx | Unknown | CC0 |
 | HoleFiller.fx | Unknown | CC0 |
 | NiceGuy_Lamps.fx | Unknown | CC0 |
 | Rim.fx | Unknown | CC0 |
+| Scatter.fx | CeeJay | CC0 |
 | SlowSharp.fx | Unknown | CC0 |
 | UIShadow.fx | Unknown | CC0 |
 | Volumetric Fog V2.0.fx | Unknown | CC0 |
 | VolumetricFog.fx | Unknown | CC0 |
-| Glamayre_Fast_Effects.fx | Robert Jessop | MIT |
-| ASCII.fx | CeeJay | MIT |
+| Denoise.fx | NVIDIA Corporation | Custom NVIDIA License |
+| DOF.fx | Marty McFly | Custom - Master Effect DonateWare |
+| SSAO.fx | Marty McFly | Custom - Master Effect DonateWare |
+| 4xBRZ.fx | Unknown | GPL |
+| Bumpmapping.fx | Unknown | GPL |
+| CRT.fx | Unknown | GPL |
+| CRTGeomMOD.fx | Marot Satil | GPL |
+| crt-royale.fx | Alex Gunter | GPL v2.0 |
+| Deblur.fx | Unknown | GPL |
+| dh_canvas.fx | AlucardDH (Damien Hembert) | GPL |
+| dh_crt.fx | AlucardDH (Damien Hembert) | GPL |
+| dh_rtgi.fx | AlucardDH (Damien Hembert) | GPL |
+| FastSharpen.fx | Unknown | GPL |
+| GuestCRT.fx | Marot Satil | GPL |
+| MaskGlowAdvanced.fx | Unknown | GPL |
+| WinUaeMaskGlow.fx | Unknown | GPL |
+| xBRv4.fx | Unknown | GPL |
+| zfast_crt.fx | Greg Hogan (SoltanGris42) | GPL v2.0 |
 | AmbientLight.fx | Unknown | MIT |
+| ASCII.fx | CeeJay | MIT |
 | Border.fx | CeeJay | MIT |
 | CA.fx | CeeJay | MIT |
 | Cartoon.fx | CeeJay | MIT |
@@ -137,6 +156,7 @@ This document lists the shader collections and individual shaders redistributed 
 | Frequency_CS.fx | SirCobra | MIT |
 | GAUSSIAN.fx | Marot Satil | MIT |
 | GaussianBloom.fx | Marot Satil | MIT |
+| Glamayre_Fast_Effects.fx | Robert Jessop | MIT |
 | GlobalAlpha.fx | Marot Satil | MIT |
 | Gr8mmFilm.fx | Unknown | MIT |
 | GrainSpread.fx | luluco250 | MIT |
@@ -168,14 +188,14 @@ This document lists the shader collections and individual shaders redistributed 
 | pkd_Kuwahara.fx | Packetdancer | MIT |
 | pkd_LayerCake.fx | Packetdancer | MIT |
 | pkd_Sketchbook.fx | Packetdancer | MIT |
-| pPalettePosterize.fx | Unknown | MIT |
-| PPFX_Bloom.fx | Marot Satil | MIT |
-| PPFX_Godrays.fx | Marot Satil | MIT |
-| PPFX_SSDO.fx | Marot Satil | MIT |
 | Pirate_Bloom.fx | Heathen | MIT |
 | Pirate_Depth_DOF.fx | Heathen | MIT |
 | Pirate_Depth_GI.fx | Heathen | MIT |
 | Pirate_FXAA.fx | Heathen | MIT |
+| pPalettePosterize.fx | Unknown | MIT |
+| PPFX_Bloom.fx | Marot Satil | MIT |
+| PPFX_Godrays.fx | Marot Satil | MIT |
+| PPFX_SSDO.fx | Marot Satil | MIT |
 | PSXDither.fx | Unknown | MIT |
 | RetroFog.fx | luluco250 | MIT |
 | RetroFog2.fx | luluco250 | MIT |
@@ -200,25 +220,10 @@ This document lists the shader collections and individual shaders redistributed 
 | warpsharp.fx | Unknown | MIT |
 | WatchDogs.fx | Marot Satil | MIT |
 | WifiLUT.fx | Otis | MIT |
-| DOF.fx | Marty McFly | Custom - Master Effect DonateWare |
-| SSAO.fx | Marty McFly | Custom - Master Effect DonateWare |
-| CRT.fx | Unknown | GPL |
-| Bumpmapping.fx | Unknown | GPL |
-| Deblur.fx | Unknown | GPL |
-| FastSharpen.fx | Unknown | GPL |
-| GuestCRT.fx | Marot Satil | GPL |
-| MaskGlowAdvanced.fx | Unknown | GPL |
-| WinUaeMaskGlow.fx | Unknown | GPL |
-| xBRv4.fx | Unknown | GPL |
-| dh_canvas.fx | AlucardDH (Damien Hembert) | GPL |
-| dh_crt.fx | AlucardDH (Damien Hembert) | GPL |
-| dh_rtgi.fx | AlucardDH (Damien Hembert) | GPL |
-| CRTGeomMOD.fx | Marot Satil | GPL |
-| KeepUI_FFXIV.fx | seri14 | Public Domain |
-| KeepUI.fx | seri14 | Public Domain |
-| TFAA.fx | Unknown | Public Domain |
 | EGAFilter.fx | Unknown | Public Domain |
-| 4xBRZ.fx | Unknown | GPL |
+| KeepUI.fx | seri14 | Public Domain |
+| KeepUI_FFXIV.fx | seri14 | Public Domain |
+| TFAA.fx | Unknown | Public Domain |
 | Action Bundle 95 MLUT.fx | Unknown | Unknown (Uses _BaseLUT.fxh, Otis/FransBouma, MIT) |
 | Action MLUT.fx | Unknown | Unknown (Uses _BaseLUT.fxh, Otis/FransBouma, MIT) |
 | Action Movie MLUT.fx | Unknown | Unknown (Uses _BaseLUT.fxh, Otis/FransBouma, MIT) |
@@ -232,27 +237,22 @@ I thank the original authors for their work; some of these shaders are widely us
 
 | BadBloomPS2.fx | Unknown | Unknown |
 | CathodeRayTube.fx | Unknown | Unknown |
-| Chromakey2.fx | Unknown | Unknown |
 | ChromaSubSampling.fx | Unknown | Unknown |
 | Clipboard.fx | seri14 | Unknown |
-| ColorFilter.fx | Unknown | Unknown |
-| ColorMod.fx | Unknown | Unknown |
+| ColorFilter.fx | Ioxa | Unknown |
+| ColorMod.fx | ReShade team (ported by Insomnia) | Unknown |
 | ColorSort.fx | Unknown | Unknown |
 | ColShift.fx | Unknown | Unknown |
-| Copyright.fx | uchu suzume | MIT |
 | CreateLUT.fx | Unknown | Unknown |
 | CrossProcess.fx | Unknown | Unknown |
-| crt-royale.fx | Unknown | Unknown |
 | CuttingTool_Depth.fx | seri14 | Unknown |
 | Daltonize.fx | Unknown | Unknown |
-| Denoise.fx | Unknown | Unknown |
-| DPX.fx | Unknown | Unknown |
-| Emboss.fx | Unknown | Unknown |
-| FilmGrain2.fx | Unknown | Unknown |
+| DPX.fx | Loadus | Unknown |
+| Emboss.fx | ReShade team (ported by Insomnia) | Unknown |
 | FilmicBloom.fx | Unknown | Unknown |
 | FineSharp.fx | Unknown | Unknown |
 | Glitch.fx | Unknown | Unknown |
-| Halation.fx | Unknown | Unknown |
+| Halation.fx | Ioxa | Unknown |
 | HistogramCompute.fx | Unknown | Unknown |
 | HQ4X.fx | Unknown | Unknown |
 | HSLShift.fx | Unknown | Unknown |
@@ -272,7 +272,6 @@ I thank the original authors for their work; some of these shaders are widely us
 | TAA.fx | Unknown | Unknown |
 | ThreeColorGradient.fx | Unknown | Unknown |
 | UIMask.fx | luluco250 | Unknown |
-| zfast_crt.fx | Unknown | Unknown |
 
 ---
 

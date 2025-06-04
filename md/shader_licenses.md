@@ -52,8 +52,6 @@ This document lists the shader collections and individual shaders redistributed 
 
 ## Individual Shaders
 
-> This section lists only root shaders redistributed with GPosingway, with author and license information. Generated from root_shader_license_analysis.csv as of June 3, 2025. Sorted by license, then name. Shaders with unknown licenses are listed at the end.
-
 | Shader | Author | License |
 |--------|--------|---------|
 | AdaptiveSharpen.fx | bacondither | BSD 2-Clause License |

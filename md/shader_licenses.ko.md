@@ -47,10 +47,13 @@
 | [ZN_FX](https://github.com/Zenteon/ZN_FX)| Zenteon | Zentient ReShade 셰이더 | GNU GPL v3.0 |
 
 [1] - 오픈소스 라이선스 하에 출시된 qUINT 컬렉션의 마지막 버전입니다.
+
+---
+
 ## 개별 셰이더
 
-| 셰이더 | 저작자 | 라이선스|
-| --- | --- | --- |
+| 셰이더 (Shader) | 저작자 (Author) | 라이선스 (License) |
+|--------|--------|---------|
 | AdaptiveSharpen.fx| bacondither | BSD 2-Clause License|
 | CAS.fx | CeeJay | BSD |
 | Colourfulness.fx | bacondither | BSD |

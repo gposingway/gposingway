@@ -278,9 +278,10 @@ int GetGuideValue() {
 // ============================================================================
 
 // Aspect ratio lookup table - maps UI indices directly to aspect ratio values
+// Updated: The order and count of this array now exactly matches the combo list, including group headers (each header uses the value of the first selectable item in its group)
 static const float AspectRatioLookup[66] = {
     16.0/9.0,        // 0: Custom (fallback value)
-    57.0/34.0,       // 1: Eorzea Collection header (uses first group item)
+    57.0/34.0,       // 1: Eorzea Collection (header, uses first group item)
     57.0/34.0,       // 2: [EC] Standard Image (3:5 Portrait)
     34.0/57.0,       // 3: [EC] Standard Image (5:3 Landscape)
     104.0/57.0,      // 4: [EC] Layout 2 - Main Image
@@ -288,55 +289,55 @@ static const float AspectRatioLookup[66] = {
     123.0/50.0,      // 6: [EC] Layout 4 - Wide Image
     85.0/70.0,       // 7: [EC] Layout 5 - Thumbnail
     115.0/95.0,      // 8: [EC] Layout 6 - Center Image
-    1.0,             // 9: BlueSky header (uses first group item)
+    1.0,             // 9: BlueSky (header, uses first group item)
     1.0,             // 10: [BS] Post Image (Square)
     1.91,            // 11: [BS] Post Image (1.91:1 Landscape)
     5.0/4.0,         // 12: [BS] Post Image (4:5 Portrait)
     4.0/5.0,         // 13: [BS] Post Image (5:4 Landscape)
-    1.0,             // 14: [BS] Profile Picture (1:1)
-    3.0,             // 15: [BS] Banner Image (3:1)
-    1.0,             // 16: Instagram header (uses first group item)
-    1.0,             // 17: [IG] Feed Post Square (1:1)
+    1.0,             // 14: [BS] Profile Picture (Square)
+    3.0,             // 15: [BS] Banner Image (3:1 Landscape)
+    1.0,             // 16: Instagram (header, uses first group item)
+    1.0,             // 17: [IG] Feed Post (Square)
     5.0/4.0,         // 18: [IG] Feed Post (4:5 Portrait)
     4.0/5.0,         // 19: [IG] Feed Post (5:4 Landscape)
     1.91,            // 20: [IG] Feed Post (1.91:1 Landscape)
-    16.0/9.0,        // 21: [IG] Story / Reels (9:16 Landscape)
-    9.0/16.0,        // 22: [IG] Story / Reels (16:9 Portrait)
-    1.91,            // 23: Facebook header (uses first group item)
+    9.0/16.0,        // 21: [IG] Story / Reels (9:16 Portrait)
+    16.0/9.0,        // 22: [IG] Story / Reels (16:9 Landscape)
+    1.91,            // 23: Facebook (header, uses first group item)
     1.91,            // 24: [FB] Feed Post (1.91:1 Landscape)
     5.0/4.0,         // 25: [FB] Feed Post (4:5 Portrait)
     4.0/5.0,         // 26: [FB] Feed Post (5:4 Landscape)
-    16.0/9.0,        // 27: [FB] Story (9:16 Landscape)
-    9.0/16.0,        // 28: [FB] Story (16:9 Portrait)
+    9.0/16.0,        // 27: [FB] Story (9:16 Portrait)
+    16.0/9.0,        // 28: [FB] Story (16:9 Landscape)
     2.63,            // 29: [FB] Cover Photo (2.63:1 Landscape)
-    16.0/9.0,        // 30: Twitter header (uses first group item)
-    9.0/16.0,        // 31: [TW] Single Image (16:9 Landscape)
-    16.0/9.0,        // 32: [TW] Single Image (9:16 Portrait)
-    8.0/7.0,         // 33: [TW] Multi-Image 2 Images (7:8 Portrait)
-    7.0/8.0,         // 34: [TW] Multi-Image 2 Images (8:7 Landscape)
+    16.0/9.0,        // 30: Twitter (X) (header, uses first group item)
+    16.0/9.0,        // 31: [TW] Single Image (16:9 Landscape)
+    9.0/16.0,        // 32: [TW] Single Image (9:16 Portrait)
+    7.0/8.0,         // 33: [TW] Multi-Image 2 Images (7:8 Portrait)
+    8.0/7.0,         // 34: [TW] Multi-Image 2 Images (8:7 Landscape)
     2.0,             // 35: [TW] Multi-Image 4 Images (2:1 Landscape)
-    1.91,            // 36: LinkedIn header (uses first group item)
+    1.91,            // 36: LinkedIn (header, uses first group item)
     1.91,            // 37: [LI] Feed Post (1.91:1 Landscape)
-    16.0/9.0,        // 38: [LI] Story (9:16 Landscape)
-    9.0/16.0,        // 39: [LI] Story (16:9 Portrait)
-    3.0/2.0,         // 40: Pinterest header (uses first group item)
-    3.0/2.0,         // 41: [PI] Pin (2:3 Portrait)
-    2.0/3.0,         // 42: [PI] Pin (3:2 Landscape)
-    2.1,             // 43: [PI] Max Length Pin (1:2.1 Portrait)
-    1.0/2.1,         // 44: [PI] Max Length Pin (2.1:1 Landscape)
-    16.0/9.0,        // 45: TikTok/Snapchat header (uses first group item)
-    16.0/9.0,        // 46: [TS] Video / Story (9:16 Landscape)
-    9.0/16.0,        // 47: [TS] Video / Story (16:9 Portrait)
-    16.0/9.0,        // 48: YouTube header (uses first group item)
-    9.0/16.0,        // 49: [YT] Thumbnail (16:9 Landscape)
-    16.0/9.0,        // 50: [YT] Shorts (9:16 Portrait)
-    1.0,             // 51: [YT] Community Post (1:1)
-    3.0/2.0,         // 52: Photography header (uses first group item)
+    9.0/16.0,        // 38: [LI] Story (9:16 Portrait)
+    16.0/9.0,        // 39: [LI] Story (16:9 Landscape)
+    2.0/3.0,         // 40: Pinterest (header, uses first group item)
+    2.0/3.0,         // 41: [PI] Pin (2:3 Portrait)
+    3.0/2.0,         // 42: [PI] Pin (3:2 Landscape)
+    1.0/2.1,         // 43: [PI] Max Length Pin (1:2.1 Portrait)
+    2.1,             // 44: [PI] Max Length Pin (2.1:1 Landscape)
+    9.0/16.0,        // 45: TikTok / Snapchat (header, uses first group item)
+    9.0/16.0,        // 46: [TS] Video / Story (9:16 Portrait)
+    16.0/9.0,        // 47: [TS] Video / Story (16:9 Landscape)
+    16.0/9.0,        // 48: YouTube (header, uses first group item)
+    16.0/9.0,        // 49: [YT] Thumbnail (16:9 Landscape)
+    9.0/16.0,        // 50: [YT] Shorts (9:16 Portrait)
+    1.0,             // 51: [YT] Community Post (Square)
+    3.0/2.0,         // 52: Photography (header, uses first group item)
     3.0/2.0,         // 53: [PH] 3:2 (Classic)
     4.0/3.0,         // 54: [PH] 4:3 (Standard)
     5.0/4.0,         // 55: [PH] 5:4 (Medium Format)
     1.0,             // 56: [PH] 1:1 (Square)
-    16.0/9.0,        // 57: Cinema header (uses first group item)
+    16.0/9.0,        // 57: Cinema (header, uses first group item)
     16.0/9.0,        // 58: [CM] 16:9 (HD/4K/TV)
     1.85,            // 59: [CM] 1.85:1 (Academy Flat)
     2.35,            // 60: [CM] 2.35:1 (CinemaScope)
@@ -344,7 +345,7 @@ static const float AspectRatioLookup[66] = {
     21.0/9.0,        // 62: [CM] 21:9 (Ultrawide)
     4.0/3.0,         // 63: [CM] 4:3 (Classic TV)
     1.0,             // 64: [CM] 1:1 (Square)
-    9.0/16.0         // 65: [CM] 9:16 (Vertical)
+    9.0/16.0         // 65: [CM] 9:16 (Portrait Vertical)
 };
 
 // Get the selected aspect ratio
@@ -764,7 +765,7 @@ float3 DrawGuides(float2 texcoord, float3 originalColor, float3 guideColor, floa
             }
             
             case 8: { // Harmonic Armature / Dynamic Symmetry
-                float diagonalWidth = sqrt(gridWidth.x * gridWidth.x + gridWidth.y * gridWidth.y);
+                float diagonalWidth = sqrt(gridWidth.x + gridWidth.x + gridWidth.y + gridWidth.y);
                 
                 // Main diagonals
                 float distToD1 = abs(frameCoord.x - frameCoord.y);

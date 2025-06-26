@@ -114,6 +114,9 @@ static const float FOG_TURBULENCE_DEFAULT = 3.0;
 static const float FOG_OFFSET_WORLD_MIN = -500.0;
 static const float FOG_OFFSET_WORLD_MAX = 500.0;
 
+// Shared world scale constant for all fog calculations
+static const float WORLD_SCALE = 1000.0;
+
 // ============================================================================
 // UI UNIFORMS - Following AS-StageFX Standard Organization
 // ============================================================================
@@ -349,7 +352,6 @@ float3 fogColour( in float3 base_color, float distance_val )
 float calculateFogDensity(in float2 screen_uv, in float linearized_depth, in float time_param)
 {
     // Pre-calculate constants and repeated values
-    const float WORLD_SCALE = 1000.0;
     float scene_world_distance = linearized_depth * WORLD_SCALE;
     float max_fog_distance = Fog_MaxDistance * WORLD_SCALE;
     float fog_start_distance = Fog_Start * WORLD_SCALE;
@@ -435,7 +437,6 @@ float4 PS_VolumetricFog(float4 pos : SV_Position, float2 texcoord : TEXCOORD) : 
     float fog_density_factor = calculateFogDensity(texcoord, scene_linear_depth, animated_time);
 
     // Consolidate world distance calculation (was repeated)
-    const float WORLD_SCALE = 1000.0;
     float approximated_world_distance = scene_linear_depth * WORLD_SCALE;
 
     // Apply distance haze (from original shader) to the background color

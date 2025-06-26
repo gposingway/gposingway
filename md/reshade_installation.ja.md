@@ -37,7 +37,7 @@
 > 
 > この警告は「シングルプレイゲームでの利用が意図されており、マルチプレイゲームで利用してBANされても自己責任です」という内容です。
 
-<img src='https://github.com/gposingway/gposingway/assets/18711130/6a57b0d1-5684-441b-94b3-01254d38095a' width='408' /><br/><br/>
+<img src='https://github.com/gposingway/gposingway/assets/18711130/6a57b0d1-5684-441b-94b3-01254d38095a' alt='ReShadeインストーラーの起動画面（SmartScreen警告例）' width='408' /><br/><br/>
 
 `Browse...` ボタンをクリックし、`game` ディレクトリ下の `ffxiv_dx11.exe` ファイルを見つけて `Open` をクリックします。
 
@@ -53,10 +53,10 @@
 デフォルトのインストール先の場合、ファイルは以下の場所にあります：
 `C:\Program Files (x86)\SquareEnix\FINAL FANTASY XIV - A Realm Reborn\game\ffxiv_dx11.exe`
 
-<img src='https://github.com/gposingway/gposingway/assets/18711130/433815f2-3648-4efd-b8c3-18786bd1a657' width='408' /><br/><br/>
+<img src='https://github.com/gposingway/gposingway/assets/18711130/433815f2-3648-4efd-b8c3-18786bd1a657' alt='ReShadeでFFXIV実行ファイルを選択する画面' width='408' /><br/><br/>
 
 ゲームファイルが正しく選択されていることを確認し、`Next` をクリックします：  
-<img src='https://github.com/gposingway/gposingway/assets/18711130/8d8062b8-cbe4-4d9c-bcaf-c252c20d2faf' width='408' /><br/><br/>
+<img src='https://github.com/gposingway/gposingway/assets/18711130/8d8062b8-cbe4-4d9c-bcaf-c252c20d2faf' alt='ReShadeでゲームファイル選択後の確認画面' width='408' /><br/><br/>
 
 希望するレンダリングAPIを選択します（Windows 10/11ユーザーの場合、通常はDirectX 10/11/12を選択します）。選択後、`Next` をクリックします：
 
@@ -70,7 +70,7 @@
 > ○ Vulkan
 > ```
 
-<img src='https://github.com/gposingway/gposingway/assets/18711130/45358023-2100-455c-9619-7c04f5487b4d' width='408' /><br/><br/>
+<img src='https://github.com/gposingway/gposingway/assets/18711130/45358023-2100-455c-9619-7c04f5487b4d' alt='レンダリングAPI選択画面（DirectX 10/11/12推奨）' width='408' /><br/><br/>
 
 エフェクトパッケージの選択画面では、すべてのチェックを外すために `Uncheck All` をクリックし、その後 `Next` をクリックします：
 
@@ -85,7 +85,7 @@
 > □ Legacy effects
 > ```
 
-<img src='https://github.com/gposingway/gposingway/assets/18711130/c458f994-5b5e-495f-9c4e-04122a63b4a6' width='408' /><br/><br/>
+<img src='https://github.com/gposingway/gposingway/assets/18711130/c458f994-5b5e-495f-9c4e-04122a63b4a6' alt='エフェクトプリセット選択画面（Uncheck All推奨）' width='408' /><br/><br/>
 
 `Select effect packages to install` ウィンドウでも、`Uncheck All` をクリックしてから `Next` をクリックします：
 
@@ -100,7 +100,7 @@
 > □ Legacy effects
 > □ OtisFX
 > ```  
-<img src='https://github.com/gposingway/gposingway/assets/18711130/0ff6a3ae-32f4-408a-935a-db9c8d30fb89' width='408' /><br/><br/>
+<img src='https://github.com/gposingway/gposingway/assets/18711130/0ff6a3ae-32f4-408a-935a-db9c8d30fb89' alt='エフェクトパッケージ選択画面（Uncheck All推奨）' width='408' /><br/><br/>
 
 ダウンロード、展開、インストールが開始されます。しばらくお待ちください。
 
@@ -134,4 +134,4 @@
 > 
 > [Finish]
 > ```  
-<img src='https://github.com/gposingway/gposingway/assets/18711130/9ab2bf1f-a809-4130-aea7-0f767e8dbe84' width='408' />
+<img src='https://github.com/gposingway/gposingway/assets/18711130/9ab2bf1f-a809-4130-aea7-0f767e8dbe84' alt='ReShadeインストール完了画面（Finishボタン）' width='408' />

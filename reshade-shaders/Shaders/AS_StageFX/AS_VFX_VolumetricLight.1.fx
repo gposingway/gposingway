@@ -1,8 +1,10 @@
 /**
  * AS_VFX_VolumetricLight.1.fx - 2D Volumetric Light Shafts with Depth Occlusion and Color Selection
  * Author: Leon Aquitaine
- * License: Creative Commons Attribution 4.0 International
- * You are free to use, share, and adapt this shader for any purpose, including commercially, as long as you provide attribution.
+ * Based on: 'fake volumetric 2d light wip' by int_45h (https://www.shadertoy.com/view/wftXzr)
+ * License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+ * You are free to use, share, and adapt this shader for non-commercial purposes only, as long as you provide attribution and distribute any derivative works under the same license.
+ * Commercial use is NOT permitted.
  * 
  * ===================================================================================
  *

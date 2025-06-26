@@ -126,6 +126,9 @@ static const int MAX_LOOP_ITERATIONS = 3; // Fixed loop count from original
 // ============================================================================
 
 // --- Pattern/Distortion ---
+
+uniform int as_shader_descriptor  <ui_type = "radio"; ui_label = " "; ui_text = "\nBased on 'Creation by Silexars' by Danguafer/Danilo Guanabara\nLink: https://www.shadertoy.com/view/XsXXDn\nLicence: CC Share-Alike Non-Commercial\n\n";>;
+
 uniform float UI_ZOffsetPerChannel < ui_type = "slider"; ui_label = "RGB Time Offset"; ui_tooltip = "Time offset between RGB channels, affects color separation."; ui_min = Z_OFFSET_PER_CHANNEL_MIN; ui_max = Z_OFFSET_PER_CHANNEL_MAX; ui_step = Z_OFFSET_PER_CHANNEL_STEP; ui_category = "Pattern/Distortion"; > = Z_OFFSET_PER_CHANNEL_DEFAULT;
 uniform float UI_DistortSinZAmp < ui_type = "slider"; ui_label = "Distortion Amplitude (Time)"; ui_tooltip = "Amplitude of time-based distortion wave (sin(z)+Amp)."; ui_min = DISTORT_SIN_Z_AMP_MIN; ui_max = DISTORT_SIN_Z_AMP_MAX; ui_step = DISTORT_SIN_Z_AMP_STEP; ui_category = "Pattern/Distortion"; > = DISTORT_SIN_Z_AMP_DEFAULT;
 uniform float UI_DistortSinLFreq < ui_type = "slider"; ui_label = "Distortion Frequency (Distance)"; ui_tooltip = "Frequency of distance-based distortion wave (sin(l*Freq - ...))."; ui_min = DISTORT_SIN_L_FREQ_MIN; ui_max = DISTORT_SIN_L_FREQ_MAX; ui_step = DISTORT_SIN_L_FREQ_STEP; ui_category = "Pattern/Distortion"; > = DISTORT_SIN_L_FREQ_DEFAULT;
@@ -333,5 +336,3 @@ technique AS_BGX_LightRipples < ui_label="[AS] BGX: Light Ripples"; ui_tooltip="
 }
 
 #endif // __AS_BGX_LightRipples_1_fx
-
-

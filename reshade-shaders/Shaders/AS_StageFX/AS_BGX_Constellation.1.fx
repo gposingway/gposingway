@@ -137,6 +137,9 @@ static const float AUDIO_GAIN_SPARKLE_MAG_DEFAULT = 0.0;
 //------------------------------------------------------------------------------------------------
 // Animation & Time Controls
 //------------------------------------------------------------------------------------------------
+
+uniform int as_shader_descriptor  <ui_type = "radio"; ui_label = " "; ui_text = "\nBased on 'old joseph' by jairoandre\nLink: https://www.shadertoy.com/view/slfGzf\nLicence: CC Share-Alike Non-Commercial\n\n";>;
+
 AS_ANIMATION_UI(TimeSpeed, TimeKeyframe, "Animation")
 
 uniform float Zoom < ui_type = "drag"; ui_label = "Zoom"; ui_tooltip = "Adjust to zoom in or out of the pattern."; ui_min = ZOOM_MIN; ui_max = ZOOM_MAX; ui_step = 0.01; ui_category = "Animation"; > = ZOOM_DEFAULT;
@@ -335,5 +338,3 @@ technique AS_BGX_Constellation <
 } // namespace ASConstellation
 
 #endif // __AS_BGX_Constellation_1_fx
-
-

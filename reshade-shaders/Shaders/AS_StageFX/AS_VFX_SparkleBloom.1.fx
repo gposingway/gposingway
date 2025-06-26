@@ -571,4 +571,3 @@ technique AS_SparkleBloom < ui_label = "[AS] VFX: Sparkle Bloom"; ui_tooltip = "
 }
 
 #endif // __AS_VFX_SparkleBloom_1_fx
-

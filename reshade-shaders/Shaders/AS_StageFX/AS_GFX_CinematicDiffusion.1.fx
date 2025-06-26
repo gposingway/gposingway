@@ -43,7 +43,6 @@ sampler CinematicDiffusion_SampBlur2 { Texture = CinematicDiffusion_TexBlur2; Ad
 sampler CinematicDiffusion_SampBlur3 { Texture = CinematicDiffusion_TexBlur3; AddressU = CLAMP; AddressV = CLAMP; };
 sampler CinematicDiffusion_SampBlur4 { Texture = CinematicDiffusion_TexBlur4; AddressU = CLAMP; AddressV = CLAMP; };
 
-
 // ============================================================================
 // UI: UNIFORMS
 // ============================================================================
@@ -60,6 +59,7 @@ uniform float HalationIntensity < ui_type = "slider"; ui_min = 0.0; ui_max = 1.0
 uniform float Contrast < ui_type = "slider"; ui_min = 0.5; ui_max = 1.5; ui_label = "Contrast Compensation"; ui_tooltip = "Recovers contrast lost from the diffusion."; ui_category = "Custom Settings"; > = 1.0;
 AS_BLENDMODE_UI_DEFAULT(BlendMode, AS_BLEND_LIGHTEN)
 AS_BLENDAMOUNT_UI(BlendAmount)
+uniform bool Debug_SplitScreen < ui_type = "checkbox"; ui_label = "Debug: Split Screen Compare"; ui_category = "Debug Controls"; ui_category_closed = true; > = false;
 
 // ============================================================================
 // SHADER LOGIC
@@ -175,9 +175,13 @@ void PS_Combine(float4 pos : SV_Position, float2 texcoord : TEXCOORD, out float4
     float3 finalImage = AS_applyBlend(float4(bloom, 1.0), float4(originalColor, 1.0), BlendMode, BlendAmount).rgb;
     finalImage = pow(finalImage, contrast);
 
-    outColor = float4(finalImage, 1.0);
+    // Debug split screen: left = original, right = effect
+    if (Debug_SplitScreen && texcoord.x < 0.5) {
+        outColor = float4(originalColor, 1.0);
+    } else {
+        outColor = float4(finalImage, 1.0);
+    }
 }
-
 
 // ============================================================================
 // TECHNIQUE

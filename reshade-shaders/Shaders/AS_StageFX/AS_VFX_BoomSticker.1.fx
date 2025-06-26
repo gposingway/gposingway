@@ -184,6 +184,9 @@ STICKER_UI(4, false, float2(POSITION_DEFAULT, POSITION_DEFAULT - 0.2), SCALE_DEF
 // ============================================================================
 // AUDIO REACTIVITY
 // ============================================================================
+
+uniform int as_shader_descriptor  <ui_type = "radio"; ui_label = " "; ui_text = "\nBased on 'StageDepth.fx' by Marot Satil\nLink: https://github.com/Otakumouse/stormshade/blob/master/v4.X/reshade-shaders/Shader%20Library/Recommended/StageDepth.fx\nLicence: Creative Commons Attribution 4.0 International\n\n";>;
+
 uniform int BoomSticker_AudioAffect < ui_type = "combo"; ui_label = "Audio Affects"; ui_items = "Opacity\0Scale\0"; ui_category = "Audio Reactivity"; > = 1;
 
 // Use the standard AS_AUDIO_UI macro to select audio source
@@ -466,4 +469,3 @@ technique AS_BoomSticker < ui_label = "[AS] VFX: BoomSticker"; ui_tooltip = "Mul
 }
 
 #endif // __AS_VFX_BoomSticker_1_fx
-

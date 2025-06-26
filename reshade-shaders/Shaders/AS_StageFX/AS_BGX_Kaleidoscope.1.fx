@@ -123,11 +123,15 @@ static const float AUDIO_GAIN_ROTATION_DEFAULT = 0.0;
 //------------------------------------------------------------------------------------------------
 // Animation & Time Controls
 //------------------------------------------------------------------------------------------------
+
+uniform int as_shader_descriptor  <ui_type = "radio"; ui_label = " "; ui_text = "\nBased on 'Kaleidoscope' by Kanduvisla\nLink: https://www.shadertoy.com/view/ddsyDN\nLicence: CC Share-Alike Non-Commercial\n\n";>;
+
 AS_ANIMATION_UI(TimeSpeed, TimeKeyframe, "Animation")
 
 //------------------------------------------------------------------------------------------------
 // Kaleidoscope Controls
 //------------------------------------------------------------------------------------------------
+
 uniform int Sectors < ui_type = "slider"; ui_label = "Mirrors"; ui_tooltip = "Number of kaleidoscope sectors. 1 means no effect. Even numbers often look best."; ui_min = SECTORS_MIN; ui_max = SECTORS_MAX; ui_step = 1; ui_category = "Kaleidoscope"; > = SECTORS_DEFAULT;
 
 //------------------------------------------------------------------------------------------------
@@ -346,5 +350,3 @@ technique AS_BGX_Kaleidoscope <
 } // namespace ASKaleidoscope
 
 #endif // __AS_BGX_Kaleidoscope_1_fx
-
-

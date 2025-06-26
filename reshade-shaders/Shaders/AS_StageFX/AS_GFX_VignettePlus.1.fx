@@ -97,6 +97,9 @@ static const int DEBUG_PATTERN_ONLY = 4;
 //------------------------------------------------------------------------------------------------
 
 // --- Group I: Main Effect Style & Appearance ---
+
+uniform int as_shader_descriptor  <ui_type = "radio"; ui_label = " "; ui_text = "\nBased on 'Hexagonal Wipe' by blandprix\nLink: https://www.shadertoy.com/view/XfjyWG\nLicence: CC Share-Alike Non-Commercial\n\n";>;
+
 uniform int EffectStyle < ui_type = "combo"; ui_label = "Visual Style"; ui_items = "Smooth Gradient\0Duotone: Circles\0Lines - Perpendicular\0Lines - Parallel\0"; ui_tooltip = "Selects the overall visual appearance of the effect."; ui_category = "Style"; > = STYLE_DUOTONE_CIRCLES;
 uniform float3 EffectColor < ui_type = "color"; ui_label = "Effect Color"; ui_tooltip = "The primary color used for the gradient or duotone patterns."; ui_category = "Style"; > = float3(0.0, 0.0, 0.0);
 uniform int MirrorStyle < ui_type = "combo"; ui_label = "Mirroring Style"; ui_items = "None\0Edge Mirrored (From Edges)\0Center Mirrored (From Center)\0"; ui_tooltip = "Selects how the directional effect is mirrored.\nNone: Standard directional effect.\nEdge Mirrored: Effect starts at outer edges and moves inwards.\nCenter Mirrored: Effect starts at the central axis and moves outwards."; ui_category = "Style"; > = MIRROR_STYLE_EDGE;
@@ -460,4 +463,3 @@ technique AS_GFX_VignettePlus < ui_label = "[AS] GFX: Vignette Plus"; ui_tooltip
 } // namespace ASVignettePlus
 
 #endif // __AS_GFX_VignettePlus_1_fx
-

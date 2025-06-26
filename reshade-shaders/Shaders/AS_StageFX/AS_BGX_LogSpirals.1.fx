@@ -136,7 +136,6 @@ static const float DETAIL_GLOW_MIN = 0.0;
 static const float DETAIL_GLOW_MAX = 50.0;
 static const float DETAIL_GLOW_DEFAULT = 10.0;
 
-
 // ============================================================================
 // UI DECLARATIONS - Organized by category
 // ============================================================================
@@ -144,6 +143,9 @@ static const float DETAIL_GLOW_DEFAULT = 10.0;
 //------------------------------------------------------------------------------------------------
 // Primary Spiral Controls
 //------------------------------------------------------------------------------------------------
+
+uniform int as_shader_descriptor  <ui_type = "radio"; ui_label = " "; ui_text = "\nBased on 'Logarithmic spiral of spheres' by mrange\nLink: https://www.shadertoy.com/view/msGXRD\nLicence: CC Share-Alike Non-Commercial\n\n";>;
+
 uniform float AnimationScale < ui_type = "slider"; ui_label = "Animation Scale"; ui_min = ANIMATION_SCALE_MIN; ui_max = ANIMATION_SCALE_MAX; ui_step = 0.01; ui_tooltip = "Legacy animation control. Use Animation Speed in Animation Controls instead."; ui_category = "Spiral Controls"; > = ANIMATION_SCALE_DEFAULT;
 
 uniform float SpiralExpansionRate < ui_type = "slider"; ui_label = "Spiral Expansion Rate"; ui_min = SPIRAL_EXPANSION_MIN; ui_max = SPIRAL_EXPANSION_MAX; ui_step = 0.01; ui_tooltip = "Controls how rapidly spirals expand/contract. Original: 1.2"; ui_category = "Spiral Controls"; > = SPIRAL_EXPANSION_DEFAULT;
@@ -352,7 +354,6 @@ float3 effect_render(float2 p_eff, float time_eff,
     aa_glow_val = min(aa_glow_val, glow_intensity * 100.0f); // Cap relative to glow_intensity
     col_out += gcol * aa_glow_val;
 
-
     col_out = aces_approx_convert(col_out);
     col_out = sRGB_convert(col_out);
 
@@ -484,4 +485,3 @@ technique AS_BGX_LogSpirals_Tech <
 } // end namespace ASLogSpirals
 
 #endif // __AS_BGX_LogSpirals_fx
-

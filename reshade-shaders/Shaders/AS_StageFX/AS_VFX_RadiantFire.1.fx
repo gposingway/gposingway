@@ -121,6 +121,9 @@ static const float DEFAULT_FLAME_COLOR_THRESHOLD_MID = 0.5f;
 // ============================================================================
 
 // --- Flame Physics ---
+
+uniform int as_shader_descriptor  <ui_type = "radio"; ui_label = " "; ui_text = "\nBased on '301's Fire Shader - Remix 3' by mu6k\nLink: https://www.shadertoy.com/view/4ttGWM\nLicence: CC Share-Alike Non-Commercial\n\n";>;
+
 uniform float AdvectionStrength < ui_type = "slider"; ui_label = "Velocity Influence"; ui_tooltip = "How strongly flames follow their existing velocity (advection)."; ui_min = 0.0; ui_max = 5.0; ui_step = 0.01; ui_category = "Flame Physics"; > = DEFAULT_ADVECTION_STRENGTH;
 uniform float RepulsionStrength < ui_type = "slider"; ui_label = "Repulsion Strength"; ui_tooltip = "How strongly flames are pushed from the Repulsion Center. Affected by Rotation."; ui_min = 0.0; ui_max = 0.01; ui_step = 0.0001; ui_category = "Flame Physics"; > = DEFAULT_REPULSION_STRENGTH;
 uniform float GeneralBuoyancy < ui_type = "slider"; ui_label = "Buoyancy"; ui_tooltip = "Constant 'upwards' drift for all flames. Affected by Rotation."; ui_min = 0.0; ui_max = 0.005; ui_step = 0.00001; ui_category = "Flame Physics"; > = DEFAULT_GENERAL_BUOYANCY;
@@ -402,5 +405,3 @@ technique AS_VFX_RadiantFire <
 } // namespace ASRadiantFire
 
 #endif // __AS_VFX_RadiantFire_1_fx_v2_9 // Updated guard
-
-

@@ -207,7 +207,6 @@ float4 PS_WaterSurface(float4 vpos : SV_Position, float2 texcoord : TEXCOORD) : 
          return float4(saturate((dbg_scaleFactor - WAVE_SCALE_MIN) / (WaveScale - WAVE_SCALE_MIN + AS_EPSILON)).xxx, 1.0);
     }
 
-
     // --- Reflection Calculation ---
     // Calculate the distance below the dynamic horizon for this pixel
     float distBelowHorizon = texcoord.y - reflectionHorizon;
@@ -251,5 +250,3 @@ technique AS_VFX_WaterSurface < ui_label = "[AS] VFX: Water Surface"; ui_tooltip
 }
 
 #endif // __AS_VFX_WaterSurface_1_fx
-
-

@@ -372,4 +372,3 @@ technique AS_VFX_ScreenRing <
 }
 
 #endif // __AS_VFX_ScreenRing_1_fx
-

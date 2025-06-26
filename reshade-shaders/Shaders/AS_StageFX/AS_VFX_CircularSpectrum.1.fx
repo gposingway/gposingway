@@ -139,6 +139,9 @@ static const float BLOOM_FALLOFF_DEFAULT = 2.0;
 // ============================================================================
 
 // --- Position ---
+
+uniform int as_shader_descriptor  <ui_type = "radio"; ui_label = " "; ui_text = "\nBased on 'Circular audio visualizer' by AIandDesign\nLink: https://www.shadertoy.com/view/tcyGW1\nLicence: CC Share-Alike Non-Commercial\n\n";>;
+
 AS_POS_UI(EffectCenter) 
 AS_SCALE_UI(EffectScale) 
 
@@ -147,6 +150,7 @@ AS_PALETTE_SELECTION_UI(PaletteSelection, "Dot Palette", PALETTE_DEFAULT_SELECTI
 AS_DECLARE_CUSTOM_PALETTE(CircularSpectrum_, "Palette & Style") // Defines CircularSpectrum_CustomPaletteColor0..4
 
 // --- Dot Appearance ---
+
 uniform bool MirrorFreqBands < ui_label = "Mirror Frequency Bands"; ui_tooltip = "If true, spectrum is mirrored (0-Max-0 around circle). If false, linear (0-Max)."; ui_category = "Pattern"; > = false;
 uniform float DotSizeMultiplier < ui_label = "Dot Size Multiplier"; ui_tooltip = "Adjusts the visual size of the dots. Range: 0.25 to 2.0"; ui_type = "slider"; ui_min = DOT_SIZE_MIN; ui_max = DOT_SIZE_MAX; ui_step = 0.05; ui_category = "Pattern"; > = DOT_SIZE_DEFAULT;
 uniform float RadialGapMultiplier < ui_label = "Radial Gap Multiplier"; ui_tooltip = "Controls the radial spacing between dot centers. Range: 0.0 to 3.0"; ui_type = "slider"; ui_min = RADIAL_GAP_MIN; ui_max = RADIAL_GAP_MAX; ui_step = 0.05; ui_category = "Pattern"; > = RADIAL_GAP_DEFAULT;

@@ -333,4 +333,3 @@ technique AS_MotionTrails_1 <
 }
 
 #endif // __AS_VFX_MotionTrails_1_fx
-

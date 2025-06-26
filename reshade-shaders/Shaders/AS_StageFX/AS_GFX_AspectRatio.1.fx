@@ -79,8 +79,8 @@
 // ============================= Aspect Ratio Configuration =============================
 uniform int AspectRatioPreset < ui_type = "combo"; ui_label = "Aspect Ratio Preset"; ui_tooltip = "Select from common aspect ratios or choose 'Custom' to define your own"; ui_category = "Aspect Ratio"; ui_items = "Custom\0"
                 "Eorzea Collection\0"
-                "  [EC] Standard Image (3:5 Portrait)\0"
-                "  [EC] Standard Image (5:3 Landscape)\0"
+                "  [EC] Standard Image (3:5 Landscape)\0"
+                "  [EC] Standard Image (5:3 Portrait)\0"
                 "  [EC] Layout 2 - Main Image (104:57)\0"
                 "  [EC] Layout 3 - Grid Image (103:56)\0"
                 "  [EC] Layout 4 - Wide Image (123:50)\0"
@@ -89,42 +89,42 @@ uniform int AspectRatioPreset < ui_type = "combo"; ui_label = "Aspect Ratio Pres
                 "BlueSky\0"
                 "  [BS] Post Image (Square 1:1)\0"
                 "  [BS] Post Image (1.91:1 Landscape)\0"
-                "  [BS] Post Image (4:5 Portrait)\0" 
-                "  [BS] Post Image (5:4 Landscape)\0"
+                "  [BS] Post Image (4:5 Landscape)\0" 
+                "  [BS] Post Image (5:4 Portrait)\0"
                 "  [BS] Profile Picture (1:1)\0"
                 "  [BS] Banner Image (3:1)\0"               
                 "Instagram\0"
                 "  [IG] Feed Post (Square 1:1)\0"
-                "  [IG] Feed Post (4:5 Portrait)\0"
-                "  [IG] Feed Post (5:4 Landscape)\0"
+                "  [IG] Feed Post (4:5 Landscape)\0"
+                "  [IG] Feed Post (5:4 Portrait)\0"
                 "  [IG] Feed Post (1.91:1 Landscape)\0"
-                "  [IG] Story / Reels (9:16 Portrait)\0"
-                "  [IG] Story / Reels (16:9 Landscape)\0"              
+                "  [IG] Story / Reels (9:16 Landscape)\0"
+                "  [IG] Story / Reels (16:9 Portrait)\0"              
                 "Facebook\0"
                 "  [FB] Feed Post (1.91:1 Landscape)\0"
-                "  [FB] Feed Post (4:5 Portrait)\0"
-                "  [FB] Feed Post (5:4 Landscape)\0"
-                "  [FB] Story (9:16 Portrait)\0"
-                "  [FB] Story (16:9 Landscape)\0"
+                "  [FB] Feed Post (4:5 Landscape)\0"
+                "  [FB] Feed Post (5:4 Portrait)\0"
+                "  [FB] Story (9:16 Landscape)\0"
+                "  [FB] Story (16:9 Portrait)\0"
                 "  [FB] Cover Photo (2.63:1 Landscape)\0"               
                 "Twitter (X)\0"
                 "  [TW] Single Image (16:9 Landscape)\0"
                 "  [TW] Single Image (9:16 Portrait)\0"
-                "  [TW] Multi-Image 2 Images (7:8 Portrait)\0"
-                "  [TW] Multi-Image 2 Images (8:7 Landscape)\0"
+                "  [TW] Multi-Image 2 Images (7:8 Landscape)\0"
+                "  [TW] Multi-Image 2 Images (8:7 Portrait)\0"
                 "  [TW] Multi-Image 4 Images (2:1 Landscape)\0"               
                 "LinkedIn\0"
                 "  [LI] Feed Post (1.91:1 Landscape)\0"
-                "  [LI] Story (9:16 Portrait)\0"
-                "  [LI] Story (16:9 Landscape)\0"               
+                "  [LI] Story (9:16 Landscape)\0"
+                "  [LI] Story (16:9 Portrait)\0"               
                 "Pinterest\0"
                 "  [PI] Pin (2:3 Portrait)\0"
                 "  [PI] Pin (3:2 Landscape)\0"
                 "  [PI] Max Length Pin (1:2.1 Portrait)\0"
                 "  [PI] Max Length Pin (2.1:1 Landscape)\0"               
                 "TikTok / Snapchat\0"
-                "  [TS] Video / Story (9:16 Portrait)\0"
-                "  [TS] Video / Story (16:9 Landscape)\0"
+                "  [TS] Video / Story (9:16 Landscape)\0"
+                "  [TS] Video / Story (16:9 Portrait)\0"
                 "YouTube\0"
                 "  [YT] Thumbnail (16:9 Landscape)\0"
                 "  [YT] Shorts (9:16 Portrait)\0"
@@ -135,9 +135,14 @@ uniform int AspectRatioPreset < ui_type = "combo"; ui_label = "Aspect Ratio Pres
                 "  [PH] 5:4 (Medium Format)\0"
                 "  [PH] 1:1 (Square)\0"
                 "Cinema\0"
-                "  [CM] 16:9 (HD/4K)\0"
+                "  [CM] 16:9 (HD/4K/TV)\0"
+                "  [CM] 1.85:1 (Academy Flat)\0"
+                "  [CM] 2.35:1 (CinemaScope)\0"
+                "  [CM] 2.39:1 (Anamorphic)\0"
                 "  [CM] 21:9 (Ultrawide)\0"
-                "  [CM] 2.39:1 (Anamorphic)\0";
+                "  [CM] 4:3 (Classic TV)\0"
+                "  [CM] 1:1 (Square)\0"
+                "  [CM] 9:16 (Vertical)\0";
 > = 3;
 
 uniform float2 CustomAspectRatio < ui_type = "drag"; ui_label = "Custom Aspect Ratio"; ui_tooltip = "Set your own aspect ratio (X:Y)"; ui_category = "Aspect Ratio"; ui_min = AS_RANGE_SCALE_MIN; ui_max = AS_RANGE_SCALE_MAX * 2.0; ui_step = 0.01; > = float2(16.0, 9.0);
@@ -272,6 +277,76 @@ int GetGuideValue() {
 // HELPER FUNCTIONS
 // ============================================================================
 
+// Aspect ratio lookup table - maps UI indices directly to aspect ratio values
+static const float AspectRatioLookup[66] = {
+    16.0/9.0,        // 0: Custom (fallback value)
+    57.0/34.0,       // 1: Eorzea Collection header (uses first group item)
+    57.0/34.0,       // 2: [EC] Standard Image (3:5 Landscape)
+    34.0/57.0,       // 3: [EC] Standard Image (5:3 Portrait)
+    104.0/57.0,      // 4: [EC] Layout 2 - Main Image
+    103.0/56.0,      // 5: [EC] Layout 3 - Grid Image
+    123.0/50.0,      // 6: [EC] Layout 4 - Wide Image
+    85.0/70.0,       // 7: [EC] Layout 5 - Thumbnail
+    115.0/95.0,      // 8: [EC] Layout 6 - Center Image
+    1.0,             // 9: BlueSky header (uses first group item)
+    1.0,             // 10: [BS] Post Image (Square 1:1)
+    1.91,            // 11: [BS] Post Image (1.91:1 Landscape)
+    5.0/4.0,         // 12: [BS] Post Image (4:5 Landscape)
+    4.0/5.0,         // 13: [BS] Post Image (5:4 Portrait)
+    1.0,             // 14: [BS] Profile Picture (1:1)
+    3.0,             // 15: [BS] Banner Image (3:1)
+    1.0,             // 16: Instagram header (uses first group item)
+    1.0,             // 17: [IG] Feed Post Square (1:1)
+    5.0/4.0,         // 18: [IG] Feed Post (4:5 Landscape)
+    4.0/5.0,         // 19: [IG] Feed Post (5:4 Portrait)
+    1.91,            // 20: [IG] Feed Post (1.91:1 Landscape)
+    16.0/9.0,        // 21: [IG] Story / Reels (9:16 Landscape)
+    9.0/16.0,        // 22: [IG] Story / Reels (16:9 Portrait)
+    1.91,            // 23: Facebook header (uses first group item)
+    1.91,            // 24: [FB] Feed Post (1.91:1 Landscape)
+    5.0/4.0,         // 25: [FB] Feed Post (4:5 Landscape)
+    4.0/5.0,         // 26: [FB] Feed Post (5:4 Portrait)
+    16.0/9.0,        // 27: [FB] Story (9:16 Landscape)
+    9.0/16.0,        // 28: [FB] Story (16:9 Portrait)
+    2.63,            // 29: [FB] Cover Photo (2.63:1 Landscape)
+    16.0/9.0,        // 30: Twitter header (uses first group item)
+    9.0/16.0,        // 31: [TW] Single Image (16:9 Landscape)
+    16.0/9.0,        // 32: [TW] Single Image (9:16 Portrait)
+    8.0/7.0,         // 33: [TW] Multi-Image 2 Images (7:8 Landscape)
+    7.0/8.0,         // 34: [TW] Multi-Image 2 Images (8:7 Portrait)
+    2.0,             // 35: [TW] Multi-Image 4 Images (2:1 Landscape)
+    1.91,            // 36: LinkedIn header (uses first group item)
+    1.91,            // 37: [LI] Feed Post (1.91:1 Landscape)
+    16.0/9.0,        // 38: [LI] Story (9:16 Landscape)
+    9.0/16.0,        // 39: [LI] Story (16:9 Portrait)
+    3.0/2.0,         // 40: Pinterest header (uses first group item)
+    3.0/2.0,         // 41: [PI] Pin (2:3 Portrait)
+    2.0/3.0,         // 42: [PI] Pin (3:2 Landscape)
+    2.1,             // 43: [PI] Max Length Pin (1:2.1 Portrait)
+    1.0/2.1,         // 44: [PI] Max Length Pin (2.1:1 Landscape)
+    16.0/9.0,        // 45: TikTok/Snapchat header (uses first group item)
+    16.0/9.0,        // 46: [TS] Video / Story (9:16 Landscape)
+    9.0/16.0,        // 47: [TS] Video / Story (16:9 Portrait)
+    16.0/9.0,        // 48: YouTube header (uses first group item)
+    9.0/16.0,        // 49: [YT] Thumbnail (16:9 Landscape)
+    16.0/9.0,        // 50: [YT] Shorts (9:16 Portrait)
+    1.0,             // 51: [YT] Community Post (1:1)
+    3.0/2.0,         // 52: Photography header (uses first group item)
+    3.0/2.0,         // 53: [PH] 3:2 (Classic)
+    4.0/3.0,         // 54: [PH] 4:3 (Standard)
+    5.0/4.0,         // 55: [PH] 5:4 (Medium Format)
+    1.0,             // 56: [PH] 1:1 (Square)
+    16.0/9.0,        // 57: Cinema header (uses first group item)
+    16.0/9.0,        // 58: [CM] 16:9 (HD/4K/TV)
+    1.85,            // 59: [CM] 1.85:1 (Academy Flat)
+    2.35,            // 60: [CM] 2.35:1 (CinemaScope)
+    2.39,            // 61: [CM] 2.39:1 (Anamorphic)
+    21.0/9.0,        // 62: [CM] 21:9 (Ultrawide)
+    4.0/3.0,         // 63: [CM] 4:3 (Classic TV)
+    1.0,             // 64: [CM] 1:1 (Square)
+    9.0/16.0         // 65: [CM] 9:16 (Vertical)
+};
+
 // Get the selected aspect ratio
 float GetAspectRatio() {
     if (AspectRatioPreset == 0) {
@@ -279,95 +354,13 @@ float GetAspectRatio() {
         return CustomAspectRatio.x / CustomAspectRatio.y;
     }
     
-    // Map preset indices directly to aspect ratios
-    switch(AspectRatioPreset) {
-        // Eorzea Collection
-        case 2: return 57.0/34.0;      // Standard Image (3:5 Portrait)
-        case 3: return 34.0/57.0;      // Standard Image (5:3 Landscape)
-        case 4: return 104.0/57.0;     // Layout 2 - Main Image
-        case 5: return 103.0/56.0;     // Layout 3 - Grid Image
-        case 6: return 123.0/50.0;     // Layout 4 - Wide Image
-        case 7: return 85.0/70.0;      // Layout 5 - Thumbnail
-        case 8: return 115.0/95.0;     // Layout 6 - Center Image
-        
-        // BlueSky
-        case 10: return 1.0;           // Post Image (Square 1:1)
-        case 11: return 1.91;          // Post Image (1.91:1 Landscape)
-        case 12: return 5.0/4.0;       // Post Image (4:5 Portrait)
-        case 13: return 4.0/5.0;       // Post Image (5:4 Landscape)
-        case 14: return 1.0;           // Profile Picture (1:1)
-        case 15: return 3.0;           // Banner Image (3:1)
-        
-        // Instagram
-        case 17: return 1.0;           // Feed Post Square (1:1)
-        case 18: return 5.0/4.0;       // Feed Post (4:5 Portrait)
-        case 19: return 4.0/5.0;       // Feed Post (5:4 Landscape)
-        case 20: return 1.91;          // Feed Post (1.91:1 Landscape)
-        case 21: return 16.0/9.0;      // Story / Reels (9:16 Portrait)
-        case 22: return 9.0/16.0;      // Story / Reels (16:9 Landscape)
-        
-        // Facebook
-        case 24: return 1.91;          // Feed Post (1.91:1 Landscape)
-        case 25: return 5.0/4.0;       // Feed Post (4:5 Portrait)
-        case 26: return 4.0/5.0;       // Feed Post (5:4 Landscape)
-        case 27: return 16.0/9.0;      // Story (9:16 Portrait)
-        case 28: return 9.0/16.0;      // Story (16:9 Landscape)
-        case 29: return 2.63;          // Cover Photo (2.63:1 Landscape)
-        
-        // Twitter (X)
-        case 31: return 9.0/16.0;      // Single Image (16:9 Landscape)
-        case 32: return 16.0/9.0;      // Single Image (9:16 Portrait)
-        case 33: return 8.0/7.0;       // Multi-Image 2 Images (7:8 Portrait)
-        case 34: return 7.0/8.0;       // Multi-Image 2 Images (8:7 Landscape)
-        case 35: return 2.0;           // Multi-Image 4 Images (2:1 Landscape)
-        
-        // LinkedIn
-        case 37: return 1.91;          // Feed Post (1.91:1 Landscape)
-        case 38: return 16.0/9.0;      // Story (9:16 Portrait)
-        case 39: return 9.0/16.0;      // Story (16:9 Landscape)
-        
-        // Pinterest
-        case 41: return 3.0/2.0;       // Pin (2:3 Portrait)
-        case 42: return 2.0/3.0;       // Pin (3:2 Landscape)
-        case 43: return 2.1;           // Max Length Pin (1:2.1 Portrait)
-        case 44: return 1.0/2.1;       // Max Length Pin (2.1:1 Landscape)
-        
-        // TikTok/Snapchat
-        case 46: return 16.0/9.0;      // Video / Story (9:16 Portrait)
-        case 47: return 9.0/16.0;      // Video / Story (16:9 Landscape)
-        
-        // YouTube
-        case 49: return 9.0/16.0;      // Thumbnail (16:9 Landscape)
-        case 50: return 16.0/9.0;      // Shorts (9:16 Portrait)
-        case 51: return 1.0;           // Community Post (1:1)
-        
-        // Photography
-        case 53: return 3.0/2.0;       // Classic (3:2)
-        case 54: return 4.0/3.0;       // Standard (4:3)
-        case 55: return 5.0/4.0;       // Medium Format (5:4)
-        case 56: return 1.0;           // Square (1:1)
-        
-        // Cinema
-        case 58: return 9.0/16.0;      // HD/4K (16:9 Landscape)
-        case 59: return 21.0/9.0;      // Ultrawide (21:9)
-        case 60: return 2.39;          // Anamorphic (2.39:1)
-        
-        // For category headers, return default values
-        case 1: return 57.0/34.0;      // Eorzea Collection header
-        case 9: return 1.0;            // BlueSky header
-        case 16: return 1.0;           // Instagram header
-        case 23: return 1.91;          // Facebook header
-        case 30: return 16.0/9.0;      // Twitter header
-        case 36: return 1.91;          // LinkedIn header
-        case 40: return 3.0/2.0;       // Pinterest header
-        case 45: return 16.0/9.0;      // TikTok/Snapchat header
-        case 48: return 16.0/9.0;      // YouTube header
-        case 52: return 3.0/2.0;       // Photography header
-        case 57: return 16.0/9.0;      // Cinema header
-        
-        // Fallback to 16:9 for any unhandled cases
-        default: return 16.0/9.0;
+    // Bounds check and lookup
+    if (AspectRatioPreset >= 0 && AspectRatioPreset < 66) {
+        return AspectRatioLookup[AspectRatioPreset];
     }
+    
+    // Fallback to 16:9 for any out-of-bounds cases
+    return 16.0/9.0;
 }
 
 float2 RotatePoint(float2 pt, float2 center, float angle) {
@@ -904,5 +897,3 @@ ui_label = "[AS] GFX: Aspect Ratio"; ui_tooltip = "Aspect ratio framing tool for
 }
 
 #endif // __AS_GFX_AspectRatio_1_fx
-
-

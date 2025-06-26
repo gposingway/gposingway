@@ -395,5 +395,3 @@ technique AS_LaserShow < ui_label = "[AS] LFX: Laser Show"; ui_tooltip = "Audio-
 }
 
 #endif // __AS_LFX_LaserShow_1_fx
-
-

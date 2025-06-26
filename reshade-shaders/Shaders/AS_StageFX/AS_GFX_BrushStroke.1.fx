@@ -159,7 +159,6 @@ AS_ROTATION_UI(StrokeRotationSnap, StrokeRotationFine)
 AS_BLENDMODE_UI_DEFAULT(BlendMode, AS_BLEND_NORMAL)
 AS_BLENDAMOUNT_UI(BlendStrength)
 
-
 // ============================================================================
 // HELPER FUNCTION to calculate stroke alpha at given texcoord
 // ============================================================================
@@ -210,7 +209,6 @@ float GetStrokeAlpha(
     
     return saturate(calculated_alpha * band_falloff_mask);
 }
-
 
 // ============================================================================
 // PIXEL SHADER

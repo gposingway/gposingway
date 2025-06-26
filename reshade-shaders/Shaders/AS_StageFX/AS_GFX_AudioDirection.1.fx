@@ -77,7 +77,6 @@ static const float INTENSITY_AUDIO_MULT_MIN = 0.0; // Opacity multiplier (0 to 1
 static const float INTENSITY_AUDIO_MULT_MAX = 5.0;
 static const float INTENSITY_AUDIO_MULT_DEFAULT = 0.8;
 
-
 // ============================================================================
 // UI DECLARATIONS
 // ============================================================================

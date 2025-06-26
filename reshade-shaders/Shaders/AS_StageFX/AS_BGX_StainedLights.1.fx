@@ -107,10 +107,14 @@ static const float AUDIO_MULTIPLIER_MAX = 3.0;
 // ============================================================================
 
 // --- Stage ---
+
+uniform int as_shader_descriptor  <ui_type = "radio"; ui_label = " "; ui_text = "\nBased on 'Stained Lights' by 104\nLink: https://www.shadertoy.com/view/WlsSzM\nLicence: CC Share-Alike Non-Commercial\n\n";>;
+
 AS_STAGEDEPTH_UI(EffectDepth)
 AS_ROTATION_UI(EffectSnapRotation, EffectFineRotation)
 
 // --- Pattern ---
+
 uniform float PatternScale < ui_type = "slider"; ui_label = "Pattern Scale"; ui_tooltip = "Overall scale of the stained glass pattern."; ui_min = PATTERN_SCALE_MIN; ui_max = PATTERN_SCALE_MAX; ui_step = PATTERN_SCALE_STEP; ui_category = "Pattern"; > = PATTERN_SCALE_DEFAULT;
 uniform float EdgeCurve < ui_type = "slider"; ui_label = "Edge Curvature"; ui_tooltip = "Controls the sharpness of the edges within the pattern."; ui_min = EDGE_CURVE_MIN; ui_max = EDGE_CURVE_MAX; ui_step = EDGE_CURVE_STEP; ui_category = "Pattern"; > = EDGE_CURVE_DEFAULT;
 uniform float EdgeBias < ui_type = "slider"; ui_label = "Edge Bias"; ui_tooltip = "Adjusts the overall brightness of the edges."; ui_min = EDGE_BIAS_MIN; ui_max = EDGE_BIAS_MAX; ui_step = EDGE_BIAS_STEP; ui_category = "Pattern"; > = EDGE_BIAS_DEFAULT;
@@ -279,4 +283,3 @@ technique AS_BGX_StainedLights < ui_label="[AS] BGX: Stained Lights"; ui_tooltip
 }
 
 #endif // __AS_BGX_StainedLights_1_fx
-

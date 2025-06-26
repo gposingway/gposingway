@@ -447,5 +447,3 @@ technique AS_StageSpotlights < ui_label = "[AS] LFX: Stage Spotlights"; ui_toolt
 }
 
 #endif // __AS_LFX_StageSpotlights_1_fx
-
-

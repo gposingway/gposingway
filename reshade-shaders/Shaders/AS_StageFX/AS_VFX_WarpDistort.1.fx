@@ -185,5 +185,3 @@ technique AS_Warp < ui_label = "[AS] VFX: Warp Distort"; ui_tooltip = "Creates a
 }
 
 #endif // __AS_VFX_WarpDistort_1_fx
-
-

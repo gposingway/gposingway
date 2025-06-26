@@ -117,6 +117,9 @@ static const float COLOR_CYCLE_SPEED_MAX = 2.0;
 // UI Declarations
 
 // --- Pattern ---
+
+uniform int as_shader_descriptor  <ui_type = "radio"; ui_label = " "; ui_text = "\nBased on 'Time Crystal' by raphaeljmu\nLink: https://www.shadertoy.com/view/lcl3z2\nLicence: CC Share-Alike Non-Commercial\n\n";>;
+
 uniform float UI_Iterations < ui_type = "slider"; ui_label = "Pattern Iterations"; ui_tooltip = "Number of fractal iterations. Higher values create more detailed patterns."; ui_min = ITERATIONS_MIN; ui_max = ITERATIONS_MAX; ui_step = ITERATIONS_STEP; ui_category = "Pattern"; > = ITERATIONS_DEFAULT;
 uniform float UI_PatternScale < ui_type = "slider"; ui_label = "Pattern Scale"; ui_tooltip = "Overall scale of the crystal pattern."; ui_min = PATTERN_SCALE_MIN; ui_max = PATTERN_SCALE_MAX; ui_step = PATTERN_SCALE_STEP; ui_category = "Pattern"; > = PATTERN_SCALE_DEFAULT;
 uniform float UI_EdgeCurve < ui_type = "slider"; ui_label = "Edge Curvature"; ui_tooltip = "Controls how sharp or smooth the crystal edges appear."; ui_min = EDGE_CURVE_MIN; ui_max = EDGE_CURVE_MAX; ui_step = EDGE_CURVE_STEP; ui_category = "Pattern"; > = EDGE_CURVE_DEFAULT;
@@ -354,5 +357,3 @@ technique AS_BGX_TimeCrystal < ui_label="[AS] BGX: Time Crystal"; ui_tooltip="Fr
 }
 
 #endif // __AS_BGX_TimeCrystal_1_fx
-
-

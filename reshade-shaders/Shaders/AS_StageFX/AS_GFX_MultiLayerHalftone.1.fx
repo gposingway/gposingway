@@ -402,4 +402,3 @@ technique AS_MultiLayerHalftone <
 }
 
 #endif // __AS_GFX_MultiLayerHalftone_1_fx
-

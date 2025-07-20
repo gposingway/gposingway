@@ -19,10 +19,10 @@
 `gposingway-update.bat`를 더블 클릭합니다. OS 구성에 따라 다음 팝업이 나타날 수 있습니다:  
 <img src='https://github.com/gposingway/gposingway/assets/18711130/9cf1ac93-20b7-41f3-b17e-4e44babb59fc' width='408' /><br/><br/>
 
-`More Info...`를 클릭합니다. 팝업에 스크립트 이름이 표시됩니다:  
+`추가 정보`를 클릭합니다. 팝업에 스크립트 이름이 표시됩니다:  
 <img src='https://github.com/gposingway/gposingway/assets/18711130/a47d0795-caa3-4a7e-a9f8-75d7b2d8961e' width='408' /><br/><br/>
 
-`Run Anyway`를 클릭합니다. 다음 화면이 나타납니다:  
+`실행`을 클릭합니다. 다음 화면이 나타납니다:  
 <img src='https://github.com/gposingway/gposingway/assets/18711130/ac637b7a-2e61-43f8-83f5-25040184f687' width='408' /><br/><br/>
 
 `I` 키를 누르면 설치 프로세스가 계속됩니다:  
@@ -36,4 +36,4 @@
 `gposingway-update.bat`를 더블 클릭합니다. 다음 화면이 나타납니다:  
 <img src='https://github.com/gposingway/gposingway/assets/18711130/6dc7431a-9793-46b3-9889-434b645bac8e' width='408' /><br/><br/>
 
-이 시점에서 설치가 패치되었으므로 게임을 시작할 수 있습니다.
+이 시점에서 패치가 설치되었으므로 게임을 시작할 수 있습니다.

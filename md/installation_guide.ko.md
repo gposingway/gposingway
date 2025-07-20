@@ -1,6 +1,6 @@
 # GPosingway 설치 가이드
 
-GPosingway는 강력한 후처리 도구인 ReShade로 구동됩니다. 시작하려면 먼저 ReShade를 설치한 다음 GPosingway를 설치해야 합니다. 아래 단계에 따라 환경을 설정하십시오.
+GPosingway는 강력한 후처리 도구인 ReShade로 구동됩니다. 시작하려면 먼저 ReShade를 설치한 다음 GPosingway를 설치해야 합니다. 아래 단계에 따라 환경을 설정하세요.
 
 ---
 
@@ -20,7 +20,7 @@ GPosingway는 강력한 후처리 도구인 ReShade로 구동됩니다. 시작�
     - 적절한 렌더링 API를 선택합니다 (대부분의 사용자는 DirectX 10/11/12).  
         ![Rendering API](https://github.com/gposingway/gposingway/assets/18711130/45358023-2100-455c-9619-7c04f5487b4d)
 
-4. **선택적 단계 건너뛰기**:
+4. **비필수 단계 건너뛰기**:
     - `Select preset to install` 및 `Select effect packages to install` 창에서 `Skip`을 클릭합니다.  
         ![Skip Preset](https://github.com/gposingway/gposingway/assets/18711130/c458f994-5b5e-495f-9c4e-04122a63b4a6)  
         ![Skip Effects](https://github.com/gposingway/gposingway/assets/18711130/0ff6a3ae-32f4-408a-935a-db9c8d30fb89)
@@ -39,9 +39,9 @@ GPosingway는 강력한 후처리 도구인 ReShade로 구동됩니다. 시작�
 
 ### 수동 설치
 1. **패키지 압축 해제**:
-    - 다운로드한 GPosingway 패키지를 마우스 오른쪽 버튼으로 클릭하고 `압축 풀기...` (`Extract All...`)를 선택합니다.  
+    - 다운로드한 GPosingway 패키지를 마우스 오른쪽 버튼으로 클릭하고 `압축 풀기...`를 선택합니다.  
         ![Extract All](https://github.com/gposingway/gposingway/assets/18711130/7968f27b-f5b5-4c1c-ba07-5911a8f7a79e)
-    - 대화 상자에서 `압축 풀기` (`Extract`)를 클릭합니다.  
+    - 대화 상자에서 `압축 풀기`를 클릭합니다.  
         ![Extract Button](https://github.com/gposingway/gposingway/assets/18711130/7d3c3978-355e-4b0e-9a74-c64ab2318f65)
 
 2. **파일 복사**:
@@ -60,7 +60,7 @@ GPosingway는 강력한 후처리 도구인 ReShade로 구동됩니다. 시작�
 2. **설치 프로그램 실행**:
     - `gposingway-update.bat`를 더블 클릭합니다.  
         ![Run Installer](https://github.com/gposingway/gposingway/assets/18711130/9cf1ac93-20b7-41f3-b17e-4e44babb59fc)
-    - Windows Defender 메시지가 나타나면 `추가 정보` (`More Info`)를 클릭한 다음 `실행` (`Run Anyway`)을 클릭합니다.  
+    - Windows Defender 메시지가 나타나면 `추가 정보`를 클릭한 다음 `실행`을 클릭합니다.  
         ![Run Anyway](https://github.com/gposingway/gposingway/assets/18711130/a47d0795-caa3-4a7e-a9f8-75d7b2d8961e)
     - 화면의 지침에 따라 설치를 완료합니다.  
         ![Installer Instructions](https://github.com/gposingway/gposingway/assets/18711130/57dbca2b-be15-4e7a-af70-ec97fbe3e03a)

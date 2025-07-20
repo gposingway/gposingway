@@ -36,4 +36,4 @@
 `gposingway-update.bat`를 더블 클릭합니다. 다음 화면이 나타납니다:  
 <img src='https://github.com/gposingway/gposingway/assets/18711130/6dc7431a-9793-46b3-9889-434b645bac8e' width='408' /><br/><br/>
 
-이 시점에서 패치가 설치 되었으므로 게임을 시작할 수 있습니다.
+이 시점에서 패치가 설치되었으므로 게임을 시작할 수 있습니다.

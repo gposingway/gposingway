@@ -75,7 +75,7 @@ GPosingway는 호환성과 안정성을 보장하기 위해 엄선된 셰이더,
 ### 모든 셰이더 컬렉션이 GPosingway에 포함되어 있나요?
 아니요, [iMMERSE](https://github.com/martymcmodding/iMMERSE/blob/main/LICENSE)와 같은 일부 셰이더 컬렉션은 라이선스 제한으로 인해 재배포할 수 없습니다. 이러한 컬렉션은 별도로 다운로드해야 할 수 있습니다.
 
-### GPosingway와 함께 모든 프리셋을 사용할 수 있나요??
+### GPosingway와 함께 모든 프리셋을 사용할 수 있나요?
 예, 대부분의 프리셋은 추가 구성 없이 작동해야 합니다. GPosingway에는 필요한 셰이더가 이미 포함되어 있으므로 `.fx` 및 `.fxh` 파일을 복사하라는 지침은 무시하세요.
 
 ---

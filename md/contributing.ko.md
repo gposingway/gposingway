@@ -46,7 +46,7 @@ GPosingway에 기여하는 데 관심을 가져주셔서 감사합니다! 커뮤
 
 ## 커뮤니티 및 지원
 
-- **Discord**: 지원 및 토론을 위해 [Sights of Eorzea Discord 서버](https://discord.com/servers/sights-of-eorzea-1124828911700811957)에 가입하십시오. (참고: 서버는 주로 영어를 사용하지만, 다른 언어로 도움을 줄 수 있는 사용자가 있을 수 있습니다.)
+- **Discord**: 지원 및 토론을 위해 [Sights of Eorzea Discord 서버](https://discord.com/servers/sights-of-eorzea-1124828911700811957)에 가입하세요. (참고: 서버는 주로 영어를 사용하지만, 다른 언어로 도움을 줄 수 있는 사용자가 있을 수 있습니다.)
 - **GitHub Issues**: [GitHub Issues](https://github.com/GPosingway/GPosingway/issues)를 통해 버그를 보고하거나 기능을 제안하세요.
 - **연락처**: 관리자인 Leon Aquitaine에게 [BlueSky](https://bsky.app/profile/leon.aquitaine.social)를 통해 연락하세요.
 

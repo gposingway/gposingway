@@ -13,7 +13,7 @@
 
 ---
 
-**현재 지원되는 ReShade 버전**: 6.4.1 (애드온 지원 포함)
+**현재 지원되는 ReShade 버전**: 6.5.1 (애드온 지원 포함)
 
 [![download](https://github.com/GPosingway/GPosingway/assets/18711130/e29bc268-09d3-4b00-9d80-a5d6f964c5de)](https://github.com/gposingway/gposingway/releases/latest)
 
@@ -60,21 +60,17 @@ FFXIV 커뮤니티의 기여를 환영합니다. GPosingway 사용자에게 도�
 | TRUEREALISM | [Nyeps](https://twitter.com/FFXIVNyeps)| 배포 허용 | 🍔 [Download Page](https://ko-fi.com/s/ac0d1c86a2)| [`#NyepsRealism`](https://twitter.com/intent/tweet?text=%23NyepsRealism)|
 | WiFi | [Wi-Fi ₍ᐢ.ˬ.ᐢ₎ 黒うさぎ](https://twitter.com/wifi_photospire) | MIT| SFW 스크린샷만 허용(라이선스 제안) · [Download Page](https://lit.link/en/wifiphotospire)| [`#WifiPresets`](https://twitter.com/intent/tweet?text=%23WifiPresets)|
 | Witch's| [🍸 Ann-A 🍸](https://twitter.com/NIRVANN_A)| WTFPL| [Repository](https://github.com/WitchMana/WitchsPresetsReshade)| [`#witchspresets`](https://twitter.com/intent/tweet?text=%23witchspresets) |
-| Yomigami Okami | [Yomy](https://twitter.com/Yomigammy)| MIT - [License](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders/blob/main/LICENSE) | [ReShade 포트](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders#yomigamiokami-reshade-560-port) by Meynan Aneytha | [`#okamishader`](https://twitter.com/intent/tweet?text=%23okamishader)|
+| Yomigami Okami | [Yomy](https://twitter.com/Yomigammy)| MIT - [License](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders/blob/main/LICENSE) | [ReShade 포트](https://github.com/MeynanAneytha/YomigamiOkami-reshade-shaders#yomigamiokami-reshade-560-port) by Meynan Aneytha | [`#okamishader`](https://twitter.com/intent/tweet?text=%23okamishader) |
 
-## 커뮤니티 프리셋 기여
+---
 
-`Community`는 프로젝트에 기여된 개별 프리셋으로 구성됩니다.
-
-| 프리셋 | 제작자 | 라이선스 | 참고 |
-| --- | --- | --- | --- |
-| **프리셋을 제출해주세요!** ||| [기여 가이드라인](md/contributing.ko.md)을 참고해 주세요! |
+## 포함된 셰이더 컬렉션
 
 포함된 모든 셰이더 컬렉션 및 라이선스 목록은 [셰이더 라이선스](md/shader_licenses.ko.md)에서 확인할 수 있습니다.
 
 ---
 
-[GPosingway · a ReShade / XIV Community Patch](https://github.com/GPosingway/GPosingway/tree/main)는 [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)에 따라 라이선스가 부여됩니다. 
+[GPosingway · a ReShade / XIV Community Patch](https://github.com/GPosingway/GPosingway/tree/main)는 [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)에 따라 [라이선스](license.md)가 부여됩니다. 
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"> 
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
 
@@ -83,4 +79,4 @@ FFXIV 커뮤니티의 기여를 환영합니다. GPosingway 사용자에게 도�
 ---
 
 **번역 관련 참고 사항:** 
-이 한국어 문서는 가독성 향상을 위해 기계 번역을 기반으로 작성되었습니다. 부자연스러운 표현이나 사소한 오류가 있을 수 있으니, 한국어에 능숙하신 분들의 풀 리퀘스트나 이슈를 환영합니다!
+이 한국어 문서는 기계 번역을 기반으로 작성되었고, 수정이 이루어지고 있습니다. 부자연스러운 표현이 있다면 풀 리퀘스트나 이슈를 통해 알려주세요.

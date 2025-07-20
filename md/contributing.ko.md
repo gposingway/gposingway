@@ -37,18 +37,18 @@ GPosingway에 기여하는 데 관심을 가져주셔서 감사합니다! 커뮤
 
 ## 제출 가이드라인
 
-- **안정성**: 프리셋과 셰이더가 안정적이고 GPosingway와 호환되는지 확인하십시오.
-- **라이선스**: 귀하의 기여가 GPosingway의 [CC BY 4.0 라이선스](http://creativecommons.org/licenses/by/4.0/)를 준수하는지 확인하십시오.
-- **출처 표시**: 포함된 제3자 작업물에 대해 적절한 출처를 명시하십시오.
-- **명확한 설명**: 기여 목적을 설명하고 해당되는 경우 스크린샷이나 예시를 포함하십시오.
+- **안정성**: 프리셋과 셰이더가 안정적이고 GPosingway와 호환되는지 확인하세요.
+- **라이선스**: 귀하의 기여가 GPosingway의 [CC BY 4.0 라이선스](http://creativecommons.org/licenses/by/4.0/)를 준수하는지 확인하세요.
+- **출처 표시**: 포함된 제3자 작업물에 대해 적절한 출처를 명시하세요.
+- **명확한 설명**: 기여 목적을 설명하고 해당되는 경우 스크린샷이나 예시를 포함하세요.
 
 ---
 
 ## 커뮤니티 및 지원
 
 - **Discord**: 지원 및 토론을 위해 [Sights of Eorzea Discord 서버](https://discord.com/servers/sights-of-eorzea-1124828911700811957)에 가입하십시오. (참고: 서버는 주로 영어를 사용하지만, 다른 언어로 도움을 줄 수 있는 사용자가 있을 수 있습니다.)
-- **GitHub Issues**: [GitHub Issues](https://github.com/GPosingway/GPosingway/issues)를 통해 버그를 보고하거나 기능을 제안하십시오.
-- **연락처**: 유지 관리자인 Leon Aquitaine에게 [BlueSky](https://bsky.app/profile/leon.aquitaine.social)를 통해 연락하십시오.
+- **GitHub Issues**: [GitHub Issues](https://github.com/GPosingway/GPosingway/issues)를 통해 버그를 보고하거나 기능을 제안하세요.
+- **연락처**: 관리자인 Leon Aquitaine에게 [BlueSky](https://bsky.app/profile/leon.aquitaine.social)를 통해 연락하세요.
 
 ---
 

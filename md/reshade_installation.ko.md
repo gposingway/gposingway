@@ -30,5 +30,5 @@
 `Select effect packages to install` 창에서도 `Skip`을 클릭합니다:  
 <img src='https://github.com/gposingway/gposingway/assets/18711130/0ff6a3ae-32f4-408a-935a-db9c8d30fb89' width='408' /><br/><br/>
 
-`Finish`를 클릭합니다. 이제 게임에서 ReShade를 실행할 준비가 되었습니다.  
+`Finish`를 클릭합니다. 이제 게임에서 ReShade를 사용할 준비가 되었습니다.  
 <img src='https://github.com/gposingway/gposingway/assets/18711130/9ab2bf1f-a809-4130-aea7-0f767e8dbe84' width='408' />
